@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);/*https://www.google.com/fonts */
+/*https://www.google.com/fonts */
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);
+
 .todo-container {
   width: 500px;
   height: auto;
@@ -6,18 +8,13 @@
   margin-top: 20px;
   font-family: 'Shadows Into Light Two', cursive;
 }
-
 .add-todo-container {
   margin-bottom: 10px;
 }
-
-.add-todo-container .col-md-10 {
+.add-todo-container .col-md-10{
   padding: 0;
 }
-
-.add-todo-container .col-md-2 {
+.add-todo-container .col-md-2{
   padding-right: 0;
   text-align: right;
 }
-
-/*# sourceMappingURL=main.css.map*/
