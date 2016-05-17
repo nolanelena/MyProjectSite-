@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);/*https://www.google.com/fonts */
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);/*https://www.google.com/fonts */
 .todo-container {
   width: 500px;
   height: auto;
@@ -19,5 +19,85 @@
   padding-right: 0;
   text-align: right;
 }
+
+h1 {
+  color: red;
+}
+
+.square {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background-color: #63a1f2;
+  text-align: center;
+  line-height: 100px;
+  font-family: arial;
+  font-size: 42px;
+  transform: none;
+  transition: transform .5s;
+}
+
+.square-container {
+  perspective: 50px;
+  display: inline-block;
+}
+
+.square1:hover {
+  transform: skewX(45deg);
+  transition: transform .5s;
+}
+
+.square2:hover {
+  transform: rotate(45deg);
+  transition: transform .5s;
+}
+
+.square3:hover {
+  transform: scale(0.8, 0.5);
+  transition: transform .5s;
+}
+
+.square4:hover {
+  transform: rotateY(745deg) rotateX(45deg);
+  transition: transform .5s;
+}
+
+.square5:hover {
+  -webkit-transform: rotateX(45deg);
+  transform: rotateX(45deg);
+  transition: transform .5s;
+}
+
+.square6:hover {
+  transform: translate3d(20px, 50px, 100px);
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  color: #595959;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #595959;
+  opacity: 0.7;
+}
+
+a {
+  display: block;
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #74ccc7;
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
 
 /*# sourceMappingURL=main.css.map*/
