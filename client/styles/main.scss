@@ -1,6 +1,7 @@
 @import 'todo';
 @import 'project';
 @import 'funnySquares';
+@import 'navbar';
 
 h1 {
   font-family: 'Josefin Sans', sans-serif;
@@ -8,55 +9,25 @@ h1 {
   color: #595959;
 }
 
-body {
-  background: url('modern-office.jpg') no-repeat center center;
-  background-size: cover;
-  min-height: 100vh;
-  padding-top: 20px;
-  padding-bottom: 20px;
+video {
+  height: 240;
+  width: 320;
 }
 
-.nav {
-  position: fixed;
-  top: 0;
-  width: 200%;
-  list-style-type: none;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding: 0;
-  overflow: hidden;
-  background-color: #595959;
-  border: 2px soild #2C2F30;
-  opacity: 0.6;
-}
-
-a {
-  display: inline;
-  font-size: 18px;
-  font-family: 'Josefin Sans', sans-serif;
-  color: #74ccc7;
-  float: left;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.nav:hover {
-  background-color: #2C2F30;
-}
 
 #modern {
   position: fixed;
   display: inline; 
-  top: 0; 
+  top: 800px; 
   left: 0; 
-  width: 1100px; 
+  width: 800px; 
   height: 800px;
 }
 
-#modern img {
+.modern-image {
   position: fixed;
   margin: auto; 
-  width: 200%;
+  width: 100px;
   height: auto;
   overflow: hidden;
 }

@@ -7,23 +7,31 @@
     <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="/main.css">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
     <script type="text/javascript" async="async" defer="defer" src="/application.js"></script>
   </head>
-  <body>
 
-<!-- Application -->
-<div class="todo-container">
-  <h1>Bootstrap Todo App</h1>
-  <div class="add-todo-container row">
-  <div class= "col-md-10">
-    <input class="form-control" type="text"p placeholder="new todo">
+  <body>
+    <header></header>
+    <!-- Application -->
+    <div class="page">
+    <div id="notepad-bar"></div>
+    <div class="v_line-left"></div>
+    <div class="todo-container">
+      <h1>Bootstrap Todo App</h1>
+      <div class="add-todo-container row">
+      <div class="h_line"></div>
+      <div class= "col-md-10">
+        <input class="form-control" type="text" placeholder="new todo">
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-primary">Add Task</button>
+        </div>
+      </div>
+      <ul class="list-group"></ul>
     </div>
-    <div class="col-md-2">
-      <button class="btn btn-primary">Add</button>
     </div>
-  </div>
-  <ul class="list-group"></ul>
-</div>
 
   </body>
+  <footer></footer>
 </html>

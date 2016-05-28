@@ -1,0 +1,33 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 200%;
+  list-style-type: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0.6;
+
+}
+.navbar-default.navbar {
+  background-color: #595959;
+
+  
+}
+.navbar-default a:hover {
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-default a {
+  display: inline;
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #74ccc7;
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}

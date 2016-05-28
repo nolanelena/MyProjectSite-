@@ -58,15 +58,21 @@
 	
 	var _pagesTodo2 = _interopRequireDefault(_pagesTodo);
 	
-	var _pagesProject = __webpack_require__(52);
+	var _pagesProject = __webpack_require__(53);
 	
 	var _pagesProject2 = _interopRequireDefault(_pagesProject);
 	
-	var _pagesFunnySquares = __webpack_require__(53);
+	var _pagesFunnySquares = __webpack_require__(54);
 	
 	var _pagesFunnySquares2 = _interopRequireDefault(_pagesFunnySquares);
 	
+	var _componentsHeader = __webpack_require__(86);
+	
+	var _componentsHeader2 = _interopRequireDefault(_componentsHeader);
+	
 	(0, _jquery2['default'])(function () {
+	
+	  _componentsHeader2['default'].init();
 	
 	  // what page are we on?
 	  var url = window.location.pathname;
@@ -9937,341 +9943,15 @@
 
 /***/ },
 /* 2 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(3);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js?module&localIdentName=[local]&sourceMap!./../../node_modules/sass-loader/index.js?sourceMap&outputStyle=expanded&includePaths[]=/Users/student1/Projects/jquery todo/node_modules!./main.scss", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js?module&localIdentName=[local]&sourceMap!./../../node_modules/sass-loader/index.js?sourceMap&outputStyle=expanded&includePaths[]=/Users/student1/Projects/jquery todo/node_modules!./main.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 3 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);", ""]);
-	
-	// module
-	exports.push([module.id, "/*https://www.google.com/fonts */\n.todo-container {\n  width: 500px;\n  height: auto;\n  margin: 5px auto;\n  margin-top: 20px;\n  font-family: 'Shadows Into Light Two', cursive;\n}\n\n.add-todo-container {\n  margin-bottom: 10px;\n}\n\n.add-todo-container .col-md-10 {\n  padding: 0;\n}\n\n.add-todo-container .col-md-2 {\n  padding-right: 0;\n  text-align: right;\n}\n\nh1 {\n  color: red;\n}\n\n.square {\n  display: inline-block;\n  height: 100px;\n  width: 100px;\n  background-color: #63a1f2;\n  text-align: center;\n  line-height: 100px;\n  font-family: arial;\n  font-size: 42px;\n  transform: none;\n  transition: transform .5s;\n}\n\n.square-container {\n  perspective: 50px;\n  display: inline-block;\n}\n\n.square1:hover {\n  transform: skewX(45deg);\n  transition: transform .5s;\n}\n\n.square2:hover {\n  transform: rotate(45deg);\n  transition: transform .5s;\n}\n\n.square3:hover {\n  transform: scale(0.8, 0.5);\n  transition: transform .5s;\n}\n\n.square4:hover {\n  transform: rotateY(745deg) rotateX(45deg);\n  transition: transform .5s;\n}\n\n.square5:hover {\n  -webkit-transform: rotateX(45deg);\n  transform: rotateX(45deg);\n  transition: transform .5s;\n}\n\n.square6:hover {\n  transform: translate3d(20px, 50px, 100px);\n}\n\nh1 {\n  font-family: 'Josefin Sans', sans-serif;\n  font-size: 30px;\n  color: #595959;\n}\n\nbody {\n  background: url(" + __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"modern-office.jpg\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())) + ") no-repeat center center;\n  background-size: cover;\n  min-height: 100vh;\n  padding-top: 20px;\n  padding-bottom: 20px;\n}\n\n.nav {\n  position: fixed;\n  top: 0;\n  width: 200%;\n  list-style-type: none;\n  margin-top: 0px;\n  margin-bottom: 0px;\n  padding: 0;\n  overflow: hidden;\n  background-color: #595959;\n  border: 2px soild #2C2F30;\n  opacity: 0.6;\n}\n\na {\n  display: inline;\n  font-size: 18px;\n  font-family: 'Josefin Sans', sans-serif;\n  color: #74ccc7;\n  float: left;\n  text-align: center;\n  padding: 14px 16px;\n  text-decoration: none;\n}\n\n.nav:hover {\n  background-color: #2C2F30;\n}\n\n#modern {\n  position: fixed;\n  display: inline;\n  top: 0;\n  left: 0;\n  width: 1100px;\n  height: 800px;\n}\n\n#modern img {\n  position: fixed;\n  margin: auto;\n  width: 200%;\n  height: auto;\n  overflow: hidden;\n}\n", "", {"version":3,"sources":["/../../../../../sass-loader/index.js?sourceMap&outputStyle=expanded&includePaths[]=/Users/student1/Projects/jquery todo/node_modules!/Users/student1/Projects/jquery todo/client/client/styles/todo.scss","/../../../../../sass-loader/index.js?sourceMap&outputStyle=expanded&includePaths[]=/Users/student1/Projects/jquery todo/node_modules!/Users/student1/Projects/jquery todo/client/client/styles/funnySquares.scss","/../../../../../sass-loader/index.js?sourceMap&outputStyle=expanded&includePaths[]=/Users/student1/Projects/jquery todo/node_modules!/Users/student1/Projects/jquery todo/client/client/styles/main.scss"],"names":[],"mappings":"AAAA,iCAAiC;AAGjC;EACE,aAAa;EACb,aAAa;EACb,iBAAiB;EACjB,iBAAiB;EACjB,+CAA+C;CAChD;;AACD;EACE,oBAAoB;CACrB;;AACD;EACE,WAAW;CACZ;;AACD;EACE,iBAAiB;EACjB,kBAAkB;CACnB;;ACnBD;EACC,WAAW;CACV;;AAEF;EACC,sBAAsB;EACtB,cAAc;EACd,aAAa;EACb,0BAA0B;EAC1B,mBAAmB;EACnB,mBAAmB;EACnB,mBAAmB;EACnB,gBAAgB;EAChB,gBAAgB;EAChB,0BAA0B;CAC1B;;AACD;EACC,kBAAkB;EAClB,sBAAsB;CACtB;;AAED;EACC,wBAAgB;EAChB,0BAA0B;CAC1B;;AAED;EACC,yBAAiB;EACjB,0BAA0B;CAC1B;;AAED;EACC,2BAAgB;EAChB,0BAA0B;CAC1B;;AAED;EACC,0CAAkC;EAClC,0BAA0B;CAC1B;;AAED;EACC,kCAA0B;EAC1B,0BAAkB;EAClB,0BAA0B;CAC1B;;AACD;EACC,0CAAsB;CACtB;;AC5CD;EACE,wCAAwC;EACxC,gBAAgB;EAChB,eAAe;CAChB;;AAED;EACE,kEAA4D;EAC5D,uBAAuB;EACvB,kBAAkB;EAClB,kBAAkB;EAClB,qBAAqB;CACtB;;AAED;EACE,gBAAgB;EAChB,OAAO;EACP,YAAY;EACZ,sBAAsB;EACtB,gBAAgB;EAChB,mBAAmB;EACnB,WAAW;EACX,iBAAiB;EACjB,0BAA0B;EAC1B,0BAA0B;EAC1B,aAAa;CACd;;AAED;EACE,gBAAgB;EAChB,gBAAgB;EAChB,wCAAwC;EACxC,eAAe;EACf,YAAY;EACZ,mBAAmB;EACnB,mBAAmB;EACnB,sBAAsB;CACvB;;AACD;EACE,0BAA0B;CAC3B;;AAED;EACE,gBAAgB;EAChB,gBAAgB;EAChB,OAAO;EACP,QAAQ;EACR,cAAc;EACd,cAAc;CACf;;AAED;EACE,gBAAgB;EAChB,aAAa;EACb,YAAY;EACZ,aAAa;EACb,iBAAiB;CAClB","file":"main.scss","sourcesContent":["/*https://www.google.com/fonts */\n@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);\n\n.todo-container {\n  width: 500px;\n  height: auto;\n  margin: 5px auto;\n  margin-top: 20px;\n  font-family: 'Shadows Into Light Two', cursive;\n}\n.add-todo-container {\n  margin-bottom: 10px;\n}\n.add-todo-container .col-md-10{\n  padding: 0;\n}\n.add-todo-container .col-md-2{\n  padding-right: 0;\n  text-align: right;\n}\n","h1 {\n\tcolor: red;\n }\n\n.square {\n\tdisplay: inline-block;\n\theight: 100px;\n\twidth: 100px;\n\tbackground-color: #63a1f2;\n\ttext-align: center;\n\tline-height: 100px;\n\tfont-family: arial;\n\tfont-size: 42px;\n\ttransform: none;\n\ttransition: transform .5s;\n}\n.square-container {\n\tperspective: 50px;\n\tdisplay: inline-block;\n}\n\n.square1:hover {\n\ttransform: skewX(45deg);\n\ttransition: transform .5s;\n}\n\n.square2:hover {\n\ttransform: rotate(45deg);\n\ttransition: transform .5s;\n}\n\n.square3:hover {\n\ttransform: scale(.8,.5);\n\ttransition: transform .5s;\n}\n\n.square4:hover {\n\ttransform: rotateY(745deg) rotateX(45deg);\n\ttransition: transform .5s;\n}\n\n.square5:hover {\n\t-webkit-transform: rotateX(45deg);\n\ttransform: rotateX(45deg);\n\ttransition: transform .5s;\n}\n.square6:hover {\n\ttransform: translate3d(20px, 50px, 100px);\n}\n\n\n\n\n","@import 'todo';\n@import 'project';\n@import 'funnySquares';\n\nh1 {\n  font-family: 'Josefin Sans', sans-serif;\n  font-size: 30px;\n  color: #595959;\n}\n\nbody {\n  background: url('modern-office.jpg') no-repeat center center;\n  background-size: cover;\n  min-height: 100vh;\n  padding-top: 20px;\n  padding-bottom: 20px;\n}\n\n.nav {\n  position: fixed;\n  top: 0;\n  width: 200%;\n  list-style-type: none;\n  margin-top: 0px;\n  margin-bottom: 0px;\n  padding: 0;\n  overflow: hidden;\n  background-color: #595959;\n  border: 2px soild #2C2F30;\n  opacity: 0.6;\n}\n\na {\n  display: inline;\n  font-size: 18px;\n  font-family: 'Josefin Sans', sans-serif;\n  color: #74ccc7;\n  float: left;\n  text-align: center;\n  padding: 14px 16px;\n  text-decoration: none;\n}\n.nav:hover {\n  background-color: #2C2F30;\n}\n\n#modern {\n  position: fixed;\n  display: inline; \n  top: 0; \n  left: 0; \n  width: 1100px; \n  height: 800px;\n}\n\n#modern img {\n  position: fixed;\n  margin: auto; \n  width: 200%;\n  height: auto;\n  overflow: hidden;\n}\n\n"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-	exports.locals = {
-		"todo-container": "todo-container",
-		"add-todo-container": "add-todo-container",
-		"col-md-10": "col-md-10",
-		"col-md-2": "col-md-2",
-		"square": "square",
-		"square-container": "square-container",
-		"square1": "square1",
-		"square2": "square2",
-		"square3": "square3",
-		"square4": "square4",
-		"square5": "square5",
-		"square6": "square6",
-		"nav": "nav",
-		"modern": "modern"
-	};
-
-/***/ },
-/* 4 */
 /***/ function(module, exports) {
 
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	// css base code, injected by the css-loader
-	module.exports = function() {
-		var list = [];
-	
-		// return the list of modules as css string
-		list.toString = function toString() {
-			var result = [];
-			for(var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if(item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-	
-		// import a list of modules into the list
-		list.i = function(modules, mediaQuery) {
-			if(typeof modules === "string")
-				modules = [[null, modules, ""]];
-			var alreadyImportedModules = {};
-			for(var i = 0; i < this.length; i++) {
-				var id = this[i][0];
-				if(typeof id === "number")
-					alreadyImportedModules[id] = true;
-			}
-			for(i = 0; i < modules.length; i++) {
-				var item = modules[i];
-				// skip already imported module
-				// this implementation is not 100% perfect for weird media query combinations
-				//  when a module is imported multiple times with different media queries.
-				//  I hope this will never occur (Hey this way we have smaller bundles)
-				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-					if(mediaQuery && !item[2]) {
-						item[2] = mediaQuery;
-					} else if(mediaQuery) {
-						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-					}
-					list.push(item);
-				}
-			}
-		};
-		return list;
-	};
-
+	// removed by extract-text-webpack-plugin
+	module.exports = {"page":"page","todo-container":"todo-container","notepad-bar":"notepad-bar","v_line-left":"v_line-left","h_line":"h_line","col-md-10":"col-md-10","add-todo-container":"add-todo-container","col-md-2":"col-md-2","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","navbar":"navbar","navbar-default":"navbar-default","modern":"modern","modern-image":"modern-image"};
 
 /***/ },
-/* 5 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	var stylesInDom = {},
-		memoize = function(fn) {
-			var memo;
-			return function () {
-				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
-				return memo;
-			};
-		},
-		isOldIE = memoize(function() {
-			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
-		}),
-		getHeadElement = memoize(function () {
-			return document.head || document.getElementsByTagName("head")[0];
-		}),
-		singletonElement = null,
-		singletonCounter = 0;
-	
-	module.exports = function(list, options) {
-		if(false) {
-			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
-		}
-	
-		options = options || {};
-		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-		// tags it will allow on a page
-		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
-	
-		var styles = listToStyles(list);
-		addStylesToDom(styles, options);
-	
-		return function update(newList) {
-			var mayRemove = [];
-			for(var i = 0; i < styles.length; i++) {
-				var item = styles[i];
-				var domStyle = stylesInDom[item.id];
-				domStyle.refs--;
-				mayRemove.push(domStyle);
-			}
-			if(newList) {
-				var newStyles = listToStyles(newList);
-				addStylesToDom(newStyles, options);
-			}
-			for(var i = 0; i < mayRemove.length; i++) {
-				var domStyle = mayRemove[i];
-				if(domStyle.refs === 0) {
-					for(var j = 0; j < domStyle.parts.length; j++)
-						domStyle.parts[j]();
-					delete stylesInDom[domStyle.id];
-				}
-			}
-		};
-	}
-	
-	function addStylesToDom(styles, options) {
-		for(var i = 0; i < styles.length; i++) {
-			var item = styles[i];
-			var domStyle = stylesInDom[item.id];
-			if(domStyle) {
-				domStyle.refs++;
-				for(var j = 0; j < domStyle.parts.length; j++) {
-					domStyle.parts[j](item.parts[j]);
-				}
-				for(; j < item.parts.length; j++) {
-					domStyle.parts.push(addStyle(item.parts[j], options));
-				}
-			} else {
-				var parts = [];
-				for(var j = 0; j < item.parts.length; j++) {
-					parts.push(addStyle(item.parts[j], options));
-				}
-				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
-			}
-		}
-	}
-	
-	function listToStyles(list) {
-		var styles = [];
-		var newStyles = {};
-		for(var i = 0; i < list.length; i++) {
-			var item = list[i];
-			var id = item[0];
-			var css = item[1];
-			var media = item[2];
-			var sourceMap = item[3];
-			var part = {css: css, media: media, sourceMap: sourceMap};
-			if(!newStyles[id])
-				styles.push(newStyles[id] = {id: id, parts: [part]});
-			else
-				newStyles[id].parts.push(part);
-		}
-		return styles;
-	}
-	
-	function createStyleElement() {
-		var styleElement = document.createElement("style");
-		var head = getHeadElement();
-		styleElement.type = "text/css";
-		head.appendChild(styleElement);
-		return styleElement;
-	}
-	
-	function createLinkElement() {
-		var linkElement = document.createElement("link");
-		var head = getHeadElement();
-		linkElement.rel = "stylesheet";
-		head.appendChild(linkElement);
-		return linkElement;
-	}
-	
-	function addStyle(obj, options) {
-		var styleElement, update, remove;
-	
-		if (options.singleton) {
-			var styleIndex = singletonCounter++;
-			styleElement = singletonElement || (singletonElement = createStyleElement());
-			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
-			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
-		} else if(obj.sourceMap &&
-			typeof URL === "function" &&
-			typeof URL.createObjectURL === "function" &&
-			typeof URL.revokeObjectURL === "function" &&
-			typeof Blob === "function" &&
-			typeof btoa === "function") {
-			styleElement = createLinkElement();
-			update = updateLink.bind(null, styleElement);
-			remove = function() {
-				styleElement.parentNode.removeChild(styleElement);
-				if(styleElement.href)
-					URL.revokeObjectURL(styleElement.href);
-			};
-		} else {
-			styleElement = createStyleElement();
-			update = applyToTag.bind(null, styleElement);
-			remove = function() {
-				styleElement.parentNode.removeChild(styleElement);
-			};
-		}
-	
-		update(obj);
-	
-		return function updateStyle(newObj) {
-			if(newObj) {
-				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
-					return;
-				update(obj = newObj);
-			} else {
-				remove();
-			}
-		};
-	}
-	
-	var replaceText = (function () {
-		var textStore = [];
-	
-		return function (index, replacement) {
-			textStore[index] = replacement;
-			return textStore.filter(Boolean).join('\n');
-		};
-	})();
-	
-	function applyToSingletonTag(styleElement, index, remove, obj) {
-		var css = remove ? "" : obj.css;
-	
-		if (styleElement.styleSheet) {
-			styleElement.styleSheet.cssText = replaceText(index, css);
-		} else {
-			var cssNode = document.createTextNode(css);
-			var childNodes = styleElement.childNodes;
-			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
-			if (childNodes.length) {
-				styleElement.insertBefore(cssNode, childNodes[index]);
-			} else {
-				styleElement.appendChild(cssNode);
-			}
-		}
-	}
-	
-	function applyToTag(styleElement, obj) {
-		var css = obj.css;
-		var media = obj.media;
-		var sourceMap = obj.sourceMap;
-	
-		if(media) {
-			styleElement.setAttribute("media", media)
-		}
-	
-		if(styleElement.styleSheet) {
-			styleElement.styleSheet.cssText = css;
-		} else {
-			while(styleElement.firstChild) {
-				styleElement.removeChild(styleElement.firstChild);
-			}
-			styleElement.appendChild(document.createTextNode(css));
-		}
-	}
-	
-	function updateLink(linkElement, obj) {
-		var css = obj.css;
-		var media = obj.media;
-		var sourceMap = obj.sourceMap;
-	
-		if(sourceMap) {
-			// http://stackoverflow.com/a/26603875
-			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
-		}
-	
-		var blob = new Blob([css], { type: "text/css" });
-	
-		var oldSrc = linkElement.href;
-	
-		linkElement.href = URL.createObjectURL(blob);
-	
-		if(oldSrc)
-			URL.revokeObjectURL(oldSrc);
-	}
-
-
-/***/ },
+/* 3 */,
+/* 4 */,
+/* 5 */,
 /* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -10291,9 +9971,9 @@
 	
 	var _lscache2 = _interopRequireDefault(_lscache);
 	
-	var _htmlTemplatesTodoItemHtml = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"html!/templates/todoItem.html\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _templatesTodoItemHtml = __webpack_require__(39);
 	
-	var _htmlTemplatesTodoItemHtml2 = _interopRequireDefault(_htmlTemplatesTodoItemHtml);
+	var _templatesTodoItemHtml2 = _interopRequireDefault(_templatesTodoItemHtml);
 	
 	// var $ = require('jquery');
 	
@@ -10303,7 +9983,7 @@
 	
 	// legacy loading for bootstrap
 	window.jQuery = window.$ = $;
-	__webpack_require__(39);
+	__webpack_require__(40);
 	
 	var savedData = _lscache2['default'].get('todos'); // if you are declaring a value
 	var todos;
@@ -10331,7 +10011,7 @@
 	    app.bindEvents();
 	  },
 	  compileTemplates: function compileTemplates() {
-	    template = _handlebars2['default'].compile(_htmlTemplatesTodoItemHtml2['default']);
+	    template = _handlebars2['default'].compile(_templatesTodoItemHtml2['default']);
 	  },
 	  unbindEvents: function unbindEvents() {
 	    $('.list-group-item').off();
@@ -17118,10 +16798,15 @@
 
 /***/ },
 /* 39 */
+/***/ function(module, exports) {
+
+	module.exports = "<li class=\"list-group-item row {{#if completed}}disabled{{/if}}\">\n  <div class=\"col-md-1\"><input type=\"checkbox\" {{#if completed}}checked{{/if}}></div>\n  <div class=\"col-md-10 title\">{{title}}</div>\n  <div class=\"col-md-10 title-edit hidden\">\n   <input type=\"text\" class=\"form-control\" value=\"{{title}}\" data-id=\"{{id}}\">\n  </div>\n  <div class=\"col-md-1\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close\">\n    <span aria-hidden=\"true\">&times;</span>\n    </button>\n  </div>\n</li>\n\n";
+
+/***/ },
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// This file is autogenerated via the `commonjs` Grunt task. You can require() this file in a CommonJS environment.
-	__webpack_require__(40)
 	__webpack_require__(41)
 	__webpack_require__(42)
 	__webpack_require__(43)
@@ -17133,9 +16818,10 @@
 	__webpack_require__(49)
 	__webpack_require__(50)
 	__webpack_require__(51)
+	__webpack_require__(52)
 
 /***/ },
-/* 40 */
+/* 41 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -17200,7 +16886,7 @@
 
 
 /***/ },
-/* 41 */
+/* 42 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -17300,7 +16986,7 @@
 
 
 /***/ },
-/* 42 */
+/* 43 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -17426,7 +17112,7 @@
 
 
 /***/ },
-/* 43 */
+/* 44 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -17669,7 +17355,7 @@
 
 
 /***/ },
-/* 44 */
+/* 45 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -17886,7 +17572,7 @@
 
 
 /***/ },
-/* 45 */
+/* 46 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -18057,7 +17743,7 @@
 
 
 /***/ },
-/* 46 */
+/* 47 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -18400,7 +18086,7 @@
 
 
 /***/ },
-/* 47 */
+/* 48 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -18920,7 +18606,7 @@
 
 
 /***/ },
-/* 48 */
+/* 49 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -19034,7 +18720,7 @@
 
 
 /***/ },
-/* 49 */
+/* 50 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -19212,7 +18898,7 @@
 
 
 /***/ },
-/* 50 */
+/* 51 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -19373,7 +19059,7 @@
 
 
 /***/ },
-/* 51 */
+/* 52 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -19541,7 +19227,7 @@
 
 
 /***/ },
-/* 52 */
+/* 53 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -19550,7 +19236,7 @@
 	module.exports = app;
 
 /***/ },
-/* 53 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19565,18 +19251,18 @@
 	
 	var _underscore2 = _interopRequireDefault(_underscore);
 	
-	var _htmlTemplatesFunnySquareHtml = __webpack_require__(54);
+	var _templatesFunnySquareHtml = __webpack_require__(55);
 	
-	var _htmlTemplatesFunnySquareHtml2 = _interopRequireDefault(_htmlTemplatesFunnySquareHtml);
+	var _templatesFunnySquareHtml2 = _interopRequireDefault(_templatesFunnySquareHtml);
 	
-	var _Handlebars = __webpack_require__(55);
+	var _Handlebars = __webpack_require__(56);
 	
 	var _Handlebars2 = _interopRequireDefault(_Handlebars);
 	
 	var template;
 	var app = {
 	  init: function init() {
-	    template = _Handlebars2['default'].compile(_htmlTemplatesFunnySquareHtml2['default']);
+	    template = _Handlebars2['default'].compile(_templatesFunnySquareHtml2['default']);
 	    app.render();
 	  },
 	  render: function render() {
@@ -19593,13 +19279,13 @@
 	module.exports = app;
 
 /***/ },
-/* 54 */
+/* 55 */
 /***/ function(module, exports) {
 
-	module.exports = "module.exports = \"<div class=\\\"square-container\\\">\\n <div class=\\\"square square{{id}} \\\">\\n   <div class=\\\"inner\\\">{{id}}</div>\\n </div>\\n</div>\\n\";";
+	module.exports = "<div class=\"square-container\">\n <div class=\"square square{{id}} \">\n   <div class=\"inner\">{{id}}</div>\n </div>\n</div>\n";
 
 /***/ },
-/* 55 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// USAGE:
@@ -19608,9 +19294,9 @@
 	
 	// var local = handlebars.create();
 	
-	var handlebars = __webpack_require__(56)['default'];
+	var handlebars = __webpack_require__(57)['default'];
 	
-	var printer = __webpack_require__(84);
+	var printer = __webpack_require__(85);
 	handlebars.PrintVisitor = printer.PrintVisitor;
 	handlebars.print = printer.print;
 	
@@ -19630,7 +19316,7 @@
 
 
 /***/ },
-/* 56 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19640,29 +19326,29 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _handlebarsRuntime = __webpack_require__(57);
+	var _handlebarsRuntime = __webpack_require__(58);
 	
 	var _handlebarsRuntime2 = _interopRequireDefault(_handlebarsRuntime);
 	
 	// Compiler imports
 	
-	var _handlebarsCompilerAst = __webpack_require__(75);
+	var _handlebarsCompilerAst = __webpack_require__(76);
 	
 	var _handlebarsCompilerAst2 = _interopRequireDefault(_handlebarsCompilerAst);
 	
-	var _handlebarsCompilerBase = __webpack_require__(76);
+	var _handlebarsCompilerBase = __webpack_require__(77);
 	
-	var _handlebarsCompilerCompiler = __webpack_require__(81);
+	var _handlebarsCompilerCompiler = __webpack_require__(82);
 	
-	var _handlebarsCompilerJavascriptCompiler = __webpack_require__(82);
+	var _handlebarsCompilerJavascriptCompiler = __webpack_require__(83);
 	
 	var _handlebarsCompilerJavascriptCompiler2 = _interopRequireDefault(_handlebarsCompilerJavascriptCompiler);
 	
-	var _handlebarsCompilerVisitor = __webpack_require__(79);
+	var _handlebarsCompilerVisitor = __webpack_require__(80);
 	
 	var _handlebarsCompilerVisitor2 = _interopRequireDefault(_handlebarsCompilerVisitor);
 	
-	var _handlebarsNoConflict = __webpack_require__(74);
+	var _handlebarsNoConflict = __webpack_require__(75);
 	
 	var _handlebarsNoConflict2 = _interopRequireDefault(_handlebarsNoConflict);
 	
@@ -19701,7 +19387,7 @@
 
 
 /***/ },
-/* 57 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19715,30 +19401,30 @@
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 	
-	var _handlebarsBase = __webpack_require__(58);
+	var _handlebarsBase = __webpack_require__(59);
 	
 	var base = _interopRequireWildcard(_handlebarsBase);
 	
 	// Each of these augment the Handlebars object. No need to setup here.
 	// (This is done to easily share code between commonjs and browse envs)
 	
-	var _handlebarsSafeString = __webpack_require__(72);
+	var _handlebarsSafeString = __webpack_require__(73);
 	
 	var _handlebarsSafeString2 = _interopRequireDefault(_handlebarsSafeString);
 	
-	var _handlebarsException = __webpack_require__(60);
+	var _handlebarsException = __webpack_require__(61);
 	
 	var _handlebarsException2 = _interopRequireDefault(_handlebarsException);
 	
-	var _handlebarsUtils = __webpack_require__(59);
+	var _handlebarsUtils = __webpack_require__(60);
 	
 	var Utils = _interopRequireWildcard(_handlebarsUtils);
 	
-	var _handlebarsRuntime = __webpack_require__(73);
+	var _handlebarsRuntime = __webpack_require__(74);
 	
 	var runtime = _interopRequireWildcard(_handlebarsRuntime);
 	
-	var _handlebarsNoConflict = __webpack_require__(74);
+	var _handlebarsNoConflict = __webpack_require__(75);
 	
 	var _handlebarsNoConflict2 = _interopRequireDefault(_handlebarsNoConflict);
 	
@@ -19773,7 +19459,7 @@
 
 
 /***/ },
-/* 58 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19784,17 +19470,17 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utils = __webpack_require__(59);
+	var _utils = __webpack_require__(60);
 	
-	var _exception = __webpack_require__(60);
+	var _exception = __webpack_require__(61);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
-	var _helpers = __webpack_require__(61);
+	var _helpers = __webpack_require__(62);
 	
-	var _decorators = __webpack_require__(69);
+	var _decorators = __webpack_require__(70);
 	
-	var _logger = __webpack_require__(71);
+	var _logger = __webpack_require__(72);
 	
 	var _logger2 = _interopRequireDefault(_logger);
 	
@@ -19883,7 +19569,7 @@
 
 
 /***/ },
-/* 59 */
+/* 60 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -20013,7 +19699,7 @@
 
 
 /***/ },
-/* 60 */
+/* 61 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -20059,7 +19745,7 @@
 
 
 /***/ },
-/* 61 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20070,31 +19756,31 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _helpersBlockHelperMissing = __webpack_require__(62);
+	var _helpersBlockHelperMissing = __webpack_require__(63);
 	
 	var _helpersBlockHelperMissing2 = _interopRequireDefault(_helpersBlockHelperMissing);
 	
-	var _helpersEach = __webpack_require__(63);
+	var _helpersEach = __webpack_require__(64);
 	
 	var _helpersEach2 = _interopRequireDefault(_helpersEach);
 	
-	var _helpersHelperMissing = __webpack_require__(64);
+	var _helpersHelperMissing = __webpack_require__(65);
 	
 	var _helpersHelperMissing2 = _interopRequireDefault(_helpersHelperMissing);
 	
-	var _helpersIf = __webpack_require__(65);
+	var _helpersIf = __webpack_require__(66);
 	
 	var _helpersIf2 = _interopRequireDefault(_helpersIf);
 	
-	var _helpersLog = __webpack_require__(66);
+	var _helpersLog = __webpack_require__(67);
 	
 	var _helpersLog2 = _interopRequireDefault(_helpersLog);
 	
-	var _helpersLookup = __webpack_require__(67);
+	var _helpersLookup = __webpack_require__(68);
 	
 	var _helpersLookup2 = _interopRequireDefault(_helpersLookup);
 	
-	var _helpersWith = __webpack_require__(68);
+	var _helpersWith = __webpack_require__(69);
 	
 	var _helpersWith2 = _interopRequireDefault(_helpersWith);
 	
@@ -20111,14 +19797,14 @@
 
 
 /***/ },
-/* 62 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _utils = __webpack_require__(59);
+	var _utils = __webpack_require__(60);
 	
 	exports['default'] = function (instance) {
 	  instance.registerHelper('blockHelperMissing', function (context, options) {
@@ -20156,7 +19842,7 @@
 
 
 /***/ },
-/* 63 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20166,9 +19852,9 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utils = __webpack_require__(59);
+	var _utils = __webpack_require__(60);
 	
-	var _exception = __webpack_require__(60);
+	var _exception = __webpack_require__(61);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
@@ -20256,7 +19942,7 @@
 
 
 /***/ },
-/* 64 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20266,7 +19952,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _exception = __webpack_require__(60);
+	var _exception = __webpack_require__(61);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
@@ -20287,14 +19973,14 @@
 
 
 /***/ },
-/* 65 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _utils = __webpack_require__(59);
+	var _utils = __webpack_require__(60);
 	
 	exports['default'] = function (instance) {
 	  instance.registerHelper('if', function (conditional, options) {
@@ -20322,7 +20008,7 @@
 
 
 /***/ },
-/* 66 */
+/* 67 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -20354,7 +20040,7 @@
 
 
 /***/ },
-/* 67 */
+/* 68 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -20372,14 +20058,14 @@
 
 
 /***/ },
-/* 68 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _utils = __webpack_require__(59);
+	var _utils = __webpack_require__(60);
 	
 	exports['default'] = function (instance) {
 	  instance.registerHelper('with', function (context, options) {
@@ -20411,7 +20097,7 @@
 
 
 /***/ },
-/* 69 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20422,7 +20108,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _decoratorsInline = __webpack_require__(70);
+	var _decoratorsInline = __webpack_require__(71);
 	
 	var _decoratorsInline2 = _interopRequireDefault(_decoratorsInline);
 	
@@ -20433,14 +20119,14 @@
 
 
 /***/ },
-/* 70 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _utils = __webpack_require__(59);
+	var _utils = __webpack_require__(60);
 	
 	exports['default'] = function (instance) {
 	  instance.registerDecorator('inline', function (fn, props, container, options) {
@@ -20468,14 +20154,14 @@
 
 
 /***/ },
-/* 71 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _utils = __webpack_require__(59);
+	var _utils = __webpack_require__(60);
 	
 	var logger = {
 	  methodMap: ['debug', 'info', 'warn', 'error'],
@@ -20521,7 +20207,7 @@
 
 
 /***/ },
-/* 72 */
+/* 73 */
 /***/ function(module, exports) {
 
 	// Build out our basic SafeString type
@@ -20542,7 +20228,7 @@
 
 
 /***/ },
-/* 73 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20562,15 +20248,15 @@
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 	
-	var _utils = __webpack_require__(59);
+	var _utils = __webpack_require__(60);
 	
 	var Utils = _interopRequireWildcard(_utils);
 	
-	var _exception = __webpack_require__(60);
+	var _exception = __webpack_require__(61);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
-	var _base = __webpack_require__(58);
+	var _base = __webpack_require__(59);
 	
 	function checkRevision(compilerInfo) {
 	  var compilerRevision = compilerInfo && compilerInfo[0] || 1,
@@ -20840,7 +20526,7 @@
 
 
 /***/ },
-/* 74 */
+/* 75 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/* global window */
@@ -20867,7 +20553,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 75 */
+/* 76 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -20904,7 +20590,7 @@
 
 
 /***/ },
-/* 76 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20919,19 +20605,19 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _parser = __webpack_require__(77);
+	var _parser = __webpack_require__(78);
 	
 	var _parser2 = _interopRequireDefault(_parser);
 	
-	var _whitespaceControl = __webpack_require__(78);
+	var _whitespaceControl = __webpack_require__(79);
 	
 	var _whitespaceControl2 = _interopRequireDefault(_whitespaceControl);
 	
-	var _helpers = __webpack_require__(80);
+	var _helpers = __webpack_require__(81);
 	
 	var Helpers = _interopRequireWildcard(_helpers);
 	
-	var _utils = __webpack_require__(59);
+	var _utils = __webpack_require__(60);
 	
 	exports.parser = _parser2['default'];
 	
@@ -20958,7 +20644,7 @@
 
 
 /***/ },
-/* 77 */
+/* 78 */
 /***/ function(module, exports) {
 
 	/* istanbul ignore next */
@@ -21702,7 +21388,7 @@
 
 
 /***/ },
-/* 78 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21712,7 +21398,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _visitor = __webpack_require__(79);
+	var _visitor = __webpack_require__(80);
 	
 	var _visitor2 = _interopRequireDefault(_visitor);
 	
@@ -21929,7 +21615,7 @@
 
 
 /***/ },
-/* 79 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21939,7 +21625,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _exception = __webpack_require__(60);
+	var _exception = __webpack_require__(61);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
@@ -22075,7 +21761,7 @@
 
 
 /***/ },
-/* 80 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22095,7 +21781,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _exception = __webpack_require__(60);
+	var _exception = __webpack_require__(61);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
@@ -22311,7 +21997,7 @@
 
 
 /***/ },
-/* 81 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* eslint-disable new-cap */
@@ -22326,13 +22012,13 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _exception = __webpack_require__(60);
+	var _exception = __webpack_require__(61);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
-	var _utils = __webpack_require__(59);
+	var _utils = __webpack_require__(60);
 	
-	var _ast = __webpack_require__(75);
+	var _ast = __webpack_require__(76);
 	
 	var _ast2 = _interopRequireDefault(_ast);
 	
@@ -22889,7 +22575,7 @@
 
 
 /***/ },
-/* 82 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22899,15 +22585,15 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _base = __webpack_require__(58);
+	var _base = __webpack_require__(59);
 	
-	var _exception = __webpack_require__(60);
+	var _exception = __webpack_require__(61);
 	
 	var _exception2 = _interopRequireDefault(_exception);
 	
-	var _utils = __webpack_require__(59);
+	var _utils = __webpack_require__(60);
 	
-	var _codeGen = __webpack_require__(83);
+	var _codeGen = __webpack_require__(84);
 	
 	var _codeGen2 = _interopRequireDefault(_codeGen);
 	
@@ -24021,7 +23707,7 @@
 
 
 /***/ },
-/* 83 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* global define */
@@ -24029,7 +23715,7 @@
 	
 	exports.__esModule = true;
 	
-	var _utils = __webpack_require__(59);
+	var _utils = __webpack_require__(60);
 	
 	var SourceNode = undefined;
 	
@@ -24193,7 +23879,7 @@
 
 
 /***/ },
-/* 84 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* eslint-disable new-cap */
@@ -24206,7 +23892,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _visitor = __webpack_require__(79);
+	var _visitor = __webpack_require__(80);
 	
 	var _visitor2 = _interopRequireDefault(_visitor);
 	
@@ -24383,6 +24069,39 @@
 	/* eslint-enable new-cap */
 	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL2xpYi9oYW5kbGViYXJzL2NvbXBpbGVyL3ByaW50ZXIuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozt1QkFDb0IsV0FBVzs7OztBQUV4QixTQUFTLEtBQUssQ0FBQyxHQUFHLEVBQUU7QUFDekIsU0FBTyxJQUFJLFlBQVksRUFBRSxDQUFDLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQztDQUN2Qzs7QUFFTSxTQUFTLFlBQVksR0FBRztBQUM3QixNQUFJLENBQUMsT0FBTyxHQUFHLENBQUMsQ0FBQztDQUNsQjs7QUFFRCxZQUFZLENBQUMsU0FBUyxHQUFHLDBCQUFhLENBQUM7O0FBRXZDLFlBQVksQ0FBQyxTQUFTLENBQUMsR0FBRyxHQUFHLFVBQVMsTUFBTSxFQUFFO0FBQzVDLE1BQUksR0FBRyxHQUFHLEVBQUUsQ0FBQzs7QUFFYixPQUFLLElBQUksQ0FBQyxHQUFHLENBQUMsRUFBRSxDQUFDLEdBQUcsSUFBSSxDQUFDLE9BQU8sRUFBRSxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMsRUFBRSxFQUFFO0FBQzVDLE9BQUcsSUFBSSxJQUFJLENBQUM7R0FDYjs7QUFFRCxLQUFHLElBQUksTUFBTSxHQUFHLElBQUksQ0FBQztBQUNyQixTQUFPLEdBQUcsQ0FBQztDQUNaLENBQUM7O0FBRUYsWUFBWSxDQUFDLFNBQVMsQ0FBQyxPQUFPLEdBQUcsVUFBUyxPQUFPLEVBQUU7QUFDakQsTUFBSSxHQUFHLEdBQUcsRUFBRTtNQUNSLElBQUksR0FBRyxPQUFPLENBQUMsSUFBSTtNQUNuQixDQUFDLFlBQUE7TUFBRSxDQUFDLFlBQUEsQ0FBQzs7QUFFVCxNQUFJLE9BQU8sQ0FBQyxXQUFXLEVBQUU7QUFDdkIsUUFBSSxXQUFXLEdBQUcsaUJBQWlCLENBQUM7QUFDcEMsU0FBSyxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMsR0FBRyxPQUFPLENBQUMsV0FBVyxDQUFDLE1BQU0sRUFBRSxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMs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SUFBSSxDQUFDLE1BQU0sQ0FBQyxLQUFLLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO0dBQ3pDOztBQUVELFNBQU8sT0FBTyxHQUFHLFdBQVcsQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLEdBQUcsR0FBRyxDQUFDO0NBQy9DLENBQUM7QUFDRixZQUFZLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyxVQUFTLElBQUksRUFBRTtBQUMvQyxTQUFPLElBQUksQ0FBQyxHQUFHLEdBQUcsR0FBRyxHQUFHLElBQUksQ0FBQyxNQUFNLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyxDQUFDO0NBQ2pELENBQUMiLCJmaWxlIjoicHJpbnRlci5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG5ldy1jYXAgKi9cbmltcG9ydCBWaXNpdG9yIGZyb20gJy4vdmlzaXRvcic7XG5cbmV4cG9ydCBmdW5jdGlvbiBwcmludChhc3QpIHtcbiAgcmV0dXJuIG5ldyBQcmludFZpc2l0b3IoKS5hY2NlcHQoYXN0KTtcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIFByaW50VmlzaXRvcigpIHtcbiAgdGhpcy5wYWRkaW5nID0gMDtcbn1cblxuUHJpbnRWaXNpdG9yLnByb3RvdHlwZSA9IG5ldyBWaXNpdG9yKCk7XG5cblByaW50VmlzaXRvci5wcm90b3R5cGUucGFkID0gZnVuY3Rpb24oc3RyaW5nKSB7XG4gIGxldCBvdXQgPSAnJztcblxuICBmb3IgKGxldCBpID0gMCwgbCA9IHRoaXMucGFkZGluZzsgaSA8IGw7IGkrKykge1xuICAgIG91dCArPSAnICAnO1xuICB9XG5cbiAgb3V0ICs9IHN0cmluZyArICdcXG4nO1xuICByZXR1cm4gb3V0O1xufTtcblxuUHJpbnRWaXNpdG9yLnByb3RvdHlwZS5Qcm9ncmFtID0gZnVuY3Rpb24ocHJvZ3JhbSkge1xuICBsZXQgb3V0ID0gJycsXG4gICAgICBib2R5ID0gcHJvZ3JhbS5ib2R5LFxuICAgICAgaSwgbDtcblxuICBpZiAocHJvZ3JhbS5ibG9ja1BhcmFtcykge1xuICAgIGxldCBibG9ja1BhcmFtcyA9ICdCTE9DSyBQQVJBTVM6IFsnO1xuICAgIGZvciAoaSA9IDAsIGwgPSBwcm9ncmFtLmJsb2NrUGFyYW1zLmxlbmd0aDsgaSA8IGw7IGkrKykge1xuICAgICAgIGJsb2NrUGFyYW1zICs9ICcgJyArIHByb2dyYW0uYmxvY2tQYXJhbXNbaV07XG4gICAgfVxuICAgIGJsb2NrUGFyYW1zICs9ICcgXSc7XG4gICAgb3V0ICs9IHRoaXMucGFkKGJsb2NrUGFyYW1zKTtcbiAgfVxuXG4gIGZvciAoaSA9IDAsIGwgPSBib2R5Lmxlbmd0aDsgaSA8IGw7IGkrKykge1xuICAgIG91dCArPSB0aGlzLmFjY2VwdChib2R5W2ldKTtcbiAgfVxuXG4gIHRoaXMucGFkZGluZy0tO1xuXG4gIHJldHVybiBvdXQ7XG59O1xuXG5QcmludFZpc2l0b3IucHJvdG90eXBlLk11c3RhY2hlU3RhdGVtZW50ID0gZnVuY3Rpb24obXVzdGFjaGUpIHtcbiAgcmV0dXJuIHRoaXMucGFkKCd7eyAnICsgdGhpcy5TdWJFeHByZXNzaW9uKG11c3RhY2hlKSArICcgfX0nKTtcbn07XG5QcmludFZpc2l0b3IucHJvdG90eXBlLkRlY29yYXRvciA9IGZ1bmN0aW9uKG11c3RhY2hlKSB7XG4gIHJldHVybiB0aGlzLnBhZCgne3sgRElSRUNUSVZFICcgKyB0aGlzLlN1YkV4cHJlc3Npb24obXVzdGFjaGUpICsgJyB9fScpO1xufTtcblxuUHJpbnRWaXNpdG9yLnByb3RvdHlwZS5CbG9ja1N0YXRlbWVudCA9XG5QcmludFZpc2l0b3IucHJvdG90eXBlLkRlY29yYXRvckJsb2NrID0gZnVuY3Rpb24oYmxvY2spIHtcbiAgbGV0IG91dCA9ICcnO1xuXG4gIG91dCArPSB0aGlzLnBhZCgoYmxvY2sudHlwZSA9PT0gJ0RlY29yYXRvckJsb2NrJyA/ICdESVJFQ1RJVkUgJyA6ICcnKSArICdCTE9DSzonKTtcbiAgdGhpcy5wYWRkaW5nKys7XG4gIG91dCArPSB0aGlzLnBhZCh0aGlzLlN1YkV4cHJlc3Npb24oYmxvY2spKTtcbiAgaWYgKGJsb2NrLnByb2dyYW0pIHtcbiAgICBvdXQgKz0gdGhpcy5wYWQoJ1BST0dSQU06Jyk7XG4gICAgdGhpcy5wYWRkaW5nKys7XG4gICAgb3V0ICs9IHRoaXMuYWNjZXB0KGJsb2NrLnByb2dyYW0pO1xuICAgIHRoaXMucGFkZGluZy0tO1xuICB9XG4gIGlmIChibG9jay5pbnZlcnNlKSB7XG4gICAgaWYgKGJsb2NrLnByb2dyYW0pIHsgdGhpcy5wYWRkaW5nKys7IH1cbiAgICBvdXQgKz0gdGhpcy5wYWQoJ3t7Xn19Jyk7XG4gICAgdGhpcy5wYWRkaW5nKys7XG4gICAgb3V0ICs9IHRoaXMuYWNjZXB0KGJsb2NrLmludmVyc2UpO1xuICAgIHRoaXMucGFkZGluZy0tO1xuICAgIGlmIChibG9jay5wcm9ncmFtKSB7IHRoaXMucGFkZGluZy0tOyB9XG4gIH1cbiAgdGhpcy5wYWRkaW5nLS07XG5cbiAgcmV0dXJuIG91dDtcbn07XG5cblByaW50VmlzaXRvci5wcm90b3R5cGUuUGFydGlhbFN0YXRlbWVudCA9IGZ1bmN0aW9uKHBhcnRpYWwpIHtcbiAgbGV0IGNvbnRlbnQgPSAnUEFSVElBTDonICsgcGFydGlhbC5uYW1lLm9yaWdpbmFsO1xuICBpZiAocGFydGlhbC5wYXJhbXNbMF0pIHtcbiAgICBjb250ZW50ICs9ICcgJyArIHRoaXMuYWNjZXB0KHBhcnRpYWwucGFyYW1zWzBdKTtcbiAgfVxuICBpZiAocGFydGlhbC5oYXNoKSB7XG4gICAgY29udGVudCArPSAnICcgKyB0aGlzLmFjY2VwdChwYXJ0aWFsLmhhc2gpO1xuICB9XG4gIHJldHVybiB0aGlzLnBhZCgne3s+ICcgKyBjb250ZW50ICsgJyB9fScpO1xufTtcblByaW50VmlzaXRvci5wcm90b3R5cGUuUGFydGlhbEJsb2NrU3RhdGVtZW50ID0gZnVuY3Rpb24ocGFydGlhbCkge1xuICBsZXQgY29udGVudCA9ICdQQVJUSUFMIEJMT0NLOicgKyBwYXJ0aWFsLm5hbWUub3JpZ2luYWw7XG4gIGlmIChwYXJ0aWFsLnBhcmFtc1swXSkge1xuICAgIGNvbnRlbnQgKz0gJyAnICsgdGhpcy5hY2NlcHQocGFydGlhbC5wYXJhbXNbMF0pO1xuICB9XG4gIGlmIChwYXJ0aWFsLmhhc2gpIHtcbiAgICBjb250ZW50ICs9ICcgJyArIHRoaXMuYWNjZXB0KHBhcnRpYWwuaGFzaCk7XG4gIH1cblxuICBjb250ZW50ICs9ICcgJyArIHRoaXMucGFkKCdQUk9HUkFNOicpO1xuICB0aGlzLnBhZGRpbmcrKztcbiAgY29udGVudCArPSB0aGlzLmFjY2VwdChwYXJ0aWFsLnByb2dyYW0pO1xuICB0aGlzLnBhZGRpbmctLTtcblxuICByZXR1cm4gdGhpcy5wYWQoJ3t7PiAnICsgY29udGVudCArICcgfX0nKTtcbn07XG5cblByaW50VmlzaXRvci5wcm90b3R5cGUuQ29udGVudFN0YXRlbWVudCA9IGZ1bmN0aW9uKGNvbnRlbnQpIHtcbiAgcmV0dXJuIHRoaXMucGFkKFwiQ09OVEVOVFsgJ1wiICsgY29udGVudC52YWx1ZSArIFwiJyBdXCIpO1xufTtcblxuUHJpbnRWaXNpdG9yLnByb3RvdHlwZS5Db21tZW50U3RhdGVtZW50ID0gZnVuY3Rpb24oY29tbWVudCkge1xuICByZXR1cm4gdGhpcy5wYWQoXCJ7eyEgJ1wiICsgY29tbWVudC52YWx1ZSArIFwiJyB9fVwiKTtcbn07XG5cblByaW50VmlzaXRvci5wcm90b3R5cGUuU3ViRXhwcmVzc2lvbiA9IGZ1bmN0aW9uKHNleHByKSB7XG4gIGxldCBwYXJhbXMgPSBzZXhwci5wYXJhbXMsXG4gICAgICBwYXJhbVN0cmluZ3MgPSBbXSxcbiAgICAgIGhhc2g7XG5cbiAgZm9yIChsZXQgaSA9IDAsIGwgPSBwYXJhbXMubGVuZ3RoOyBpIDwgbDsgaSsrKSB7XG4gICAgcGFyYW1TdHJpbmdzLnB1c2godGhpcy5hY2NlcHQocGFyYW1zW2ldKSk7XG4gIH1cblxuICBwYXJhbXMgPSAnWycgKyBwYXJhbVN0cmluZ3Muam9pbignLCAnKSArICddJztcblxuICBoYXNoID0gc2V4cHIuaGFzaCA/ICcgJyArIHRoaXMuYWNjZXB0KHNleHByLmhhc2gpIDogJyc7XG5cbiAgcmV0dXJuIHRoaXMuYWNjZXB0KHNleHByLnBhdGgpICsgJyAnICsgcGFyYW1zICsgaGFzaDtcbn07XG5cblByaW50VmlzaXRvci5wcm90b3R5cGUuUGF0aEV4cHJlc3Npb24gPSBmdW5jdGlvbihpZCkge1xuICBsZXQgcGF0aCA9IGlkLnBhcnRzLmpvaW4oJy8nKTtcbiAgcmV0dXJuIChpZC5kYXRhID8gJ0AnIDogJycpICsgJ1BBVEg6JyArIHBhdGg7XG59O1xuXG5cblByaW50VmlzaXRvci5wcm90b3R5cGUuU3RyaW5nTGl0ZXJhbCA9IGZ1bmN0aW9uKHN0cmluZykge1xuICByZXR1cm4gJ1wiJyArIHN0cmluZy52YWx1ZSArICdcIic7XG59O1xuXG5QcmludFZpc2l0b3IucHJvdG90eXBlLk51bWJlckxpdGVyYWwgPSBmdW5jdGlvbihudW1iZXIpIHtcbiAgcmV0dXJuICdOVU1CRVJ7JyArIG51bWJlci52YWx1ZSArICd9Jztcbn07XG5cblByaW50VmlzaXRvci5wcm90b3R5cGUuQm9vbGVhbkxpdGVyYWwgPSBmdW5jdGlvbihib29sKSB7XG4gIHJldHVybiAnQk9PTEVBTnsnICsgYm9vbC52YWx1ZSArICd9Jztcbn07XG5cblByaW50VmlzaXRvci5wcm90b3R5cGUuVW5kZWZpbmVkTGl0ZXJhbCA9IGZ1bmN0aW9uKCkge1xuICByZXR1cm4gJ1VOREVGSU5FRCc7XG59O1xuXG5QcmludFZpc2l0b3IucHJvdG90eXBlLk51bGxMaXRlcmFsID0gZnVuY3Rpb24oKSB7XG4gIHJldHVybiAnTlVMTCc7XG59O1xuXG5QcmludFZpc2l0b3IucHJvdG90eXBlLkhhc2ggPSBmdW5jdGlvbihoYXNoKSB7XG4gIGxldCBwYWlycyA9IGhhc2gucGFpcnMsXG4gICAgICBqb2luZWRQYWlycyA9IFtdO1xuXG4gIGZvciAobGV0IGkgPSAwLCBsID0gcGFpcnMubGVuZ3RoOyBpIDwgbDsgaSsrKSB7XG4gICAgam9pbmVkUGFpcnMucHVzaCh0aGlzLmFjY2VwdChwYWlyc1tpXSkpO1xuICB9XG5cbiAgcmV0dXJuICdIQVNIeycgKyBqb2luZWRQYWlycy5qb2luKCcsICcpICsgJ30nO1xufTtcblByaW50VmlzaXRvci5wcm90b3R5cGUuSGFzaFBhaXIgPSBmdW5jdGlvbihwYWlyKSB7XG4gIHJldHVybiBwYWlyLmtleSArICc9JyArIHRoaXMuYWNjZXB0KHBhaXIudmFsdWUpO1xufTtcbi8qIGVzbGludC1lbmFibGUgbmV3LWNhcCAqL1xuIl19
 
+
+/***/ },
+/* 86 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _templatesNavbarHtml = __webpack_require__(87);
+	
+	var _templatesNavbarHtml2 = _interopRequireDefault(_templatesNavbarHtml);
+	
+	var app = {
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {
+	    (0, _jquery2['default'])('header').append(_templatesNavbarHtml2['default']);
+	  }
+	};
+	
+	module.exports = app;
+
+/***/ },
+/* 87 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"navbar navbar-default\">\n  <a role=\"menuitem\" href=\"/pages/todo.html\"> TODO APPLICATION </a>\n  <a role=\"menuitem\" href=\"/pages/project.html\"> MY PROJECT </a>\n  <a role=\"menuitem\" href=\"/pages/funnySquares.html\"> FUNNY SQUARES </a>\n  <a role=\"menuitem\" href=\"/\"> HOME </a>\n</div>";
 
 /***/ }
 /******/ ]);

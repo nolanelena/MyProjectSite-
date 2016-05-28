@@ -1,7 +1,7 @@
 
 import $ from 'jquery';
 import _ from 'underscore';
-import rawTemplate from 'html!templates/funnySquare.html';
+import rawTemplate from 'templates/funnySquare.html';
 import Handlebars from 'Handlebars';
 
 var template;
