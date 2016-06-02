@@ -58,9 +58,9 @@
 	
 	var _pagesTodo2 = _interopRequireDefault(_pagesTodo);
 	
-	var _pagesProject = __webpack_require__(53);
+	var _pagesMaven = __webpack_require__(53);
 	
-	var _pagesProject2 = _interopRequireDefault(_pagesProject);
+	var _pagesMaven2 = _interopRequireDefault(_pagesMaven);
 	
 	var _pagesFunnySquares = __webpack_require__(54);
 	
@@ -9946,7 +9946,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"page":"page","todo-container":"todo-container","notepad-bar":"notepad-bar","v_line-left":"v_line-left","h_line":"h_line","col-md-10":"col-md-10","add-todo-container":"add-todo-container","col-md-2":"col-md-2","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","navbar":"navbar","navbar-default":"navbar-default","modern":"modern","modern-image":"modern-image"};
+	module.exports = {"page":"page","todo-container":"todo-container","notepad-bar":"notepad-bar","v_line-left":"v_line-left","h_line":"h_line","col-md-10":"col-md-10","add-todo-container":"add-todo-container","col-md-2":"col-md-2","custom-bootstrap-menu":"custom-bootstrap-menu","navbar-default":"navbar-default","navbar-brand":"navbar-brand","navbar-nav":"navbar-nav","active":"active","navbar-toggle":"navbar-toggle","icon-bar":"icon-bar","maven-header":"maven-header","navbar-collapse":"navbar-collapse","collapse":"collapse","menuitem":"menuitem","navbar-text":"navbar-text","in":"in","collapsing":"collapsing","funnyheader":"funnyheader","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","navbar":"navbar","modern":"modern","modern-image":"modern-image"};
 
 /***/ },
 /* 3 */,
@@ -24101,7 +24101,7 @@
 /* 87 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"navbar navbar-default\">\n  <a role=\"menuitem\" href=\"/pages/todo.html\"> TODO APPLICATION </a>\n  <a role=\"menuitem\" href=\"/pages/project.html\"> MY PROJECT </a>\n  <a role=\"menuitem\" href=\"/pages/funnySquares.html\"> FUNNY SQUARES </a>\n  <a role=\"menuitem\" href=\"/\"> HOME </a>\n</div>";
+	module.exports = "<div class=\"navbar navbar-default\">\n  <a role=\"menuitem\" href=\"/pages/todo.html\"> TODO APPLICATION </a>\n  <a role=\"menuitem\" href=\"/pages/maven.html\"> MAVEN </a>\n  <a role=\"menuitem\" href=\"/pages/funnySquares.html\"> FUNNY SQUARES </a>\n  <a role=\"menuitem\" href=\"/\"> HOME </a>\n</div>";
 
 /***/ }
 /******/ ]);

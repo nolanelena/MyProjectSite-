@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);/*https://www.google.com/fonts */
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);@import url(https://fonts.googleapis.com/css?family=Raleway);/*https://www.google.com/fonts */
 .page {
   position: absolute;
   height: 700px;
@@ -72,7 +72,133 @@
   border-right: 1px solid #ff0000;
 }
 
-h1 {
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+/*
+
+.maven-header h1{
+  font-family: 'Raleway', sans-serif;
+  color: #70aeac;
+  font-size: 22px;
+}
+
+.mavennav {
+  font-family: 'Raleway', sans-serif;
+  display: inline;
+  font-size: 18px;  
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}*/
+#custom-bootstrap-menu.navbar-default .navbar-brand {
+  color: #70aeac;
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+  list-style-type: none;
+}
+
+#custom-bootstrap-menu.navbar-default {
+  font-size: 17px;
+  font-family: 'Raleway', sans-serif;
+  background-color: black;
+  text-align: right;
+  width: 1700px;
+  height: auto;
+  display: inline-block;
+  padding: 20px;
+  position: absolute;
+  background: -webkit-linear-gradient(top, #4d4b4b 0%, black 100%);
+  border-width: 0px;
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-nav > a {
+  color: white;
+  background-color: rgba(248, 248, 248, 0);
+  font-family: 'Raleway', sans-serif;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-nav > a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav > a:focus {
+  color: #698a88;
+  background-color: transparent;
+  font-family: 'Raleway', sans-serif;
+  list-style-type: none;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-nav > .active > a,
+#custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav > .active > a:focus {
+  color: #698a88;
+  background-color: rgba(231, 231, 231, 0);
+  font-family: 'Raleway', sans-serif;
+  list-style-type: none;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+  border-color: #ddd;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+  background-color: #ddd;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+  background-color: #000000;
+}
+
+@media (max-width: 991px) {
+  .maven-header {
+    float: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+  .navbar-nav {
+    float: none !important;
+    margin: 7.5px -15px;
+  }
+  .navbar-nav > a {
+    float: none;
+  }
+  .navbar-nav > .menuitem {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-text {
+    float: none;
+    margin: 15px 0;
+  }
+  /* since 3.1.0 */
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+  .collapsing {
+    overflow: hidden !important;
+  }
+}
+
+.funnyheader h1 {
   font-family: 'Josefin Sans', sans-serif;
   color: #595959;
   padding-top: 50px;
@@ -160,17 +286,11 @@ h1 {
   text-decoration: none;
 }
 
-h1 {
+/*h1 {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 30px;
   color: #595959;
-}
-
-video {
-  height: 240;
-  width: 320;
-}
-
+}*/
 #modern {
   position: fixed;
   display: inline;

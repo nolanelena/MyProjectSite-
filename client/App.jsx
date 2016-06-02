@@ -2,7 +2,7 @@
 import $ from 'jquery';
 import 'styles/main.scss'; 
 import todos from 'pages/todo'; 
-import project from 'pages/project';
+import maven from 'pages/maven';
 import funnySquares from 'pages/funnySquares';
 import header from 'components/header';
 
