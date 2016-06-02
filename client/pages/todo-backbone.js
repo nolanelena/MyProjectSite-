@@ -35,7 +35,7 @@ TodoModel = Backbone.Model.extend({
   }
 });
 
-var todoModel = new TodoModel();
+todoModel = new TodoModel();
 
 // View 
 
@@ -50,6 +50,6 @@ TodoControllerView = Backbone.View.extend({
   }
 });
 
-var todoControllerView = new TodoControllerView(); // it calls ViewClass.initialize
+todoControllerView = new TodoControllerView(); // it calls ViewClass.initialize
 
 module.exports = todoControllerView;
