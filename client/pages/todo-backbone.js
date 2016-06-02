@@ -25,13 +25,32 @@ var TodoControllerView;
 
 TodoModel = Backbone.Model.extend({
   defaults: {
-    
+    todos: []
+  },
+  todoSchema: {
+    id: 0,
+    title: "",
+    completed: false
   },
   fetch: function(){
-    // gets the data
+    var data = lscache.get('todos');
+    data = this.applySchema(data);
+    this.set('todos', data);
   },
   save: function(){
-    // saves the data 
+    var data = this.get('todos');
+    lscache.set('todos', data);
+  },
+  applySchema: function(todos){
+    var data = todos;
+    var schema = this.todoSchema;
+    data = (_.isArray(todos)) ? data : [];
+    data = data.map(function(todo, index){
+      todo.id = index;
+      return _.defaults(todo, this.todoSchema);
+    });
+
+    return data;
   }
 });
 
