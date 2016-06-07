@@ -66,7 +66,11 @@
 	
 	var _pagesFunnySquares2 = _interopRequireDefault(_pagesFunnySquares);
 	
-	var _componentsHeader = __webpack_require__(87);
+	var _pagesBackboneForms = __webpack_require__(87);
+	
+	var _pagesBackboneForms2 = _interopRequireDefault(_pagesBackboneForms);
+	
+	var _componentsHeader = __webpack_require__(90);
 	
 	var _componentsHeader2 = _interopRequireDefault(_componentsHeader);
 	
@@ -88,6 +92,11 @@
 	      break;
 	    case '/pages/funnySquares.html':
 	      _pagesFunnySquares2['default'].init();
+	      break;
+	    case '/pages/backboneForms.html':
+	      _pagesBackboneForms2['default'].render();
+	      break;
+	    default:
 	      break;
 	
 	  }
@@ -9946,7 +9955,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"page":"page","todo-container":"todo-container","notepad-bar":"notepad-bar","v_line-left":"v_line-left","h_line":"h_line","col-md-10":"col-md-10","add-todo-container":"add-todo-container","col-md-2":"col-md-2","custom-bootstrap-menu":"custom-bootstrap-menu","navbar-default":"navbar-default","navbar-brand":"navbar-brand","navbar-nav":"navbar-nav","active":"active","navbar-toggle":"navbar-toggle","icon-bar":"icon-bar","maven-header":"maven-header","navbar-collapse":"navbar-collapse","collapse":"collapse","menuitem":"menuitem","navbar-text":"navbar-text","in":"in","collapsing":"collapsing","funnyheader":"funnyheader","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","navbar":"navbar","modern":"modern","modern-image":"modern-image"};
+	module.exports = {"page":"page","todo-container":"todo-container","notepad-bar":"notepad-bar","v_line-left":"v_line-left","h_line":"h_line","col-md-10":"col-md-10","add-todo-container":"add-todo-container","col-md-2":"col-md-2","custom-bootstrap-menu":"custom-bootstrap-menu","navbar-default":"navbar-default","navbar-brand":"navbar-brand","navbar-nav":"navbar-nav","active":"active","navbar-toggle":"navbar-toggle","icon-bar":"icon-bar","maven-header":"maven-header","navbar-collapse":"navbar-collapse","collapse":"collapse","menuitem":"menuitem","navbar-text":"navbar-text","in":"in","collapsing":"collapsing","funnyheader":"funnyheader","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","page-container":"page-container","navbar-fixed-side":"navbar-fixed-side","container":"container","container-fluid":"container-fluid","navbar-header":"navbar-header","navbar-form":"navbar-form","navbar-left":"navbar-left","navbar-right":"navbar-right","dropdown-menu":"dropdown-menu","dropdown-header":"dropdown-header","dropdown":"dropdown","dropdown-toggle":"dropdown-toggle","caret":"caret","navbar-inverse":"navbar-inverse","divider":"divider","modern":"modern","modern-image":"modern-image"};
 
 /***/ },
 /* 3 */,
@@ -10013,6 +10022,7 @@
 	  },
 	  save: function save() {
 	    var data = this.get('todos');
+	    data = this.applySchema(data);
 	    _lscache2['default'].set('todos', data);
 	  },
 	  applySchema: function applySchema(todos) {
@@ -10083,7 +10093,7 @@
 	  tagName: 'li', // el= <li class="list-group-item"></li>
 	  className: 'list-group-item row',
 	  events: {
-	    'click .close': 'removerItem'
+	    'click .close': 'removeItem'
 	  },
 	  template: _handlebars2['default'].compile(_templatesTodoItemHtml2['default']),
 	  initialize: function initialize(todo) {
@@ -26008,11 +26018,146 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
+	var _underscore = __webpack_require__(7);
+	
+	var _underscore2 = _interopRequireDefault(_underscore);
+	
+	var _backbone = __webpack_require__(8);
+	
+	var _backbone2 = _interopRequireDefault(_backbone);
+	
+	var _handlebars = __webpack_require__(9);
+	
+	var _handlebars2 = _interopRequireDefault(_handlebars);
+	
+	var _lscache = __webpack_require__(39);
+	
+	var _lscache2 = _interopRequireDefault(_lscache);
+	
+	var _templatesAccountListHtml = __webpack_require__(88);
+	
+	var _templatesAccountListHtml2 = _interopRequireDefault(_templatesAccountListHtml);
+	
+	var _templatesCreateAccountHtml = __webpack_require__(89);
+	
+	var _templatesCreateAccountHtml2 = _interopRequireDefault(_templatesCreateAccountHtml);
+	
+	// model
+	
+	var $ = __webpack_require__(1);
+	
+	// legacy loading for bootstrap
+	window.jQuery = window.$ = $;
+	__webpack_require__(41);
+	
+	var accountModelConfigObject = {
+	  defaults: {
+	    accounts: []
+	  },
+	  save: function save() {
+	    var data = this.get('accounts');
+	    _lscache2['default'].set('accounts', data);
+	  },
+	  fetch: function fetch() {
+	    var data = _lscache2['default'].get('accounts');
+	    data = data || [];
+	    this.set('accounts', data);
+	  }
+	};
+	
+	var AccountModel = _backbone2['default'].Model.extend(accountModelConfigObject);
+	var accountModel = new AccountModel();
+	
+	// Controller
+	
+	var controllerConfigObject = {
+	  el: '.page-container',
+	  model: accountModel,
+	  events: {
+	    'click .btn-create': 'createNewAccount'
+	  },
+	  initialize: function initialize() {
+	    this.model.fetch();
+	  },
+	  render: function render() {
+	    var listView = new ListView();
+	    this.$el.find('.view-container').html(listView.$el.html());
+	  },
+	  // display the account list
+	  createNewAccount: function createNewAccount() {
+	    var createView = new CreateView();
+	    this.$el.find('.view-container').html(createView.$el.html());
+	  }
+	};
+	var AccountControllerView = _backbone2['default'].View.extend(controllerConfigObject);
+	
+	// Views
+	
+	var listViewConfig = {
+	  tagName: 'div',
+	  events: {},
+	  template: _handlebars2['default'].compile(_templatesAccountListHtml2['default']),
+	  initialize: function initialize() {
+	    this.render();
+	  },
+	  render: function render() {
+	    var renderedTemplate = this.template({});
+	    this.$el.html(renderedTemplate);
+	  }
+	
+	};
+	var ListView = _backbone2['default'].View.extend(listViewConfig);
+	
+	// Create
+	
+	var createViewConfig = {
+	  tagName: 'div',
+	  events: {
+	    'click .btn-done': 'submitForm'
+	  },
+	  template: _handlebars2['default'].compile(_templatesCreateAccountHtml2['default']),
+	  initialize: function initialize() {
+	    this.render();
+	  },
+	  render: function render() {
+	    var renderedTemplate = this.template({});
+	    this.$el.html(renderedTemplate);
+	  },
+	  submitForm: function submitForm() {
+	    accountControllerView.render();
+	  }
+	};
+	var CreateView = _backbone2['default'].View.extend(createViewConfig);
+	
+	var accountControllerView = new AccountControllerView();
+	
+	module.exports = accountControllerView;
+
+/***/ },
+/* 88 */
+/***/ function(module, exports) {
+
+	module.exports = "<table class=\"table table-striped table-bordered\">\n\t\t<tr>\n\t\t <th>number</th>\n\t\t </tr>\n\t\t <tr>\n\t\t <td>1</td>\n\t </tr>\n\t <tr>\n\t\t <td>2</td>\n\t\t </tr>\n\t\t </table>\n";
+
+/***/ },
+/* 89 */
+/***/ function(module, exports) {
+
+	module.exports = "<form>\n\t<label for=\"name-field\">Name</label>\n\t<input class=\"form-control\" type=\"text\" id=\"name-field\">\n\n</form>\n<button class=\"btn btn-primary btn-done\">Done</button>";
+
+/***/ },
+/* 90 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
 	var _jquery = __webpack_require__(1);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _templatesNavbarHtml = __webpack_require__(88);
+	var _templatesNavbarHtml = __webpack_require__(91);
 	
 	var _templatesNavbarHtml2 = _interopRequireDefault(_templatesNavbarHtml);
 	
@@ -26028,10 +26173,10 @@
 	module.exports = app;
 
 /***/ },
-/* 88 */
+/* 91 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"navbar navbar-default\">\n  <a role=\"menuitem\" href=\"/pages/todo.html\"> TODO APPLICATION </a>\n  <a role=\"menuitem\" href=\"/pages/maven.html\"> MAVEN </a>\n  <a role=\"menuitem\" href=\"/pages/funnySquares.html\"> FUNNY SQUARES </a>\n  <a role=\"menuitem\" href=\"/\"> HOME </a>\n</div>";
+	module.exports = "<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-sm-3 col-lg-4\">\n<nav class=\"navbar navbar-default navbar-fixed-side\">\n  <a role=\"menuitem\" href=\"/pages/todo.html\"> TODO APPLICATION </a>\n  <a role=\"menuitem\" href=\"/pages/maven.html\"> MAVEN </a>\n  <a role=\"menuitem\" href=\"/pages/funnySquares.html\"> FUNNY SQUARES </a>\n  <a role=\"menuitem\" href=\"/pages/backboneForms.html\"> BACKBONE FORM </a>\n  <a role=\"menuitem\" href=\"/\"> HOME </a>\n</nav>\n  </div>\n    <!-- <div class=\"col-sm-9 col-lg-8\"></div> -->\n </div>\n</div> ";
 
 /***/ }
 /******/ ]);

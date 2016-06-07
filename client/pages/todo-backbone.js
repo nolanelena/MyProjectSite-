@@ -39,6 +39,7 @@ TodoModel = Backbone.Model.extend({
   },
   save: function(){
     var data = this.get('todos');
+    data = this.applySchema(data);
     lscache.set('todos', data);
   },
   applySchema: function(todos){
@@ -107,7 +108,7 @@ TodoItemView = Backbone.View.extend({
   tagName: 'li', // el= <li class="list-group-item"></li>
   className: 'list-group-item row',
   events: {
-    'click .close': 'removerItem'
+    'click .close': 'removeItem'
   },
   template: Handlebars.compile(todoItemTemplate),
   initialize: function(todo){
