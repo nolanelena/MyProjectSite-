@@ -1,14 +1,14 @@
 <div class="col-md-1">
-<input class="completed-checkbox" type="checkbox" {{#if completed}}checked{{/if}}>
-  </div>
-  <div class="col-md-10 title">{{title}}</div>
-  <div class="col-md-10 title-edit hidden">
-   <input type="text" class="form-control" value="{{title}}" data-id="{{id}}">
-  </div>
-  <div class="col-md-1">
-    <button type="button" class="close" aria-label="Close">
+  <input class="completed-checkbox" type="checkbox" {{#if completed}}checked{{/if}}>
+</div>
+<div class="col-md-10 title">{{title}}</div>
+<div class="col-md-10 title-edit hidden">
+  <input type="text" class="form-control title-edit-input" value="{{title}}">
+</div>
+<div class="col-md-1">
+  <button type="button" class="close" aria-label="Close">
     <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
+  </button>
+</div>
 
 
