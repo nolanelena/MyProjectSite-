@@ -9955,7 +9955,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"page":"page","todo-container":"todo-container","notepad-bar":"notepad-bar","v_line-left":"v_line-left","h_line":"h_line","col-md-10":"col-md-10","add-todo-container":"add-todo-container","col-md-2":"col-md-2","custom-bootstrap-menu":"custom-bootstrap-menu","navbar-default":"navbar-default","navbar-brand":"navbar-brand","navbar-nav":"navbar-nav","active":"active","navbar-toggle":"navbar-toggle","icon-bar":"icon-bar","maven-header":"maven-header","navbar-collapse":"navbar-collapse","collapse":"collapse","menuitem":"menuitem","navbar-text":"navbar-text","in":"in","collapsing":"collapsing","funnyheader":"funnyheader","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","page-container":"page-container","navbar-fixed-side":"navbar-fixed-side","container":"container","container-fluid":"container-fluid","navbar-header":"navbar-header","navbar-form":"navbar-form","navbar-left":"navbar-left","navbar-right":"navbar-right","dropdown-menu":"dropdown-menu","dropdown-header":"dropdown-header","dropdown":"dropdown","dropdown-toggle":"dropdown-toggle","caret":"caret","navbar-inverse":"navbar-inverse","divider":"divider","modern":"modern","modern-image":"modern-image"};
+	module.exports = {"page":"page","todo-container":"todo-container","notepad-bar":"notepad-bar","v_line-left":"v_line-left","h_line":"h_line","col-md-10":"col-md-10","add-todo-container":"add-todo-container","col-md-2":"col-md-2","custom-bootstrap-menu":"custom-bootstrap-menu","navbar-default":"navbar-default","navbar-brand":"navbar-brand","navbar-nav":"navbar-nav","active":"active","navbar-toggle":"navbar-toggle","icon-bar":"icon-bar","maven-header":"maven-header","navbar-collapse":"navbar-collapse","collapse":"collapse","menuitem":"menuitem","navbar-text":"navbar-text","in":"in","collapsing":"collapsing","funnyheader":"funnyheader","content":"content","container-fluid":"container-fluid","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","page-container":"page-container","navbar-fixed-side":"navbar-fixed-side","navbar":"navbar","container":"container","navbar-header":"navbar-header","navbar-form":"navbar-form","navbar-left":"navbar-left","navbar-right":"navbar-right","dropdown-menu":"dropdown-menu","dropdown-header":"dropdown-header","dropdown":"dropdown","dropdown-toggle":"dropdown-toggle","caret":"caret","navbar-inverse":"navbar-inverse","divider":"divider","modern":"modern","modern-image":"modern-image"};
 
 /***/ },
 /* 3 */,
@@ -10048,6 +10048,13 @@
 	    var todos = this.get('todos');
 	    todos.splice(id, 1);
 	    this.save();
+	  },
+	  itemCompleted: function itemCompleted(id, isCompleted) {
+	    var todos = this.get('todos');
+	    var item = _underscore2['default'].findWhere(todos, { id: id });
+	    item.completed = isCompleted;
+	    this.set('todos', todos);
+	    this.save();
 	  }
 	});
 	
@@ -10086,6 +10093,10 @@
 	  removeItem: function removeItem(id) {
 	    this.model.removeItem(id);
 	    this.render();
+	  },
+	  itemCompleted: function itemCompleted(id, isCompleted) {
+	    this.model.itemCompleted(id, isCompleted);
+	    this.render();
 	  }
 	});
 	
@@ -10093,7 +10104,8 @@
 	  tagName: 'li', // el= <li class="list-group-item"></li>
 	  className: 'list-group-item row',
 	  events: {
-	    'click .close': 'removeItem'
+	    'click .close': 'removeItem',
+	    'change .completed-checkbox': 'completedClicked'
 	  },
 	  template: _handlebars2['default'].compile(_templatesTodoItemHtml2['default']),
 	  initialize: function initialize(todo) {
@@ -10102,10 +10114,15 @@
 	  },
 	  render: function render() {
 	    this.$el.html(this.template(this.data));
+	    this.$el.toggleClass('disabled', this.data.completed);
 	  },
 	  removeItem: function removeItem() {
 	    // get the id of the current item
 	    todoControllerView.removeItem(this.data.id);
+	  },
+	  completedClicked: function completedClicked(event) {
+	    var isChecked = $(event.currentTarget).is(':checked');
+	    todoControllerView.itemCompleted(this.data.id, isChecked);
 	  }
 	});
 	
@@ -18740,7 +18757,7 @@
 /* 40 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"col-md-1\">\n<input type=\"checkbox\">\n  </div>\n  <div class=\"col-md-10 title\">{{title}}</div>\n  <div class=\"col-md-10 title-edit hidden\">\n   <input type=\"text\" class=\"form-control\" value=\"{{title}}\" data-id=\"{{id}}\">\n  </div>\n  <div class=\"col-md-1\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close\">\n    <span aria-hidden=\"true\">&times;</span>\n    </button>\n  </div>\n\n\n";
+	module.exports = "<div class=\"col-md-1\">\n<input class=\"completed-checkbox\" type=\"checkbox\" {{#if completed}}checked{{/if}}>\n  </div>\n  <div class=\"col-md-10 title\">{{title}}</div>\n  <div class=\"col-md-10 title-edit hidden\">\n   <input type=\"text\" class=\"form-control\" value=\"{{title}}\" data-id=\"{{id}}\">\n  </div>\n  <div class=\"col-md-1\">\n    <button type=\"button\" class=\"close\" aria-label=\"Close\">\n    <span aria-hidden=\"true\">&times;</span>\n    </button>\n  </div>\n\n\n";
 
 /***/ },
 /* 41 */
@@ -26112,10 +26129,11 @@
 	
 	var createViewConfig = {
 	  tagName: 'div',
+	  template: _handlebars2['default'].compile(_templatesCreateAccountHtml2['default']),
 	  events: {
 	    'click .btn-done': 'submitForm'
 	  },
-	  template: _handlebars2['default'].compile(_templatesCreateAccountHtml2['default']),
+	
 	  initialize: function initialize() {
 	    this.render();
 	  },
@@ -26176,7 +26194,7 @@
 /* 91 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-sm-3 col-lg-4\">\n<nav class=\"navbar navbar-default navbar-fixed-side\">\n  <a role=\"menuitem\" href=\"/pages/todo.html\"> TODO APPLICATION </a>\n  <a role=\"menuitem\" href=\"/pages/maven.html\"> MAVEN </a>\n  <a role=\"menuitem\" href=\"/pages/funnySquares.html\"> FUNNY SQUARES </a>\n  <a role=\"menuitem\" href=\"/pages/backboneForms.html\"> BACKBONE FORM </a>\n  <a role=\"menuitem\" href=\"/\"> HOME </a>\n</nav>\n  </div>\n    <!-- <div class=\"col-sm-9 col-lg-8\"></div> -->\n </div>\n</div> ";
+	module.exports = "<div id=\"content\"class=\"container-fluid\">\n  <div class=\"row\">\n    <div id=\"navigation\" class=\"col-lg-2 col-md-3 col-sm-3\">\n<nav class=\"navbar navbar-default navbar-fixed-side\">\n<h1>MAVEN</h1>\n<ul>\n  <li><a role=\"menuitem\" href=\"/\"> HOME </a></li><br>\n  <li><a role=\"menuitem\" href=\"/pages/maven.html\"> MAVEN </a></li><br>\n  <li><a role=\"menuitem\" href=\"/pages/funnySquares.html\"> FUNNY SQUARES </a></li><br>\n  <li><a role=\"menuitem\" href=\"/pages/backboneForms.html\"> BACKBONE FORM </a></li><br>\n  <li><a role=\"menuitem\" href=\"/pages/todo.html\"> TODO APPLICATION </a></li><br>\n</nav>\n</ul>\n  </div>\n  \t\n  \t<div class=\"col-lg-2 col-md-3 col-sm-3\">\n  \t</div>\n</main>\n  \t<div id=\"main\" class=\"col-lg-10 col-md-9 fill\">\n  \t</div>\n </div>\n</div> ";
 
 /***/ }
 /******/ ]);

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway);
+/*/*@import url(https://fonts.googleapis.com/css?family=Raleway);
 
 
 body {
@@ -27,6 +27,7 @@ a {
 }*/
 
 #custom-bootstrap-menu.navbar-default .navbar-brand {
+    position: relative;
     color: #70aeac;
     font-size: 22px;
     font-family: 'Raleway', sans-serif;
@@ -37,11 +38,12 @@ a {
     font-family: 'Raleway', sans-serif;
     background-color: rgba(0, 0, 0, 1);
     text-align: right;
-    width: 1700px;
+    width: 1000px;
     height: auto;
     display: inline-block;
     padding: 20px;
-    position: absolute;
+    position: fixed;
+    margin-left: 250px;
     background: -webkit-linear-gradient(top, rgba(77, 75, 75, 1) 0%, rgba(0, 0, 0, 1) 100%);
     border-width: 0px;
     border-radius: 1px;

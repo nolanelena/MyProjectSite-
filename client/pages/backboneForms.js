@@ -76,10 +76,11 @@ var ListView = Backbone.View.extend(listViewConfig);
 
 var createViewConfig = {
   tagName: 'div',
+  template: Handlebars.compile(createTemplate),
   events: {
     'click .btn-done': 'submitForm'
   },
-  template: Handlebars.compile(createTemplate),
+  
   initialize: function(){
     this.render();
   },

@@ -1,15 +1,24 @@
+
 .funnyheader h1 {
+	position: relative;
+	text-align: center;
+	margin-right: 500px;
 	font-family:'Josefin Sans', sans-serif;
 	color: #595959;
 	padding-top: 50px
 	
 	
  }
+ #content .container-fluid {
+ 	margin-right: 20px;
+ }
 
 .square {
+	position: relative;
 	display: inline-block;
 	height: 100px;
 	width: 100px;
+	left: 350%;
 	background-color: #74ccc7;
 	text-align: center;
 	line-height: 100px;
@@ -19,9 +28,11 @@
 	transition: transform .5s;
 }
 .square-container {
+	position: relative;
 	perspective: 50px;
 	display: inline-block;
 	color: #595959;
+	
 }
 
 .square1:hover {
