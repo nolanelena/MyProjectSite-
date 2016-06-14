@@ -4,28 +4,61 @@
 @import 'backboneForms';
 @import 'navbar';
 
-
-/*h1 {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 30px;
-  color: #595959;
-}*/
-
-
-#modern {
-  position: fixed;
-  display: inline; 
-  top: 800px; 
-  left: 0; 
-  width: 800px; 
-  height: 800px;
+div {
+  display: block;
 }
-
-.modern-image {
+* {
+  box-sizing: border-box;
+}
+.top-border, .right-border, .bottom-border, .left-border {
   position: fixed;
-  margin: auto; 
-  width: 100px;
-  height: auto;
+  background-color: #fff;
+  padding: 10px;
+}
+.right-border {
+  z-index: 1042;
+}
+.top-border {
+  left: 0;
+  right: 0;
+}
+.right-border {
+  top:0;
+  right:0;
+  bottom: 0;
+}
+.bottom-border {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.left-border {
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.PageBlocks li.isotope-item-fullheight {
+  height: calc(100vh - 40px);
+}
+.is-isotope {
+  padding: 0;
+  margin: 0;
+  max-width: none;
   overflow: hidden;
 }
+.is-isotope > * {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.PageBlocks li > a {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: calc(100% + 1px);
+}
+
+
 

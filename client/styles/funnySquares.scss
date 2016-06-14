@@ -6,19 +6,13 @@
 	font-family:'Josefin Sans', sans-serif;
 	color: #595959;
 	padding-top: 50px
-	
-	
- }
- #content .container-fluid {
- 	margin-right: 20px;
- }
+}
+
 
 .square {
-	position: relative;
-	display: inline-block;
+	position: fixed;
 	height: 100px;
 	width: 100px;
-	left: 350%;
 	background-color: #74ccc7;
 	text-align: center;
 	line-height: 100px;
@@ -26,13 +20,15 @@
 	font-size: 54px;
 	transform: none;
 	transition: transform .5s;
+	float: right;
 }
 .square-container {
-	position: relative;
+	position: fixed;
 	perspective: 50px;
 	display: inline-block;
 	color: #595959;
-	
+	margin-left: 1000px;
+
 }
 
 .square1:hover {

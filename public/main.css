@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);/*https://www.google.com/fonts */
-.page {
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);@import url(https://fonts.googleapis.com/css?family=Poiret+One);/*https://www.google.com/fonts */
+.note-page {
   position: absolute;
   height: 700px;
   width: 700px;
@@ -211,16 +211,10 @@ a {
   padding-top: 50px;
 }
 
-#content .container-fluid {
-  margin-right: 20px;
-}
-
 .square {
-  position: relative;
-  display: inline-block;
+  position: fixed;
   height: 100px;
   width: 100px;
-  left: 350%;
   background-color: #74ccc7;
   text-align: center;
   line-height: 100px;
@@ -228,13 +222,15 @@ a {
   font-size: 54px;
   transform: none;
   transition: transform .5s;
+  float: right;
 }
 
 .square-container {
-  position: relative;
+  position: fixed;
   perspective: 50px;
   display: inline-block;
   color: #595959;
+  margin-left: 1000px;
 }
 
 .square1:hover {
@@ -282,9 +278,10 @@ a {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .navbar-fixed-side {
-    position: fixed;
+    display: inline-block;
+    position: relative;
     margin: 0 -15px;
     height: 100vh;
     width: inherit;
@@ -299,24 +296,49 @@ nav.navbar {
   position: fixed;
 }
 
+body {
+  height: 100%;
+  overflow: hidden;
+  padding-right: 44px;
+}
+
 h1 {
   display: block;
   text-align: center;
+  font-family: 'Poiret One', cursive;
   line-height: 1.4;
   font-weight: 700;
   -webkit-margin-before: 0.67em;
   -webkit-margin-after: 0.67em;
+  margin-top: 100px;
 }
 
 ul {
   list-style-type: none;
-  padding: 20px 19px;
+  padding: 50px 19px;
+  font-family: 'Poiret One', cursive;
   font-size: 12px;
   line-height: 20px;
   font-weight: 900;
   letter-spacing: .2em;
   margin: 0 0 100px 0;
   text-align: center;
+  transition: .2s;
+}
+
+a {
+  color: #000000;
+  font-weight: 900;
+}
+
+a:hover {
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+li {
+  margin-top: 20px;
 }
 
 .navbar-fixed-side .container, .navbar-fixed-side .container-fluid {
@@ -354,9 +376,8 @@ ul {
 }
 
 .navbar-fixed-side .navbar-nav > li > a {
-  padding-top: 10px;
+  padding-top: 100px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #e7e7e7;
   list-style-type: none;
 }
 
@@ -365,7 +386,6 @@ ul {
   margin-left: -15px;
   margin-right: -15px;
   padding: 10px 15px;
-  border-bottom: 1px solid #e7e7e7;
 }
 
 .navbar-fixed-side .navbar-text {
@@ -386,7 +406,6 @@ ul {
   background-color: transparent;
   border: 0;
   box-shadow: none;
-  border-bottom: 1px solid #e7e7e7;
 }
 
 .navbar-fixed-side .navbar-nav .dropdown-menu > li > a,
@@ -397,6 +416,7 @@ ul {
 .navbar-fixed-side .navbar-nav .dropdown-menu > li > a {
   line-height: 20px;
   color: #777;
+  text-decoration: none;
 }
 
 .navbar-fixed-side .navbar-nav .dropdown-menu > li > a:hover,
@@ -409,6 +429,7 @@ ul {
 .navbar-fixed-side .navbar-nav .dropdown-menu > .active > a {
   background-color: #e7e7e7;
   color: #555;
+  text-decoration: none;
 }
 
 .navbar-fixed-side .navbar-nav > li > a:hover, .navbar-fixed-side
@@ -441,18 +462,19 @@ ul {
   display: block;
 }
 
-.navbar-fixed-side.navbar-inverse .navbar-collapse, .navbar-fixed-side
-.navbar-inverse .navbar-nav > li > a, .navbar-fixed-side.navbar-inverse
-.navbar-form, .navbar-fixed-side.navbar-inverse .navbar-nav .dropdown-menu {
-  border-color: #363636;
-}
-
+/*.navbar-fixed-side.navbar-inverse .navbar-collapse,.navbar-fixed-side
+.navbar-inverse .navbar-nav>li>a,.navbar-fixed-side.navbar-inverse 
+.navbar-form,.navbar-fixed-side.navbar-inverse .navbar-nav .dropdown-menu
+{
+  border-color:#363636;
+}*/
 .navbar-fixed-side.navbar-inverse .divider {
   background-color: #363636;
 }
 
 .navbar-fixed-side.navbar-inverse .navbar-nav .dropdown-menu > li > a {
   color: #9d9d9d;
+  text-decoration: none;
 }
 
 .navbar-fixed-side.navbar-inverse .navbar-nav .dropdown-menu > .active > a {
@@ -461,39 +483,115 @@ ul {
   text-decoration: none;
 }
 
-.navbar-fixed-side.navbar-inverse .navbar-nav > li:not(.active) > a:hover,
-.navbar-fixed-side.navbar-inverse .navbar-nav > li:not(.active) > a:focus,
-.navbar-fixed-side.navbar-inverse .navbar-nav .dropdown-menu > li:not(.active) > a:hover,
-.navbar-fixed-side.navbar-inverse .navbar-nav .dropdown-menu > li:not(.active) > a:focus {
-  background-color: #2f2f2f;
-  color: #fff;
+.navbarSocial {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.navbarSocial ul {
+  overflow: auto;
+}
+
+.navbarSocial ul li {
+  list-style-type: none;
+  float: left;
+}
+
+.navbarSocial ul li a i {
+  display: inline-block;
+  color: #000000;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  text-align: center;
+  margin: 0 5px;
+  padding-top: 100%;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+}
+
+/*main content*/
+/*.navbar-fixed-side.navbar-inverse .navbar-nav>li:not(.active)>a:hover,
+.navbar-fixed-side.navbar-inverse .navbar-nav>li:not(.active)>a:focus,
+.navbar-fixed-side.navbar-inverse .navbar-nav .dropdown-menu>li:not(.active)>a:hover,
+.navbar-fixed-side.navbar-inverse .navbar-nav .dropdown-menu>li:not(.active)>a:focus{
+  background-color:#2f2f2f;
+  color:#fff;
   text-decoration: none;
 }
-
-.navbar-fixed-side.navbar-inverse .dropdown > .dropdown-toggle {
-  color: #777777 !important;
-}
-
-/*h1 {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 30px;
-  color: #595959;
+.navbar-fixed-side.navbar-inverse .dropdown>.dropdown-toggle
+{
+  color:#777777 !important;
+  text-decoration: none;
 }*/
-#modern {
-  position: fixed;
-  display: inline;
-  top: 800px;
-  left: 0;
-  width: 800px;
-  height: 800px;
+div {
+  display: block;
 }
 
-.modern-image {
+* {
+  box-sizing: border-box;
+}
+
+.top-border, .right-border, .bottom-border, .left-border {
   position: fixed;
-  margin: auto;
-  width: 100px;
-  height: auto;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.right-border {
+  z-index: 1042;
+}
+
+.top-border {
+  left: 0;
+  right: 0;
+}
+
+.right-border {
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.bottom-border {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.left-border {
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.PageBlocks li.isotope-item-fullheight {
+  height: calc(100vh - 40px);
+}
+
+.is-isotope {
+  padding: 0;
+  margin: 0;
+  max-width: none;
   overflow: hidden;
+}
+
+.is-isotope > * {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.PageBlocks li > a {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: calc(100% + 1px);
 }
 
 /*# sourceMappingURL=main.css.map*/

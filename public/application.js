@@ -66,11 +66,15 @@
 	
 	var _pagesFunnySquares2 = _interopRequireDefault(_pagesFunnySquares);
 	
-	var _pagesBackboneForms = __webpack_require__(87);
+	var _pagesPhotoSearch = __webpack_require__(87);
+	
+	var _pagesPhotoSearch2 = _interopRequireDefault(_pagesPhotoSearch);
+	
+	var _pagesBackboneForms = __webpack_require__(88);
 	
 	var _pagesBackboneForms2 = _interopRequireDefault(_pagesBackboneForms);
 	
-	var _componentsHeader = __webpack_require__(90);
+	var _componentsHeader = __webpack_require__(91);
 	
 	var _componentsHeader2 = _interopRequireDefault(_componentsHeader);
 	
@@ -93,6 +97,8 @@
 	    case '/pages/funnySquares.html':
 	      _pagesFunnySquares2['default'].init();
 	      break;
+	    case '/pages/photoSearch.html':
+	      _pagesPhotoSearch2['default'].init();
 	    case '/pages/backboneForms.html':
 	      _pagesBackboneForms2['default'].render();
 	      break;
@@ -9955,7 +9961,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"page":"page","todo-container":"todo-container","notepad-bar":"notepad-bar","v_line-left":"v_line-left","h_line":"h_line","col-md-10":"col-md-10","add-todo-container":"add-todo-container","col-md-2":"col-md-2","custom-bootstrap-menu":"custom-bootstrap-menu","navbar-default":"navbar-default","navbar-brand":"navbar-brand","navbar-nav":"navbar-nav","active":"active","navbar-toggle":"navbar-toggle","icon-bar":"icon-bar","maven-header":"maven-header","navbar-collapse":"navbar-collapse","collapse":"collapse","menuitem":"menuitem","navbar-text":"navbar-text","in":"in","collapsing":"collapsing","funnyheader":"funnyheader","content":"content","container-fluid":"container-fluid","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","page-container":"page-container","navbar-fixed-side":"navbar-fixed-side","navbar":"navbar","container":"container","navbar-header":"navbar-header","navbar-form":"navbar-form","navbar-left":"navbar-left","navbar-right":"navbar-right","dropdown-menu":"dropdown-menu","dropdown-header":"dropdown-header","dropdown":"dropdown","dropdown-toggle":"dropdown-toggle","caret":"caret","navbar-inverse":"navbar-inverse","divider":"divider","modern":"modern","modern-image":"modern-image"};
+	module.exports = {"note-page":"note-page","todo-container":"todo-container","notepad-bar":"notepad-bar","v_line-left":"v_line-left","h_line":"h_line","col-md-10":"col-md-10","add-todo-container":"add-todo-container","col-md-2":"col-md-2","custom-bootstrap-menu":"custom-bootstrap-menu","navbar-default":"navbar-default","navbar-brand":"navbar-brand","navbar-nav":"navbar-nav","active":"active","navbar-toggle":"navbar-toggle","icon-bar":"icon-bar","maven-header":"maven-header","navbar-collapse":"navbar-collapse","collapse":"collapse","menuitem":"menuitem","navbar-text":"navbar-text","in":"in","collapsing":"collapsing","funnyheader":"funnyheader","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","page-container":"page-container","navbar-fixed-side":"navbar-fixed-side","navbar":"navbar","container":"container","container-fluid":"container-fluid","navbar-header":"navbar-header","navbar-form":"navbar-form","navbar-left":"navbar-left","navbar-right":"navbar-right","dropdown-menu":"dropdown-menu","dropdown-header":"dropdown-header","dropdown":"dropdown","dropdown-toggle":"dropdown-toggle","caret":"caret","navbar-inverse":"navbar-inverse","divider":"divider","navbarSocial":"navbarSocial","fa":"fa","top-border":"top-border","right-border":"right-border","bottom-border":"bottom-border","left-border":"left-border","PageBlocks":"PageBlocks","isotope-item-fullheight":"isotope-item-fullheight","is-isotope":"is-isotope"};
 
 /***/ },
 /* 3 */,
@@ -18784,7 +18790,7 @@
 /* 40 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"col-md-1\">\n  <input class=\"completed-checkbox\" type=\"checkbox\" {{#if completed}}checked{{/if}}>\n</div>\n<div class=\"col-md-10 title\">{{title}}</div>\n<div class=\"col-md-10 title-edit hidden\">\n  <input type=\"text\" class=\"form-control title-edit-input\" value=\"{{title}}\">\n</div>\n<div class=\"col-md-1\">\n  <button type=\"button\" class=\"close\" aria-label=\"Close\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n\n\n";
+	module.exports = "<div class=\"col-md-1\">\n  {{#if completed}}\n   <input class=\"completed-checkbox\" type=\"checkbox\"checked>\n  {{else}}\n  \t<input class=\"completed-checkbox\" type=\"checkbox\">\n  {{/if}} \n</div>\n<div class=\"col-md-10 title\">{{title}}</div>\n<div class=\"col-md-10 title-edit hidden\">\n  <input type=\"text\" class=\"form-control title-edit-input\" value=\"{{title}}\">\n</div>\n<div class=\"col-md-1\">\n  <button type=\"button\" class=\"close\" aria-label=\"Close\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n\n\n";
 
 /***/ },
 /* 41 */
@@ -26056,6 +26062,56 @@
 
 /***/ },
 /* 87 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	var app = {
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {
+	    app.$input = $('.search-container input');
+	    app.bindEvents();
+	  },
+	  bindEvents: function bindEvents() {
+	    app.$input.on('keypress', app.searchKeypress);
+	  },
+	  searchKeypress: function searchKeypress(event) {
+	    if (event.which === 13) {
+	      app.doSearch();
+	    }
+	  },
+	  doSearch: function doSearch() {
+	    var phrase = app.$input.val();
+	    $.ajax({
+	      url: 'https://api.flickr.com/services/rest',
+	      method: 'GET',
+	      data: {
+	        text: phrase,
+	        method: 'flickr.photos.search',
+	        api_key: '731717db25329eb6aa65703cb6b71970',
+	        format: 'json',
+	        per_page: 3
+	      },
+	      complete: function complete(response) {
+	        var text = response.responseText;
+	        text = text.slice(14, text.length - 1);
+	        var data = JSON.parse(text);
+	        app.renderResults(data);
+	      }
+	    });
+	  },
+	  renderResults: function renderResults(data) {
+	    // pass data to the template
+	    // append results to the .search-result div
+	  }
+	};
+	
+	module.exports = app;
+
+/***/ },
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26078,11 +26134,11 @@
 	
 	var _lscache2 = _interopRequireDefault(_lscache);
 	
-	var _templatesAccountListHtml = __webpack_require__(88);
+	var _templatesAccountListHtml = __webpack_require__(89);
 	
 	var _templatesAccountListHtml2 = _interopRequireDefault(_templatesAccountListHtml);
 	
-	var _templatesCreateAccountHtml = __webpack_require__(89);
+	var _templatesCreateAccountHtml = __webpack_require__(90);
 	
 	var _templatesCreateAccountHtml2 = _interopRequireDefault(_templatesCreateAccountHtml);
 	
@@ -26179,19 +26235,19 @@
 	module.exports = accountControllerView;
 
 /***/ },
-/* 88 */
+/* 89 */
 /***/ function(module, exports) {
 
 	module.exports = "<table class=\"table table-striped table-bordered\">\n\t\t<tr>\n\t\t <th>number</th>\n\t\t </tr>\n\t\t <tr>\n\t\t <td>1</td>\n\t </tr>\n\t <tr>\n\t\t <td>2</td>\n\t\t </tr>\n\t\t </table>\n";
 
 /***/ },
-/* 89 */
+/* 90 */
 /***/ function(module, exports) {
 
 	module.exports = "<form>\n\t<label for=\"name-field\">Name</label>\n\t<input class=\"form-control\" type=\"text\" id=\"name-field\">\n\n</form>\n<button class=\"btn btn-primary btn-done\">Done</button>";
 
 /***/ },
-/* 90 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26202,7 +26258,7 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _templatesNavbarHtml = __webpack_require__(91);
+	var _templatesNavbarHtml = __webpack_require__(92);
 	
 	var _templatesNavbarHtml2 = _interopRequireDefault(_templatesNavbarHtml);
 	
@@ -26218,10 +26274,10 @@
 	module.exports = app;
 
 /***/ },
-/* 91 */
+/* 92 */
 /***/ function(module, exports) {
 
-	module.exports = "<div id=\"content\"class=\"container-fluid\">\n  <div class=\"row\">\n    <div id=\"navigation\" class=\"col-lg-2 col-md-3 col-sm-3\">\n<nav class=\"navbar navbar-default navbar-fixed-side\">\n<h1>MAVEN</h1>\n<ul>\n  <li><a role=\"menuitem\" href=\"/\"> HOME </a></li><br>\n  <li><a role=\"menuitem\" href=\"/pages/maven.html\"> MAVEN </a></li><br>\n  <li><a role=\"menuitem\" href=\"/pages/funnySquares.html\"> FUNNY SQUARES </a></li><br>\n  <li><a role=\"menuitem\" href=\"/pages/backboneForms.html\"> BACKBONE FORM </a></li><br>\n  <li><a role=\"menuitem\" href=\"/pages/todo.html\"> TODO APPLICATION </a></li><br>\n</nav>\n</ul>\n  </div>\n  \t\n  \t<div class=\"col-lg-2 col-md-3 col-sm-3\">\n  \t</div>\n</main>\n  \t<div id=\"main\" class=\"col-lg-10 col-md-9 fill\">\n  \t</div>\n </div>\n</div> ";
+	module.exports = "\n\n<div class=\"wrapper\">\n<div class=\"row\">\n  <div class=\"col-lg-2 col-md-3 col-sm-3\">\n    <nav class=\"navbar navbar-default navbar-fixed-side\">\n      <h1>MAVEN</h1>\n      <ul>\n        <li><a role=\"menuitem\" href=\"/\"> HOME </a></li><br>\n        <li><a role=\"menuitem\" href=\"/pages/maven.html\"> MAVEN </a></li><br>\n        <li><a role=\"menuitem\" href=\"/pages/funnySquares.html\"> FUNNY SQUARES </a></li><br>\n        <li><a role=\"menuitem\" href=\"/pages/photoSearch.html\"> PHOTO SEARCH </a></li><br>\n        <li><a role=\"menuitem\" href=\"/pages/backboneForms.html\"> BACKBONE FORM </a></li><br>\n        <li><a role=\"menuitem\" href=\"/pages/todo.html\"> TODO APPLICATION </a></li><br>\n      </ul>\n   \n    <!-- end of SideNav -->\n    <div class=\"is-nav-offset\"></div>\n    <div class=\"navbarSocial\">\n    <ul>\n      <li><a href=\"https://www.facebook.com/elena.nolan.10\" target=\"blank\">\n      <i class=\"fa fa-facebook\"></i></a></li>\n      <li><a href=\"https://twitter.com/enolan1\" target=\"blank\">\n      <i class=\"fa fa-twitter\"></i></a></li>\n\n    </div>\n  </nav>\n</div>\n  <div class=\"col-lg-10 col-md-9 content\">\n  </div>\n</div>\n</div> \n\n";
 
 /***/ }
 /******/ ]);

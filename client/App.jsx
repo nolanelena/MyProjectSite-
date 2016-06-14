@@ -4,6 +4,7 @@ import 'styles/main.scss';
 import todos from 'pages/todo-backbone'; 
 import maven from 'pages/maven';
 import funnySquares from 'pages/funnySquares';
+import photoSearch from 'pages/photoSearch';
 import backboneForms from 'pages/backboneForms';
 import header from 'components/header';
 
@@ -27,6 +28,8 @@ $(function(){
     case '/pages/funnySquares.html':
           funnySquares.init();
     break;
+    case '/pages/photoSearch.html':
+          photoSearch.init();
     case '/pages/backboneForms.html':
       backboneForms.render();
     break;

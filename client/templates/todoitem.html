@@ -1,5 +1,9 @@
 <div class="col-md-1">
-  <input class="completed-checkbox" type="checkbox" {{#if completed}}checked{{/if}}>
+  {{#if completed}}
+   <input class="completed-checkbox" type="checkbox"checked>
+  {{else}}
+  	<input class="completed-checkbox" type="checkbox">
+  {{/if}} 
 </div>
 <div class="col-md-10 title">{{title}}</div>
 <div class="col-md-10 title-edit hidden">
