@@ -70,11 +70,11 @@
 	
 	var _pagesPhotoSearch2 = _interopRequireDefault(_pagesPhotoSearch);
 	
-	var _pagesBackboneForms = __webpack_require__(88);
+	var _pagesBackboneForms = __webpack_require__(89);
 	
 	var _pagesBackboneForms2 = _interopRequireDefault(_pagesBackboneForms);
 	
-	var _componentsHeader = __webpack_require__(91);
+	var _componentsHeader = __webpack_require__(92);
 	
 	var _componentsHeader2 = _interopRequireDefault(_componentsHeader);
 	
@@ -9961,7 +9961,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"note-page":"note-page","todo-container":"todo-container","notepad-bar":"notepad-bar","v_line-left":"v_line-left","h_line":"h_line","col-md-10":"col-md-10","add-todo-container":"add-todo-container","col-md-2":"col-md-2","custom-bootstrap-menu":"custom-bootstrap-menu","navbar-default":"navbar-default","navbar-brand":"navbar-brand","navbar-nav":"navbar-nav","active":"active","navbar-toggle":"navbar-toggle","icon-bar":"icon-bar","maven-header":"maven-header","navbar-collapse":"navbar-collapse","collapse":"collapse","menuitem":"menuitem","navbar-text":"navbar-text","in":"in","collapsing":"collapsing","funnyheader":"funnyheader","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","page-container":"page-container","navbar-fixed-side":"navbar-fixed-side","navbar":"navbar","container":"container","container-fluid":"container-fluid","navbar-header":"navbar-header","navbar-form":"navbar-form","navbar-left":"navbar-left","navbar-right":"navbar-right","dropdown-menu":"dropdown-menu","dropdown-header":"dropdown-header","dropdown":"dropdown","dropdown-toggle":"dropdown-toggle","caret":"caret","navbar-inverse":"navbar-inverse","divider":"divider","navbarSocial":"navbarSocial","fa":"fa","top-border":"top-border","right-border":"right-border","bottom-border":"bottom-border","left-border":"left-border","PageBlocks":"PageBlocks","isotope-item-fullheight":"isotope-item-fullheight","is-isotope":"is-isotope"};
+	module.exports = {"note-page":"note-page","todo-container":"todo-container","notepad-bar":"notepad-bar","v_line-left":"v_line-left","h_line":"h_line","col-md-10":"col-md-10","add-todo-container":"add-todo-container","col-md-2":"col-md-2","custom-bootstrap-menu":"custom-bootstrap-menu","navbar-default":"navbar-default","navbar-brand":"navbar-brand","navbar-nav":"navbar-nav","active":"active","navbar-toggle":"navbar-toggle","icon-bar":"icon-bar","maven-header":"maven-header","navbar-collapse":"navbar-collapse","collapse":"collapse","menuitem":"menuitem","navbar-text":"navbar-text","in":"in","collapsing":"collapsing","funnyheader":"funnyheader","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","page-container":"page-container","navbar-fixed-side":"navbar-fixed-side","navbar":"navbar","container":"container","container-fluid":"container-fluid","navbar-header":"navbar-header","navbar-form":"navbar-form","navbar-left":"navbar-left","navbar-right":"navbar-right","dropdown-menu":"dropdown-menu","dropdown-header":"dropdown-header","dropdown":"dropdown","dropdown-toggle":"dropdown-toggle","caret":"caret","navbar-inverse":"navbar-inverse","divider":"divider","navbarSocial":"navbarSocial","fa":"fa","search-container":"search-container","photo":"photo","top-border":"top-border","right-border":"right-border","bottom-border":"bottom-border","left-border":"left-border","PageBlocks":"PageBlocks","isotope-item-fullheight":"isotope-item-fullheight","is-isotope":"is-isotope"};
 
 /***/ },
 /* 3 */,
@@ -26062,16 +26062,32 @@
 
 /***/ },
 /* 87 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _handlebars = __webpack_require__(9);
+	
+	var _handlebars2 = _interopRequireDefault(_handlebars);
+	
+	var _templatesFlickrImageHtml = __webpack_require__(88);
+	
+	var _templatesFlickrImageHtml2 = _interopRequireDefault(_templatesFlickrImageHtml);
+	
+	var compiledTemplate = _handlebars2['default'].compile(_templatesFlickrImageHtml2['default']);
 	
 	var app = {
 	  init: function init() {
 	    app.render();
 	  },
 	  render: function render() {
-	    app.$input = $('.search-container input');
+	    app.$input = (0, _jquery2['default'])('.search-container input');
 	    app.bindEvents();
 	  },
 	  bindEvents: function bindEvents() {
@@ -26084,7 +26100,7 @@
 	  },
 	  doSearch: function doSearch() {
 	    var phrase = app.$input.val();
-	    $.ajax({
+	    _jquery2['default'].ajax({
 	      url: 'https://api.flickr.com/services/rest',
 	      method: 'GET',
 	      data: {
@@ -26092,7 +26108,7 @@
 	        method: 'flickr.photos.search',
 	        api_key: '731717db25329eb6aa65703cb6b71970',
 	        format: 'json',
-	        per_page: 3
+	        per_page: 30
 	      },
 	      complete: function complete(response) {
 	        var text = response.responseText;
@@ -26104,7 +26120,13 @@
 	  },
 	  renderResults: function renderResults(data) {
 	    // pass data to the template
+	    var html = '';
+	    var myPhotos = data.photos.photo;
+	    myPhotos.forEach(function (item) {
+	      html = html + compiledTemplate(item);
+	    });
 	    // append results to the .search-result div
+	    (0, _jquery2['default'])('.search-results').html(html);
 	  }
 	};
 	
@@ -26112,6 +26134,12 @@
 
 /***/ },
 /* 88 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"photo\">\n\t<img src=\"http://farm{{farm}}.static.flickr.com/{{server}}/{{id}}_{{secret}}_b.jpg\">\n</div>";
+
+/***/ },
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26134,11 +26162,11 @@
 	
 	var _lscache2 = _interopRequireDefault(_lscache);
 	
-	var _templatesAccountListHtml = __webpack_require__(89);
+	var _templatesAccountListHtml = __webpack_require__(90);
 	
 	var _templatesAccountListHtml2 = _interopRequireDefault(_templatesAccountListHtml);
 	
-	var _templatesCreateAccountHtml = __webpack_require__(90);
+	var _templatesCreateAccountHtml = __webpack_require__(91);
 	
 	var _templatesCreateAccountHtml2 = _interopRequireDefault(_templatesCreateAccountHtml);
 	
@@ -26235,19 +26263,19 @@
 	module.exports = accountControllerView;
 
 /***/ },
-/* 89 */
+/* 90 */
 /***/ function(module, exports) {
 
 	module.exports = "<table class=\"table table-striped table-bordered\">\n\t\t<tr>\n\t\t <th>number</th>\n\t\t </tr>\n\t\t <tr>\n\t\t <td>1</td>\n\t </tr>\n\t <tr>\n\t\t <td>2</td>\n\t\t </tr>\n\t\t </table>\n";
 
 /***/ },
-/* 90 */
+/* 91 */
 /***/ function(module, exports) {
 
 	module.exports = "<form>\n\t<label for=\"name-field\">Name</label>\n\t<input class=\"form-control\" type=\"text\" id=\"name-field\">\n\n</form>\n<button class=\"btn btn-primary btn-done\">Done</button>";
 
 /***/ },
-/* 91 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26258,7 +26286,7 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _templatesNavbarHtml = __webpack_require__(92);
+	var _templatesNavbarHtml = __webpack_require__(93);
 	
 	var _templatesNavbarHtml2 = _interopRequireDefault(_templatesNavbarHtml);
 	
@@ -26274,7 +26302,7 @@
 	module.exports = app;
 
 /***/ },
-/* 92 */
+/* 93 */
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"wrapper\">\n<div class=\"row\">\n  <div class=\"col-lg-2 col-md-3 col-sm-3\">\n    <nav class=\"navbar navbar-default navbar-fixed-side\">\n      <h1>MAVEN</h1>\n      <ul>\n        <li><a role=\"menuitem\" href=\"/\"> HOME </a></li><br>\n        <li><a role=\"menuitem\" href=\"/pages/maven.html\"> MAVEN </a></li><br>\n        <li><a role=\"menuitem\" href=\"/pages/funnySquares.html\"> FUNNY SQUARES </a></li><br>\n        <li><a role=\"menuitem\" href=\"/pages/photoSearch.html\"> PHOTO SEARCH </a></li><br>\n        <li><a role=\"menuitem\" href=\"/pages/backboneForms.html\"> BACKBONE FORM </a></li><br>\n        <li><a role=\"menuitem\" href=\"/pages/todo.html\"> TODO APPLICATION </a></li><br>\n      </ul>\n   \n    <!-- end of SideNav -->\n    <div class=\"is-nav-offset\"></div>\n    <div class=\"navbarSocial\">\n    <ul>\n      <li><a href=\"https://www.facebook.com/elena.nolan.10\" target=\"blank\">\n      <i class=\"fa fa-facebook\"></i></a></li>\n      <li><a href=\"https://twitter.com/enolan1\" target=\"blank\">\n      <i class=\"fa fa-twitter\"></i></a></li>\n\n    </div>\n  </nav>\n</div>\n  <div class=\"col-lg-10 col-md-9 content\">\n  </div>\n</div>\n</div> \n\n";
