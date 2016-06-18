@@ -20,23 +20,33 @@ TodoModel = Backbone.Model.extend({
     completed: false
   },
   fetch: function(){
+    var that = this;
     $.ajax({
       url: '/api',
       method: 'GET'
       complete: function(response){
         var dataString = response.responseText;
-        var dat = JSON.parse(dataString);
-        var data = lscache.get('todos');
-        data = this.applySchema(data);
-        this.set('todos', data);
+        var data = JSON.parse(dataString);
+        data = that.applySchema(data);
+        that.set('todos', data);
       }
-    }),
+    });
  
   },
   save: function(){
-    var data = this.get('todos');
-    data = this.applySchema(data);
-    lscache.set('todos', data);
+    var that = this;
+    var todos = this.get('todos');
+    $.ajax({
+      url: '/api',
+      method: 'POST',
+      data: {todos: todos}, 
+      complete: function(response){
+        var dataString = response.responseText;
+        var data = JSON.parse(dataString);
+        data = that.applySchema(data);
+        that.set('todos', data);
+      }
+    });   
   },
   applySchema: function(todos){
     var data = todos;
