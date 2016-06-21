@@ -5,3 +5,263 @@
 @import 'navbar';
 @import 'photoSearches';
 
+.ps-container {
+  overflow: hidden !important;
+}
+
+.wrapper {
+  padding-top: 100px 20px 50px 30px;
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  text-align: center;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+  padding-right: 44px;
+}
+
+.top-border, .right-border, .bottom-border, .left-border {
+  position: fixed;
+  background-color: #fafafa;
+  padding: 10px; }
+
+.top-border, .right-border, .bottom-border, .left-border {
+  z-index: 1044; }
+
+.right-border {
+  z-index: 1042; }
+
+.top-border {
+  top: 0;
+  left: 0;
+  right: 0; }
+
+.right-border {
+  top: 0;
+  right: 0;
+  bottom: 0; }
+
+.bottom-border {
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.left-border {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  }
+
+.js .is-isotope {
+  display: none; 
+}
+
+.is-isotope {
+  padding: 0;
+  margin: 0;
+  max-width: none;
+  overflow: hidden; 
+}
+  .is-isotope > * {
+    list-style: none;
+    margin: 0;
+    padding: 0; 
+}
+  .is-isotope .bg-image {
+    width: 101%;
+    width: calc(100% + 2px); 
+}
+  .is-isotope img {
+    display: block;
+    width: 100.4%;
+    width: calc(100% + 1px);
+    max-width: none; 
+}
+
+.PageBlocks li {
+  height: calc(50vh - 20px); 
+}
+  
+.PageBlocks li:before {
+    -webkit-transition: .65s;
+            transition: .65s;
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 1px solid #fff;
+    z-index: 10; 
+}
+
+.PageBlocks li {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100.4%;
+  width: calc(100% + 1px); 
+}
+
+.PageBlocks li.isotope-item-fullheight {
+  height: calc(100vh - 40px); }
+  @media only screen and (max-width: 1200px) 
+{
+
+.PageBlocks li.isotope-item-fullheight {
+  height: 50vh; 
+
+} 
+}
+
+.PageBlocks li:hover .bg-image, .PageBlocks li:hover img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1); 
+
+}
+
+.PageBlocks li:hover .overlay-dark {
+  opacity: 0; 
+}
+
+.PageBlocks .page-block-item-title {
+  -webkit-transition: .3s;
+          transition: .3s;
+  position: absolute;
+  top: 60%;
+  right: 20px;
+  width: 100%;
+  width: calc(100% - 40px);
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 5px;
+  font-weight: 900;
+  text-align: right;
+  pointer-events: none; 
+}
+
+.PageBlocks .overlay-dark {
+  -webkit-transition: .2s;
+          transition: .2s;
+  opacity: 1; 
+}
+
+.overlay-dark {
+  -webkit-transition: .2s;
+          transition: .2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; 
+}
+
+.overlay-dark {
+  background-color: rgba(11, 10, 24, 0.46); 
+}
+
+.PageBlocks .bg-image, .PageBlocks img {
+  -webkit-transition: .25s;
+          transition: .25s; 
+}
+
+
+.SideNavLogo {
+  margin-bottom: 60px;
+}
+
+.SideNavLogo a {
+  display: block;
+}
+
+a, a:focus {
+  color: #3b3b3b;
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+.SideNavLogo h1 {
+  font-size: 3em;
+}
+
+h1 {
+  display: block;
+  margin: 0 0 0.5em;
+  text-align: center;
+  font-family: 'Poiret One', cursive;
+  line-height: 1.4;
+  font-size: 24px;
+  font-weight: 700;
+  -webkit-margin-before: 0.67em;
+  -webkit-margin-after: 0.67em;
+  margin-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.navbar .navbar-default {
+  text-transform: uppercase;
+  font-size: .8em;
+  margin-bottom: 20px;
+  background-color: #fff;
+  margin: 0 0 0.5em;
+}
+
+.navbar > ul {
+  margin: 0;
+  padding: 20px 0 0;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar > ul > li {
+  position: relative;
+  background-color: #fff;
+}
+
+.navbar > ul > li > a {
+  list-style-type: none;
+  background-color: #fff;
+  padding: 10px 5px;
+  font-family: 'Poiret One', cursive;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 900;
+  letter-spacing: .2em;
+  margin: 0 0 100px 0;
+  text-align: center;
+  transition: .2s;
+  text-decoration: none;
+}
+
+a {
+  color: #000000;
+  font-weight: 900;
+}
+
+a:focus {
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+a > i {
+  margin-left: 8px;
+  font-size: 13px;
+  text-decoration: none;
+  vertical-align: middle;
+  color: #a5e5d6;
+}
+
+li {
+  margin-top: 20px;
+  font-family: 'Poiret One', cursive;
+}
