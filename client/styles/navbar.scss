@@ -6,6 +6,12 @@
   margin-right:-15px;
 }
 }
+@media only screen and (max-width: 992px) {
+  .main-sidebar-fixed {
+    width: 28%; 
+}
+}
+
 @media (min-width: 1200px){
 .col-lg-2{
   width:100%;
@@ -89,8 +95,10 @@ h1 {
   border-color: #fff;
 }
 
-.navbar .navbar-default {
+.navbar .navbar-default .navbar-fixed-side {
   text-transform: uppercase;
+  width: 302px;
+  height: 450px;
   font-size: .8em;
   margin-bottom: 20px;
   background-color: #fff;

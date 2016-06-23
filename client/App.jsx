@@ -1,7 +1,8 @@
 
 import $ from 'jquery';
-import 'styles/main.scss'; 
-import todos from 'pages/todo-backbone'; 
+import 'styles/main.scss';
+import TodoControllerView from 'pages/todoReact/todoController';
+// import todos from 'pages/todo-backbone'; 
 import maven from 'pages/maven';
 import funnySquares from 'pages/funnySquares';
 import photoSearch from 'pages/photoSearch';
@@ -20,7 +21,7 @@ $(function(){
 
   switch (url) {
     case '/pages/todo.html':
-        todos.render();
+       var todoControllerView = new TodoControllerView();
     break;
     case '/pages/project.html':
   // init the project javascript

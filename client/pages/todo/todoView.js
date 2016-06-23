@@ -1,17 +1,12 @@
 var $ = require('jquery');
-
-// legacy loading for bootstrap
-window.jQuery = window.$ = $;
-require('bootstrap'); 
-
-import _ from 'underscore'; 
 import Backbone from 'backbone';
 import Handlebars from 'handlebars';
 import todoItemTemplate from 'templates/todoItem.html';
-import todoControllerView from 'pages/todo/todoController';
 
-TodoItemView = Backbone.View.extend({
-  tagName: 'li', // el= <li class="list-group-item"></li>
+// Item View
+
+var TodoItemView = Backbone.View.extend({
+  tagName: 'li', // el = <li class="list-group-item"></li>
   className: 'list-group-item row',
   events: {
     'click .close': 'removeItem',
@@ -20,7 +15,8 @@ TodoItemView = Backbone.View.extend({
     'keypress .title-edit-input': 'titleEditConfirm'
   },
   template: Handlebars.compile(todoItemTemplate),
-  initialize: function(todo){
+  initialize: function(todo, controller){
+    this.controller = controller;
     this.data = todo;
     this.render();
   },
@@ -32,12 +28,11 @@ TodoItemView = Backbone.View.extend({
     this.$el.toggleClass('disabled', this.data.completed);
   },
   removeItem: function(){
-    // get the id of the current item
-    todoControllerView.removeItem(this.data.id);
+    this.controller.removeItem(this.data.id);
   },
   completedClicked: function(event){
-    var isChecked = $(event.currentTarget).is(':checked');
-    todoControllerView.itemCompleted(this.data.id, isChecked);
+    var isChecked = $(event.target).is(':checked');
+    this.controller.itemCompleted(this.data.id, isChecked);
   },
   titleClicked: function(){
     this.$title.addClass('hidden');
@@ -45,10 +40,12 @@ TodoItemView = Backbone.View.extend({
     this.$titleInput.focus();
   },
   titleEditConfirm: function(event){
+    // they hit the enter key
     if (event.which === 13) {
       var newTitle = this.$titleInput.val();
-      todoControllerView.titleEdit(newTitle, this.data.id);
+      this.controller.titleEdit(newTitle, this.data.id);    
     }
   }
 });
+
 module.exports = TodoItemView;

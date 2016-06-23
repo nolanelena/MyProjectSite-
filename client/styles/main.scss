@@ -5,6 +5,16 @@
 @import 'navbar';
 @import 'photoSearches';
 
+@media only screen and (max-width: 992px) {
+  .main-sidebar-fixed {
+    width: 28%; }
+  .main-content {
+    width: 72%;
+    margin-left: 28%; 
+}
+}
+
+
 .ps-container {
   overflow: hidden !important;
 }
@@ -53,7 +63,32 @@ body {
   left: 0;
   top: 0;
   bottom: 0;
-  }
+}
+
+.main-content {
+  width: 1500px;
+  margin-left: 20%;
+  padding: 20px 20px 20px 0;
+  overflow-x: hidden;
+}
+ul.PageBlocks.is-isotope.list-unstyled {
+  width: 1500px;
+  display: block;
+  position: relative;
+  height: 768px;
+}
+
+.PageBlocks li.isotope-item-fullheight {
+  width: 490px;
+  position: absolute;
+  height: 780px;
+  left: 6px;
+  top: 0px;
+}
+.page-blocks-subitem .is-changeable-item {
+  opacity: 1;
+}
+
 
 .js .is-isotope {
   display: none; 

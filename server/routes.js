@@ -5,10 +5,11 @@ var router = express.Router();
 var _ = require('lodash');
 var fs = require('fs');
 
-
 // API routes
 
-router.get('/elephant', function(req, res){
+var databasePath = __dirname + '/database.json';
+
+router.get('/api', function(req, res){
   // read in the database
   fs.readFile(databasePath, function(err, data){
     if (err) { console.log(err); }

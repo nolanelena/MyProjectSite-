@@ -1,8 +1,10 @@
 var $ = require('jquery');
+import React from 'react';
+import ReactDOM from 'react-dom';
 import Backbone from 'backbone';
-import Handlebars from 'handlebars';
-import todoModel from 'pages/todo/todoModel';
-import TodoItemView from 'pages/todo/todoView';
+import todoModel from 'pages/todoReact/todoModel';
+import TodoItemView from 'pages/todoReact/todoView';
+
 
 // Controller View
 
@@ -22,9 +24,13 @@ var TodoControllerView = Backbone.View.extend({
     var $ul = this.$el.find('.list-group');
     $ul.html('');
     var controller = this;
-    todos.map(function(todo){
-      var view = new TodoItemView(todo, controller);
-      $ul.append(view.$el);
+    todos.forEach(function(todo){
+      var $li = $('<li class="list-group-item row"></li>');
+      $ul.append($li);
+      ReactDOM.render(
+          <TodoItemView data={todo} controller={controller} />,
+          $li[0] // get original DOMnode from JQuery object 
+        );
     });
   },
   addTodoItem: function(){
@@ -35,14 +41,6 @@ var TodoControllerView = Backbone.View.extend({
     $input.val('');
     this.render();
   },
-  removeItem: function(id){
-    this.model.removeItem(id);
-    this.render();
-  },
-  itemCompleted: function(id, isCompleted){
-    this.model.itemCompleted(id, isCompleted);
-    this.render();
-  },
   titleEdit: function(newTitle, id){
     this.model.editTitle(newTitle, id);
     this.render();
@@ -50,4 +48,3 @@ var TodoControllerView = Backbone.View.extend({
 });
 
 module.exports = TodoControllerView;
-Status API Training Shop Blog About
