@@ -33,6 +33,8 @@ body {
   padding-right: 44px;
 }
 
+    /* Top-Borders */
+
 .top-border, .right-border, .bottom-border, .left-border {
   position: fixed;
   background-color: #fafafa;
@@ -66,29 +68,15 @@ body {
 }
 
 .main-content {
-  width: 1500px;
+  width: 1417px;
   margin-left: 20%;
   padding: 20px 20px 20px 0;
   overflow-x: hidden;
-}
-ul.PageBlocks.is-isotope.list-unstyled {
-  width: 1500px;
-  display: block;
-  position: relative;
-  height: 768px;
+  height: 826px;
+  top: 147px;
 }
 
-.PageBlocks li.isotope-item-fullheight {
-  width: 490px;
-  position: absolute;
-  height: 780px;
-  left: 6px;
-  top: 0px;
-}
-.page-blocks-subitem .is-changeable-item {
-  opacity: 1;
-}
-
+    /* isotope */
 
 .js .is-isotope {
   display: none; 
@@ -114,6 +102,26 @@ ul.PageBlocks.is-isotope.list-unstyled {
     width: 100.4%;
     width: calc(100% + 1px);
     max-width: none; 
+}
+
+      /* PageBlocks */
+
+ul.PageBlocks.is-isotope.list-unstyled {
+  width: 1500px;
+  display: block;
+  position: relative;
+  height: 802px;
+  top: 5px;
+}
+
+.PageBlocks li.isotope-item-fullheight {
+  width: 490px;
+  position: absolute;
+  left: 6px;
+  top: 0px;
+}
+.page-blocks-subitem .is-changeable-item {
+  opacity: 1;
 }
 
 .PageBlocks li {
@@ -146,11 +154,27 @@ ul.PageBlocks.is-isotope.list-unstyled {
   height: calc(100vh - 40px); }
   @media only screen and (max-width: 1200px) 
 {
+}
 
 .PageBlocks li.isotope-item-fullheight {
-  height: 50vh; 
+  height: 803px; 
 
 } 
+
+.PageBlocks li.isotope-item-width-1 {
+  width: 906px;
+  position: absolute;
+  height: 397.5px;
+  left: 495px;
+  top: 0px;
+}
+.PageBlocks li.isotope-item-width-2 {
+  width: 906px;
+  position: absolute;
+  left: 495px;
+  top: 398px;
+  height: 403.5px;
+
 }
 
 .PageBlocks li:hover .bg-image, .PageBlocks li:hover img {
@@ -158,6 +182,12 @@ ul.PageBlocks.is-isotope.list-unstyled {
       -ms-transform: scale(1.1);
           transform: scale(1.1); 
 
+}
+
+.PageBlocks .bg-image, .PageBlocks img {
+  -webkit-transition: .25s;
+          transition: .25s; 
+          height:798px;
 }
 
 .PageBlocks li:hover .overlay-dark {
@@ -180,6 +210,11 @@ ul.PageBlocks.is-isotope.list-unstyled {
   pointer-events: none; 
 }
 
+.is-changeable .isotope-item-width-2 h5{
+  top: 238px;
+  
+}
+    /* Overlay-Dark */
 .PageBlocks .overlay-dark {
   -webkit-transition: .2s;
           transition: .2s;
@@ -200,10 +235,6 @@ ul.PageBlocks.is-isotope.list-unstyled {
   background-color: rgba(11, 10, 24, 0.46); 
 }
 
-.PageBlocks .bg-image, .PageBlocks img {
-  -webkit-transition: .25s;
-          transition: .25s; 
-}
 
 
 .SideNavLogo {

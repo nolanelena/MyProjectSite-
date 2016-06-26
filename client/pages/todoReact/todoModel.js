@@ -8,6 +8,7 @@ import _ from 'underscore';
 import Backbone from 'backbone';
 import Handlebars from 'handlebars';
 
+
 var TodoModel = Backbone.Model.extend({
   defaults: {
     todos: []
@@ -30,7 +31,6 @@ var TodoModel = Backbone.Model.extend({
         that.set('todos', data);
       }
     });
- 
   },
   save: function(){
     var that = this;
@@ -72,20 +72,20 @@ var TodoModel = Backbone.Model.extend({
     todos.splice(id, 1);
     this.save();
   },
-  itemCompleted: function(id, isCompleted){
+  itemCompleted: function(id){
     var todos = this.get('todos');
     var item = _.findWhere(todos, {id: id});
-    item.completed = isCompleted;
+    item.completed = !item.completed;
     this.set('todos', todos);
     this.save(); 
   },
-  editTitle: function(newTitle, id){
-    var todos = this.get('todos');
-    var item = _.findWhere(todos, {id: id});
-    item.title = newTitle;
-    item.isEditing = false;
-    this.set('todos', todos);
-    this.save(); 
+  editTitle: function(id, newTitle){
+      var todos = this.get('todos');
+      var item = _.findWhere(todos, {id: id});
+      item.title = newTitle;
+      item.isEditing = false;
+      this.set('todos', todos);
+      this.save(); 
   },
   startEditing: function(id){
     var todos = this.get('todos');

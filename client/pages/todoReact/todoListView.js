@@ -4,11 +4,12 @@ import ReactDOM from 'react-dom';
 import Backbone from 'backbone';
 import todoModel from 'pages/todoReact/todoModel';
 import TodoItemView from 'pages/todoReact/todoView';
+import dispatcher from 'pages/todoReact/todoDispatcher';
 
 
 // Controller View
 
-var TodoControllerView = Backbone.View.extend({
+var TodoListView = Backbone.View.extend({
   el: '.todo-container',
   model: todoModel,
   events: {
@@ -23,12 +24,12 @@ var TodoControllerView = Backbone.View.extend({
     var todos = this.model.get('todos');
     var $ul = this.$el.find('.list-group');
     $ul.html('');
-    var controller = this;
     todos.forEach(function(todo){
-      var $li = $('<li class="list-group-item row"></li>');
+      var extraClass = (todo.completed) ? 'disabled' : '';
+      var $li = $('<li class="list-group-item row' + extraClass + '"></li>');
       $ul.append($li);
       ReactDOM.render(
-          <TodoItemView data={todo} controller={controller} />,
+          <TodoItemView data={todo} />,
           $li[0] // get original DOMnode from JQuery object 
         );
     });
@@ -36,15 +37,11 @@ var TodoControllerView = Backbone.View.extend({
   addTodoItem: function(){
     var $input = this.$el.find('.input-name');
     var newTitle = $input.val();
-    if (newTitle === '') { return; }
-    this.model.addItem(newTitle);
+    dispatcher.addTodo(newTitle);
     $input.val('');
-    this.render();
-  },
-  titleEdit: function(newTitle, id){
-    this.model.editTitle(newTitle, id);
-    this.render();
+    // TODO this.model.addItem(newTitle);
+
   }
 });
 
-module.exports = TodoControllerView;
+module.exports = TodoListView;

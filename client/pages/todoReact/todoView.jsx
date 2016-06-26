@@ -1,5 +1,7 @@
 
+import $ from 'jQuery';
 import React, { PropTypes } from 'react';
+import dispatcher from 'pages/todoReact/todoDispatcher';
 
 var TodoItem = React.createClass({
 propTypes: {
@@ -26,7 +28,7 @@ propTypes: {
       return (
         <div>
         <div className="col-md-1">
-          <input type="checkbox" checked={todo.completed} onChange={todo.completed} onChange={this.handleComplete}></input>
+          <input type="checkbox" checked={todo.completed} onChange={this.handleComplete}></input>
         </div>
        {title}
         <div className="col-md-1">
@@ -34,29 +36,31 @@ propTypes: {
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        </div>
+      </div>
       );
     },
     handleComplete: function(){
       var id = this.props.data.id;
-      var newValue = !this.props.data.completed;
-      this.props.controller.model.itemCompleted(id, newValue);
+      dispatcher.clickComplete(id);
+      // TODO this.props.controller.model.itemCompleted(id, newValue);
     },
     handleClose: function(){
       var id = this.props.data.id;
-      this.props.controller.model.removeItem(id);
+      dispatcher.removeTodo(id);
+      // TODO this.props.controller.model.removeItem(id);
     },
     titleClick: function(){
       var id = this.props.data.id;
-      this.props.controller.model.startEditing(id);
+      dispatcher.startEditMode(id);
+      // TODO this.props.controller.model.startEditing(id);
     },
     editKeypress: function(event){
-    if (event.which === 13) {
       var id = this.props.data.id;
       var newTitle = $('li').eq(id).find('input[type="text"]').val();
-      this.props.controller.model.editTitle(newTitle, id);
+      dispatcher.editTodoTitle(id, newTitle, event);
+
+      // TODO this.props.controller.model.editTitle(newTitle, id);
     }
-  }
 });
   
 

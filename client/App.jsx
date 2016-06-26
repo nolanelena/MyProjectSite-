@@ -1,7 +1,7 @@
 
 import $ from 'jquery';
 import 'styles/main.scss';
-import TodoControllerView from 'pages/todoReact/todoController';
+import TodoListView from 'pages/todoReact/todoListView';
 // import todos from 'pages/todo-backbone'; 
 import maven from 'pages/maven';
 import funnySquares from 'pages/funnySquares';
@@ -21,7 +21,7 @@ $(function(){
 
   switch (url) {
     case '/pages/todo.html':
-       var todoControllerView = new TodoControllerView();
+       var todoListView = new TodoListView();
     break;
     case '/pages/project.html':
   // init the project javascript

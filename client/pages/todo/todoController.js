@@ -11,6 +11,7 @@ var TodoControllerView = Backbone.View.extend({
   model: todoModel,
   events: {
     'click .btn-add': 'addTodoItem'
+  
   },
   initialize: function(){
     this.model.fetch();
