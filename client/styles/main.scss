@@ -14,23 +14,11 @@
 }
 }
 
-
-.ps-container {
-  overflow: hidden !important;
-}
-
-.wrapper {
-  padding-top: 100px 20px 50px 30px;
-  position: relative;
-  overflow: hidden;
-  min-height: 100%;
-  text-align: center;
-}
-
 body {
   height: 100%;
   overflow: hidden;
   padding-right: 44px;
+  line-height: 24px;
 }
 
     /* Top-Borders */
@@ -68,7 +56,7 @@ body {
 }
 
 .main-content {
-  width: 1417px;
+  width: 1422px;
   margin-left: 20%;
   padding: 20px 20px 20px 0;
   overflow-x: hidden;
@@ -161,6 +149,10 @@ ul.PageBlocks.is-isotope.list-unstyled {
 
 } 
 
+.PageBlocks li.isotope-item-fullheight .bg-image img {
+  height: 803px;
+}
+
 .PageBlocks li.isotope-item-width-1 {
   width: 906px;
   position: absolute;
@@ -187,7 +179,7 @@ ul.PageBlocks.is-isotope.list-unstyled {
 .PageBlocks .bg-image, .PageBlocks img {
   -webkit-transition: .25s;
           transition: .25s; 
-          height:798px;
+          height:455px;
 }
 
 .PageBlocks li:hover .overlay-dark {
@@ -236,14 +228,18 @@ ul.PageBlocks.is-isotope.list-unstyled {
 }
 
 
-
 .SideNavLogo {
+  color: #3b3b3b;
+  font-family: 'Poiret One', cursive;
   margin-bottom: 60px;
+  text-decoration: none;
 }
 
-.SideNavLogo a {
+.SideNavLogo a:focus {
   display: block;
+  text-decoration: none;
 }
+
 
 a, a:focus {
   color: #3b3b3b;
@@ -254,7 +250,10 @@ a, a:focus {
 
 .SideNavLogo h1 {
   font-size: 3em;
+  color: #3b3b3b;
+  text-decoration: inherit!important;
 }
+
 
 h1 {
   display: block;
@@ -306,11 +305,13 @@ h1 {
   text-align: center;
   transition: .2s;
   text-decoration: none;
+  color: #000000;
 }
 
-a {
+ h1 a {
   color: #000000;
   font-weight: 900;
+  text-decoration: none;
 }
 
 a:focus {
@@ -330,4 +331,48 @@ a > i {
 li {
   margin-top: 20px;
   font-family: 'Poiret One', cursive;
+}
+
+.navbarSocial a {
+  font-size: 16px;
+  display: inline-block;
+  margin: 0.5px;
+}
+
+.navbarSocial {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 168px;
+  padding-left: 26px;
+}
+.navbarSocial ul {
+  overflow: auto;
+}
+
+.navbarSocial ul li  {
+  list-style-type: none;
+  float: left;
+}
+
+.navbarSocial ul li a i {
+  display: inline-block;
+  color: #000000;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  text-align: center;
+  margin: 0 5px;
+
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.navbarFooter {
+  line-height: 24px;
+  text-align: center;
+
 }

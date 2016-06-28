@@ -1,8 +1,6 @@
-
 import $ from 'jquery';
 import 'styles/main.scss';
 import TodoListView from 'pages/todoReact/todoListView';
-// import todos from 'pages/todo-backbone'; 
 import maven from 'pages/maven';
 import funnySquares from 'pages/funnySquares';
 import photoSearch from 'pages/photoSearch';
@@ -34,8 +32,9 @@ $(function(){
     case '/pages/backboneForms.html':
       backboneForms.render();
     break;
+    case '/pages/navbar.html':
+      navbar.render();
+    break;
     default: break;
-
   }
-
 });

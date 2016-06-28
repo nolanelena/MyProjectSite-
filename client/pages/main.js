@@ -1,7 +1,8 @@
 window.jQuery = window.$ = $;
 require('bootstrap'); 
 
-import homeMain from 'server/view.ejs';
+import homeMain from '/server/view.ejs';
+import navbar from '/pages/templates/navbar.html';
 
 
 var time = 600;

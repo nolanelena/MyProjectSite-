@@ -2,7 +2,11 @@
 @import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);
 
 header {
-  
+  text-decoration: none;
+}
+
+body {
+  overflow-y: scroll;
 }
 .note-page {
   position: absolute;
@@ -56,6 +60,9 @@ header {
 .col-md-10 {
   background-color: rgb(255,237,136);
 }
+.col-md-10 .form-control {
+  font-family: 'Shadows Into Light Two', cursive;
+}
 
 .add-todo-container {
   margin-bottom: 10px;
@@ -70,6 +77,9 @@ header {
   background-color: rgb(255,237,136);
   padding-right: 0;
   text-align: right;
-  border-right:1px solid #ff0000;
   
+}
+
+.list-group ul {
+  font-family: 'Shadows Into Light Two', cursive;
 }
