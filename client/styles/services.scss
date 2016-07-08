@@ -126,9 +126,13 @@ img {
 	left: 6px;
 }
 
+.fw-col-xs-12.fw-col-sm-12.fw-col-md-4 {
+	padding-right: 81px;
+}
+
 .fw-col-xs-12 {
 	padding-left: 30px;
-	padding-right: 30px;
+	padding-right: 46px;
 	position: relative;
 	min-height: 1px;
 	box-sizing: border-box;
@@ -340,16 +344,8 @@ h3#ui-id-1 {
 	border: 1px solid #a5e5d6;
 }
 
-span.ui-accordion-header-icon.ui-icon-triangle-1-s {
-	font-size: 10px;
-	position: absolute;
-	top:18px;
-	left:15px;
-	width: 8px;
-	height: 8px;
-}
 
-.fw-accordion .fw-accordion-title {
+/*.fw-accordion .fw-accordion-title {
 	color: #565656;
 	border-color: #a5e5d6;
 }
@@ -361,7 +357,7 @@ span.ui-accordion-header-icon.ui-icon-triangle-1-s {
 	color: #a5e5d6;
 	content: "\f0fe";
 
-}
+}*/
 
 #section-3 {
 	padding: 0px 0px 0px 60px;
@@ -388,35 +384,69 @@ span.ui-accordion-header-icon.ui-icon-triangle-1-s {
 	height: 130px;
 }
 
-span.fw-accordion .fw-accordion-title .ui-icon {
+/*i.fw-accordion .fw-accordion-title .ui-icon {
 	font-size: 10px;
 	position: absolute;
 	top:18px;
 	left: 15px;
 	width: 8px;
 	height: 8px;
+	color: #a5e5d6;
 
-}
+}*/
 
-.fw-accordion .fw-accordion-title .ui-icon .widget > ul li:before {
+i.fa.fa-plus-square:before {
+    position: relative;
+    right: 26px;
+    bottom: -2px;
+    color: #a5e5d6;
+ }
+
+/*.fw-accordion .fw-accordion-title .ui-icon .widget > ul li:before {
 	display: inline-block;
 	font-family: FontAwesome;
 	font-style: normal;
 	font-weight: normal;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
-}
+}*/
 
 #ui-id-2 {
 	padding: 20px;
 	width: 600px;
 	font-family:'Poiret One', cursive;
+	border:none;
+
+}
+
+#ui-id-4 {
+	padding: 20px;
+	width: 600px;
+	font-family:'Poiret One', cursive;
+	border: none;
+}
+
+#ui-id-6 {
+	padding: 20px;
+	width: 600px;
+	font-family:'Poiret One', cursive;
+	border: none;
 
 }
 
 
+.ui-widget-content {
+	border: none;
+}
+
 .fw-accordion .fw-accordion-content p:last-child {
 	margin-bottom: 0;
+}
+
+.fw-accordion.ui-accordion.ui-widget.ui-helper-reset {
+	position: relative;
+	top: -200px;
+	font-family:'Poiret One', cursive;
 }
 
 h3#ui-id-3 {
@@ -431,6 +461,7 @@ h3#ui-id-3 {
 	padding: 20px 20px 20px 40px;
 	margin: 0 0 10px 0;
 	cursor: pointer;
+	background: #fff;
 	border: 1px solid #a5e5d6;
 }
 
@@ -446,11 +477,89 @@ h3#ui-id-5 {
 	padding: 20px 20px 20px 40px;
 	margin: 0 0 10px 0;
 	cursor: pointer;
+	background: #fff;
 	border: 1px solid #a5e5d6;
 }
+.ui-state-default {
+ 	border: none;
+ 	background: none;
+ }
 
+ .fw-col-xs-12.fw-col-md-6#team {
+ 	position: relative;
+ 	left:581px;
+ 	top:-692px;
+ 	height: 529px;
+ }
 
+ .fw-container-full {
+ 	position: relative;
+ 	margin-right: auto;
+ 	margin-left: auto;
+ 	padding-left: 0;
+ 	padding-right: 0;
+ }
 
+ .fw-container-full:before {
+ 	content:"";
+ 	display: table;
+ }
+
+ .fw-container-full:after {
+ 	clear: both;
+ 	content: "";
+ 	display: table;
+ }
+
+ .imagewallwrapper {
+ 	position: relative;
+ }
+
+ .overlay-light {
+
+ }
+
+ .imagewallcontent .overlay-text {
+ 	width: 55%;
+ 	left: 50%;
+ 	text-align: center;
+ }
+
+ .overlay-text {
+ 	position: absolute;
+ 	z-index: 10;
+ 	top: 50%;
+ 	transform: translateY(-50%);
+ 	padding: 50px 70px;
+ 	background-color: rgba(255, 255, 255, 0.95);
+ }
+
+ .imagewallcontent .image-wall-title {
+ 	font-size: 18px;
+ 	text-transform: uppercase;
+ 	margin-bottom: 20px;
+ }
+
+ .title-stripe {
+ 	position: relative;
+ 	z-index: 1;
+ }
+
+.imagewallwrapper .image-wall-text {
+	line-height: 22px;
+}
+
+h4 {
+	margin: 0 0 0.5em;
+	color: #111;
+	font-weight: 700;
+	line-height: 1,4;
+}
+
+section#imagewall {
+	top: -1457px;
+	position: relative;
+}
 
 
 

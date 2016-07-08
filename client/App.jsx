@@ -6,6 +6,7 @@ import funnySquares from 'pages/funnySquares';
 import photoSearch from 'pages/photoSearch';
 import backboneForms from 'pages/backboneForms';
 import header from 'components/header';
+import services from 'pages/services';
 
 $(function(){
 
@@ -34,6 +35,9 @@ $(function(){
     break;
     case '/pages/navbar.html':
       navbar.render();
+    break;
+    case '/pages/services.html':
+        services.init();
     break;
     default: break;
   }

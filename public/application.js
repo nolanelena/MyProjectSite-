@@ -78,6 +78,10 @@
 	
 	var _componentsHeader2 = _interopRequireDefault(_componentsHeader);
 	
+	var _pagesServices = __webpack_require__(255);
+	
+	var _pagesServices2 = _interopRequireDefault(_pagesServices);
+	
 	(0, _jquery2['default'])(function () {
 	
 	  _componentsHeader2['default'].init();
@@ -104,6 +108,9 @@
 	      break;
 	    case '/pages/navbar.html':
 	      navbar.render();
+	      break;
+	    case '/pages/services.html':
+	      _pagesServices2['default'].init();
 	      break;
 	    default:
 	      break;
@@ -9963,7 +9970,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"note-page":"note-page","todo-container":"todo-container","notepad-bar":"notepad-bar","v_line-left":"v_line-left","h_line":"h_line","col-md-10":"col-md-10","form-control":"form-control","add-todo-container":"add-todo-container","col-md-2":"col-md-2","list-group":"list-group","main-content":"main-content","me-text-block-title":"me-text-block-title","ma-main-row":"ma-main-row","ma-container":"ma-container","ma-col-xs-12":"ma-col-xs-12","image-and-text":"image-and-text","image-and-text-image":"image-and-text-image","image-right":"image-right","image-amd-text-image":"image-amd-text-image","image-and-text-text":"image-and-text-text","image-and-text-dark":"image-and-text-dark","is-floating":"is-floating","metextblock":"metextblock","special-text-block-title":"special-text-block-title","me-text-block-stripe":"me-text-block-stripe","me-text-block-subtitle":"me-text-block-subtitle","me-text-block-content":"me-text-block-content","text-monospace":"text-monospace","ma-section-light":"ma-section-light","image-text-office":"image-text-office","overlay-screen":"overlay-screen","fw-container":"fw-container","ma-col-md-6":"ma-col-md-6","meheading":"meheading","text-left":"text-left","ma-stripe":"ma-stripe","me-title":"me-title","ma-heading":"ma-heading","ma-heading-h2":"ma-heading-h2","ma-subtitle":"ma-subtitle","progressbar":"progressbar","progress-bar-wrap":"progress-bar-wrap","progress-bar":"progress-bar","is-progressbar":"is-progressbar","is-inview":"is-inview","boxicon":"boxicon","box-icon-horizontal":"box-icon-horizontal","box-header-icon":"box-header-icon","box-header-wrapper":"box-header-wrapper","box-icon-content":"box-icon-content","funnyheader":"funnyheader","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","page-container":"page-container","navbar-fixed-side":"navbar-fixed-side","main-sidebar-fixed":"main-sidebar-fixed","col-lg-2":"col-lg-2","navbar-text":"navbar-text","navbar-left":"navbar-left","navbar-right":"navbar-right","navbar":"navbar","slicknav_menu":"slicknav_menu","PageBlocks":"PageBlocks","main-sidebar":"main-sidebar","js":"js","ps-container":"ps-container","ps-active-x":"ps-active-x","ps-scrollbar-x-rail":"ps-scrollbar-x-rail","ps-active-y":"ps-active-y","ps-scrollbar-y-rail":"ps-scrollbar-y-rail","ps-in-scrolling":"ps-in-scrolling","ps-x":"ps-x","ps-scrollbar-x":"ps-scrollbar-x","ps-y":"ps-y","ps-scrollbar-y":"ps-scrollbar-y","wrapper":"wrapper","is-slicknav":"is-slicknav","SideNavLogo":"SideNavLogo","link-border":"link-border","navbar-default":"navbar-default","SideNav":"SideNav","menu-item-has-children":"menu-item-has-children","not-visible":"not-visible","sub-menu":"sub-menu","navbarSocial":"navbarSocial","fa":"fa","navbarFooter":"navbarFooter","search-container":"search-container","photo":"photo","fx-main-row":"fx-main-row","section-light":"section-light","is-parallax":"is-parallax","special-title":"special-title","title-stripe":"title-stripe","fw-main-row":"fw-main-row","overlay-light":"overlay-light","specialheading":"specialheading","text-center":"text-center","special-subtitle":"special-subtitle","fw-col-xs-12":"fw-col-xs-12","fw-col-md-4":"fw-col-md-4","box-icon-vertical":"box-icon-vertical","is-matchheight":"is-matchheight","box-icon-title":"box-icon-title","fw-container-fluid":"fw-container-fluid","fw-row":"fw-row","box-icon-subtitle":"box-icon-subtitle","fw-col-md-6":"fw-col-md-6","section-2":"section-2","spacer":"spacer","specialtextblock":"specialtextblock","special-text-block-stripe":"special-text-block-stripe","fw-col-md-3":"fw-col-md-3","counter":"counter","counter-number":"counter-number","counter-text":"counter-text","fw-container-full":"fw-container-full","fw-accordion":"fw-accordion","ui-id-1":"ui-id-1","ui-accordion-header-icon":"ui-accordion-header-icon","ui-icon-triangle-1-s":"ui-icon-triangle-1-s","fw-accordion-title":"fw-accordion-title","section-3":"section-3","spa":"spa","ui-icon":"ui-icon","widget":"widget","ui-id-2":"ui-id-2","fw-accordion-content":"fw-accordion-content","ui-id-3":"ui-id-3","ui-id-5":"ui-id-5","fs-background":"fs-background","section-co":"section-co","co-main-row":"co-main-row","overlay-color":"overlay-color","background-video":"background-video","co-container":"co-container","contactheading":"contactheading","contact-title":"contact-title","contact-stripe":"contact-stripe","contact-subtitle":"contact-subtitle","fs-background-container":"fs-background-container","fs-background-media":"fs-background-media","row":"row","co-col-md-6":"co-col-md-6","contacttextblock":"contacttextblock","contact-text-block":"contact-text-block","contact-text-block-stripe":"contact-text-block-stripe","contact-text-block-title":"contact-text-block-title","contact-text-block-subtitle":"contact-text-block-subtitle","form-wrapper":"form-wrapper","contact-form":"contact-form","co-row":"co-row","field-text":"field-text","wrap-forms":"wrap-forms","field-textarea":"field-textarea","top-border":"top-border","right-border":"right-border","bottom-border":"bottom-border","left-border":"left-border","is-isotope":"is-isotope","bg-image":"bg-image","list-unstyled":"list-unstyled","isotope-item-fullheight":"isotope-item-fullheight","page-blocks-subitem":"page-blocks-subitem","is-changeable-item":"is-changeable-item","isotope-item-width-1":"isotope-item-width-1","isotope-item-width-2":"isotope-item-width-2","overlay-dark":"overlay-dark","page-block-item-title":"page-block-item-title","is-changeable":"is-changeable"};
+	module.exports = {"note-page":"note-page","todo-container":"todo-container","notepad-bar":"notepad-bar","v_line-left":"v_line-left","h_line":"h_line","col-md-10":"col-md-10","form-control":"form-control","add-todo-container":"add-todo-container","col-md-2":"col-md-2","list-group":"list-group","main-content":"main-content","me-text-block-title":"me-text-block-title","ma-main-row":"ma-main-row","ma-container":"ma-container","ma-col-xs-12":"ma-col-xs-12","image-and-text":"image-and-text","image-and-text-image":"image-and-text-image","image-right":"image-right","image-amd-text-image":"image-amd-text-image","image-and-text-text":"image-and-text-text","image-and-text-dark":"image-and-text-dark","is-floating":"is-floating","metextblock":"metextblock","special-text-block-title":"special-text-block-title","me-text-block-stripe":"me-text-block-stripe","me-text-block-subtitle":"me-text-block-subtitle","me-text-block-content":"me-text-block-content","text-monospace":"text-monospace","ma-section-light":"ma-section-light","image-text-office":"image-text-office","overlay-screen":"overlay-screen","fw-container":"fw-container","ma-col-md-6":"ma-col-md-6","meheading":"meheading","text-left":"text-left","ma-stripe":"ma-stripe","me-title":"me-title","ma-heading":"ma-heading","ma-heading-h2":"ma-heading-h2","ma-subtitle":"ma-subtitle","progressbar":"progressbar","progress-bar-wrap":"progress-bar-wrap","progress-bar":"progress-bar","is-progressbar":"is-progressbar","is-inview":"is-inview","boxicon":"boxicon","box-icon-horizontal":"box-icon-horizontal","box-header-icon":"box-header-icon","box-header-wrapper":"box-header-wrapper","box-icon-content":"box-icon-content","funnyheader":"funnyheader","square":"square","square-container":"square-container","square1":"square1","square2":"square2","square3":"square3","square4":"square4","square5":"square5","square6":"square6","page-container":"page-container","navbar-fixed-side":"navbar-fixed-side","main-sidebar-fixed":"main-sidebar-fixed","col-lg-2":"col-lg-2","navbar-text":"navbar-text","navbar-left":"navbar-left","navbar-right":"navbar-right","navbar":"navbar","slicknav_menu":"slicknav_menu","PageBlocks":"PageBlocks","main-sidebar":"main-sidebar","js":"js","ps-container":"ps-container","ps-active-x":"ps-active-x","ps-scrollbar-x-rail":"ps-scrollbar-x-rail","ps-active-y":"ps-active-y","ps-scrollbar-y-rail":"ps-scrollbar-y-rail","ps-in-scrolling":"ps-in-scrolling","ps-x":"ps-x","ps-scrollbar-x":"ps-scrollbar-x","ps-y":"ps-y","ps-scrollbar-y":"ps-scrollbar-y","wrapper":"wrapper","is-slicknav":"is-slicknav","SideNavLogo":"SideNavLogo","link-border":"link-border","navbar-default":"navbar-default","SideNav":"SideNav","menu-item-has-children":"menu-item-has-children","not-visible":"not-visible","sub-menu":"sub-menu","navbarSocial":"navbarSocial","fa":"fa","navbarFooter":"navbarFooter","search-container":"search-container","photo":"photo","fx-main-row":"fx-main-row","section-light":"section-light","is-parallax":"is-parallax","special-title":"special-title","title-stripe":"title-stripe","fw-main-row":"fw-main-row","overlay-light":"overlay-light","specialheading":"specialheading","text-center":"text-center","special-subtitle":"special-subtitle","fw-col-xs-12":"fw-col-xs-12","fw-col-sm-12":"fw-col-sm-12","fw-col-md-4":"fw-col-md-4","box-icon-vertical":"box-icon-vertical","is-matchheight":"is-matchheight","box-icon-title":"box-icon-title","fw-container-fluid":"fw-container-fluid","fw-row":"fw-row","box-icon-subtitle":"box-icon-subtitle","fw-col-md-6":"fw-col-md-6","section-2":"section-2","spacer":"spacer","specialtextblock":"specialtextblock","special-text-block-stripe":"special-text-block-stripe","fw-col-md-3":"fw-col-md-3","counter":"counter","counter-number":"counter-number","counter-text":"counter-text","fw-container-full":"fw-container-full","fw-accordion":"fw-accordion","ui-id-1":"ui-id-1","section-3":"section-3","spa":"spa","fa-plus-square":"fa-plus-square","ui-id-2":"ui-id-2","ui-id-4":"ui-id-4","ui-id-6":"ui-id-6","ui-widget-content":"ui-widget-content","fw-accordion-content":"fw-accordion-content","ui-accordion":"ui-accordion","ui-widget":"ui-widget","ui-helper-reset":"ui-helper-reset","ui-id-3":"ui-id-3","ui-id-5":"ui-id-5","ui-state-default":"ui-state-default","team":"team","imagewallwrapper":"imagewallwrapper","imagewallcontent":"imagewallcontent","overlay-text":"overlay-text","image-wall-title":"image-wall-title","image-wall-text":"image-wall-text","imagewall":"imagewall","fs-background":"fs-background","section-co":"section-co","co-main-row":"co-main-row","bubble":"bubble","overlay-color":"overlay-color","background-video":"background-video","co-container":"co-container","contactheading":"contactheading","contact-title":"contact-title","contact-stripe":"contact-stripe","contact-subtitle":"contact-subtitle","video":"video","fs-background-container":"fs-background-container","fs-background-media":"fs-background-media","row":"row","co-col-md-6":"co-col-md-6","co-col-xs-12":"co-col-xs-12","co-col-md-6-2":"co-col-md-6-2","contacttextblock":"contacttextblock","contact-text-block":"contact-text-block","contact-text-block-stripe":"contact-text-block-stripe","contact-text-block-title":"contact-text-block-title","contact-text-block-subtitle":"contact-text-block-subtitle","contact-text-block-content":"contact-text-block-content","form-wrapper":"form-wrapper","contact-form":"contact-form","col-sm-8":"col-sm-8","col-sm-offset-2":"col-sm-offset-2","co-row":"co-row","field-text":"field-text","wrap-forms":"wrap-forms","field-textarea":"field-textarea","btn-danger":"btn-danger","map":"map","top-border":"top-border","right-border":"right-border","bottom-border":"bottom-border","left-border":"left-border","is-isotope":"is-isotope","bg-image":"bg-image","list-unstyled":"list-unstyled","isotope-item-fullheight":"isotope-item-fullheight","page-blocks-subitem":"page-blocks-subitem","is-changeable-item":"is-changeable-item","isotope-item-width-1":"isotope-item-width-1","isotope-item-width-2":"isotope-item-width-2","overlay-dark":"overlay-dark","page-block-item-title":"page-block-item-title","is-changeable":"is-changeable"};
 
 /***/ },
 /* 3 */,
@@ -55929,7 +55936,790 @@
 /* 254 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"main-sidebar main-sidebar-fixed is sidebar ps-container ps-active-y ps-in-scolling ps-y\">\n    <div class=\"wrapper is-slicknav\">\n        <div class=\"SideNavLogo\">\n          <a href=\"http://localhost:5000/\">\n            <h1>MAVEN</h1>\n          </a>\n        </div>\n        <!-- end of NavLogo -->\n    <!--   <div class=\"col-lg-2 col-md-3 col-sm-3\"> -->\n     <nav class=\"navbar navbar-default navbar-fixed-side\">\n        <ul class=\"menu-main-menu\" class=\"is-navmenu\">\n          <li class=\"menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-1 is-visible\"><a role=\"menuitem\" href=\"/\"> HOME <i class=\"fa fa-caret-down\"></i></a></li><br>\n          <li class=\"menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-2 not-visible\"><a role=\"menuitem\" href=\"/pages/maven.html\"> ABOUT ME <i class=\"fa fa-caret-down\"></i></a></li><br>\n            <ul class=\"sub-menu\">\n            <li class= \"menu-item menu-item-object-page current-menu-item page_item page-item-1\"><a href=\"/pages/maven.html\">\n            BIO\n            </a>\n            </li>\n            <li class= \"menu-item menu-item-object-page current-menu-item page_item page-item-2\"><a href=\"/Projects/jquery%20todo/public/images/elena%20resume.pdf\">\n            RESUME\n            </a>\n            </li>\n          </ul>\n          </li><br>\n          <li class=\"menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-3 not-visible\"><a role=\"menuitem\"> SERVICES <i class=\"fa fa-caret-down\"></i></a></li><br>\n          <ul class=\"sub-menu\">\n            <li class= \"menu-item menu-item-object-page current-menu-item page_item page-item-3\"><a href=\"/pages/services.html\">\n            OUR SERVICES\n            </a>\n            </li>\n            </ul>\n            </li><br>\n          <li class=\"menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-4 not-visible\"><a role=\"menuitem\"> PROJECTS <i class=\"fa fa-caret-down\"></i></a></li><br>\n          <ul class=\"sub-menu\">\n            <li class= \"menu-item menu-item-object-page current-menu-item page_item page-item-4\"><a href=\"/pages/todo.html\">\n            TODO APPLICATION\n            </a>\n            </li>\n            <li class= \"menu-item menu-item-object-page current-menu-item page_item page-item-5\"><a href=\"/pages/funnySquares.html\">\n            FUNNY SQUARES \n            </a>\n            </li>\n            <li class= \"menu-item menu-item-object-page current-menu-item page_item page-item-6\"><a href=\"/pages/backboneForms.html\">\n            BACKBONE FORMS\n            </a>\n            </li>\n            <li class= \"menu-item menu-item-object-page current-menu-item page_item page-item-7\"><a href=\"/pages/photoSearch.html\">\n            PHOTO SEARCH \n            </a>\n            </li>\n          </ul>\n          <li class=\"menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-5 not-visible\"><a role=\"menuitem\"> CONTACT <i class=\"fa fa-caret-down\"></i></a></li><br>\n          <ul class=\"sub-menu\">\n            <li class= \"menu-item menu-item-object-page current-menu-item page_item page-item-8\"><a href=\"/pages/contact.html\">\n            CONTACT ME\n            </a>\n            </li>\n        </ul>\n      </nav>\n            <!-- end of SideNav -->\n      <div class=\"navbarSocial\">\n          <ul>\n            <li><a href=\"https://www.facebook.com/elena.nolan.10\" target=\"blank\">\n            <i class=\"fa fa-facebook\"></i></a></li>\n            <li><a href=\"https://twitter.com/enolan1\" target=\"blank\">\n            <i class=\"fa fa-twitter\"></i></a></li>\n              <li><a href=\"https://github.com/nolanelena\" target=\"blank\">\n            <i class=\"fa fa-github\"></i></a></li>\n          </ul>\n      </div>\n      <div class=\"navbarFooter\">\n      Maven 2016 </div>\n    </div>\n    <!-- end of sidewrapper --> \n   \n    </div>\n     <div class=\"ps-scrollbar-x-rail\"><div class=\"ps-scrollbar-x\"></div></div> \n    <div class=\"ps-scrollbar-y-rail\"><div class=\"ps-scrollbar-y\"></div></div>\n</div>\n      <!-- end of main-sidebar -->\n\n\n\n";
+	module.exports = "\n<div class=\"main-sidebar main-sidebar-fixed is sidebar ps-container ps-active-y ps-in-scolling ps-y\">\n    <div class=\"wrapper is-slicknav\">\n        <div class=\"SideNavLogo\">\n          <a href=\"http://localhost:5000/\">\n            <h1>MAVEN</h1>\n          </a>\n        </div>\n        <!-- end of NavLogo -->\n    <!--   <div class=\"col-lg-2 col-md-3 col-sm-3\"> -->\n     <nav class=\"navbar navbar-default navbar-fixed-side\">\n        <ul class=\"menu-main-menu\" class=\"is-navmenu\">\n          <li class=\"menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-1 is-visible\"><a role=\"menuitem\" href=\"/\"> HOME <i class=\"fa fa-caret-down\"></i></a></li><br>\n          <li class=\"menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-2 not-visible\"><a role=\"menuitem\" href=\"/pages/maven.html\"> ABOUT ME <i class=\"fa fa-caret-down\"></i></a></li><br>\n            <ul class=\"sub-menu\">\n            <li class= \"menu-item menu-item-object-page current-menu-item page_item page-item-1\"><a href=\"/pages/maven.html\">\n            BIO\n            </a>\n            </li>\n            <li class= \"menu-item menu-item-object-page current-menu-item page_item page-item-2\"><a href=\"/images/elenaResume2.pdf\">\n            RESUME\n            </a>\n            </li>\n          </ul>\n          </li><br>\n          <li class=\"menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-3 not-visible\"><a role=\"menuitem\"> SERVICES <i class=\"fa fa-caret-down\"></i></a></li><br>\n          <ul class=\"sub-menu\">\n            <li class= \"menu-item menu-item-object-page current-menu-item page_item page-item-3\"><a href=\"/pages/services.html\">\n            OUR SERVICES\n            </a>\n            </li>\n            </ul>\n            </li><br>\n          <li class=\"menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-4 not-visible\"><a role=\"menuitem\"> PROJECTS <i class=\"fa fa-caret-down\"></i></a></li><br>\n          <ul class=\"sub-menu\">\n            <li class= \"menu-item menu-item-object-page current-menu-item page_item page-item-4\"><a href=\"/pages/todo.html\">\n            TODO APPLICATION\n            </a>\n            </li>\n            <li class= \"menu-item menu-item-object-page current-menu-item page_item page-item-5\"><a href=\"/pages/funnySquares.html\">\n            FUNNY SQUARES \n            </a>\n            </li>\n            <li class= \"menu-item menu-item-object-page current-menu-item page_item page-item-6\"><a href=\"/pages/backboneForms.html\">\n            BACKBONE FORMS\n            </a>\n            </li>\n            <li class= \"menu-item menu-item-object-page current-menu-item page_item page-item-7\"><a href=\"/pages/photoSearch.html\">\n            PHOTO SEARCH \n            </a>\n            </li>\n          </ul>\n          <li class=\"menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-5 not-visible\"><a role=\"menuitem\"> CONTACT <i class=\"fa fa-caret-down\"></i></a></li><br>\n          <ul class=\"sub-menu\">\n            <li class= \"menu-item menu-item-object-page current-menu-item page_item page-item-8\"><a href=\"/pages/contact.html\">\n            CONTACT ME\n            </a>\n            </li>\n        </ul>\n      </nav>\n            <!-- end of SideNav -->\n      <div class=\"navbarSocial\">\n          <ul>\n            <li><a href=\"https://www.facebook.com/elena.nolan.10\" target=\"blank\">\n            <i class=\"fa fa-facebook\"></i></a></li>\n            <li><a href=\"https://twitter.com/enolan1\" target=\"blank\">\n            <i class=\"fa fa-twitter\"></i></a></li>\n              <li><a href=\"https://github.com/nolanelena\" target=\"blank\">\n            <i class=\"fa fa-github\"></i></a></li>\n          </ul>\n      </div>\n      <div class=\"navbarFooter\">\n      Maven 2016 </div>\n    </div>\n    <!-- end of sidewrapper --> \n   \n    </div>\n     <div class=\"ps-scrollbar-x-rail\"><div class=\"ps-scrollbar-x\"></div></div> \n    <div class=\"ps-scrollbar-y-rail\"><div class=\"ps-scrollbar-y\"></div></div>\n</div>\n      <!-- end of main-sidebar -->\n\n\n\n";
+
+/***/ },
+/* 255 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _jQuery = __webpack_require__(212);
+	
+	var _jQuery2 = _interopRequireDefault(_jQuery);
+	
+	var _lscache = __webpack_require__(250);
+	
+	var _lscache2 = _interopRequireDefault(_lscache);
+	
+	var _templatesServicesHtml = __webpack_require__(256);
+	
+	var _templatesServicesHtml2 = _interopRequireDefault(_templatesServicesHtml);
+	
+	__webpack_require__(257);
+	
+	window.jQuery = window.$ = _jQuery2['default'];
+	__webpack_require__(198);
+	
+	var app = {
+	  init: function init() {
+	    app.render();
+	  },
+	  render: function render() {
+	    (0, _jQuery2['default'])('.ui-accordion').accordion();
+	  }
+	};
+	module.exports = app;
+
+/***/ },
+/* 256 */
+/***/ function(module, exports) {
+
+	module.exports = "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"x-ua-compatible\" content=\"ie=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"/images/favicon.ico\" />\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" integrity=\"sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7\" crossorigin=\"anonymous\">\n    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>\n    <link href=\"//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css\" rel=\"stylesheet\">\n    <link href=\"/styles/services.scss\" rel=\"stylesheet\" type=\"text/css\">\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/main.css\">\n    <link rel=\"stylesheet\" href=\"https://i.icomoon.io/public/temp/9aa4ad0507/UntitledProject/style.css\">   \n    <script type=\"text/javascript\" async=\"async\" defer=\"defer\" src=\"/application.js\"></script>\n    <link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css\">\n  <script src=\"//code.jquery.com/jquery-1.10.2.js\"></script>\n  <script src=\"//code.jquery.com/ui/1.11.4/jquery-ui.js\"></script>\n  <link rel=\"stylesheet\" href=\"/resources/demos/style.css\">\n  </head>\n  <header></header>\n<body class=\"page page-id-874 page-template page-template-template-page-blocks\">\n      <div class=\"top-border\"></div>\n      <div class=\"right-border\"></div>\n      <div class=\"bottom-border\"></div>\n      <div class=\"left-border\"></div>\n<div class=\"main-content\">\n  <div class=\"fw-page-builder-content\">\n    <section class=\"fw-main-row section-light is-parallax\">\n      <img src=\"/images/marketing-office.jpeg\">\n      <div class=\"overlay-light\"></div>\n      <div class=\"fw-container-1\">\n        <div class=\"fw-col-xs-12\">\n          <div class=\"specialheading fw-heading fw-heading-h1 text-center\">\n            <h1 class=\"special-title title-stripe\">Services</h1>\n            <div class=\"special-subtitle\">Here's a list of what we can do for you</div>\n          </div>\n        </div>\n      </div>\n    </section>\n    <section class=\"fw-main-row\">\n      <div class=\"fw-container-2\">\n        <div class=\"fw-col-xs-12 fw-col-sm-12 fw-col-md-4\">\n          <div class=\"boxicon box-icon-vertical is-matchheight\">\n            <div class=\"box-header-wrapper box-header-icon\">\n             <i class=\"fa fa-camera\" aria-hidden=\"true\"></i>\n            </div>\n            <div class=\"box-icon-content\">\n              <h4 class=\"box-icon-title\"> Marketing</h4>\n              <div class=\"box-icon-subtitle\">Isn't it fantastic that you can change your mind and create all these happy things? It's a good way of getting rid of all your anxieties and hostilities. Let's put a touch more of the magic here.</div>\n            </div>\n          </div>\n        </div>\n        <div class=\"fw-col-xs-12 fw-col-sm-12 fw-col-md-4\">\n          <div class=\"boxicon box-icon-vertical is matchheight\">\n            <div class=\"box-header-wrapper box-header-icon\">\n              <i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i>\n            </div>\n            <div class=\"box-icon-content\">\n              <h4 class=\"box-icon-title\"> Graphic Design</h4>\n              <div class=\"box-icon-subtitle\">I'm a water fanatic. I love water. That's what painting is all about. It should make you feel good when you paint. You can do anything here - the only pre-requisite is that it makes you happy.  \n              </div>\n            </div>\n          </div>\n        </div>\n        <div class=\"fw-col-xs-12 fw-col-sm-12 fw-col-md-4\">\n          <div class=\"boxicon box-icon-vertical is-matchheight\">\n            <div class=\"box-header-wrapper box-header-icon\">\n              <i class=\"fa fa-laptop\" aria-hidden=\"true\"></i>\n            </div>\n            <div class=\"box-icon-content\">\n              <h4 class=\"box-icon-title\"> Web Development</h4>\n              <div class=\"box-icon-subtitle\">And that's when it becomes fun - you don't have to spend your time thinking about what's happening - you just let it happen. And I will hypnotize that just a little bit. That is when you can experience true joy.\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n    <section class=\"fw-main-row\" id=\"section-2\">\n      <div class=\"fw-container-3\">\n        <div class=\"fw-col-xs-12 fw-col-md-6\">\n          <img src=\"/images/creative-process.jpeg\" style=\"width: 513px; height:660px; right:88px; position:relative; left: -150px; top:-40px;\"></img>\n        </div>\n          <div class=\"fw-col-xs-12 fw-col-md-6\">\n            <div class=\"spacer\"></div>\n            <div class=\"specialtextblock\">\n              <h5 class=\"special-text-block-title special-text-block-stripe\">What can we do for you?</h5>\n              <div class=\"special-text-block-content\">\n                <p>We're not trying to teach you a thing to copy. We're just here to teach you a technique, then let you loose into the world. I think there's an artist hidden in the bottom of every single one of us. These things happen automatically.\n                </p>\n              </div>\n          </div>\n          <!-- end of special textblock -->\n        </div>\n        <div class=\"fw-col-xs-12 fw-col-md-6\">\n          </div>\n        <div class=\"fw-col-xs-12 fw-col-md-3\">\n          <div class=\"counter\">\n            <i class=\"fa fa-calendar\" aria-hidden=\"true\"></i>\n            <span class=\"counter-number is-counter is-inview\" data-from=\"0\" data-to=\"32\" data-speed=\"2000\"> 32 </span>\n            <div class=\"counter-text\">Finished Projects</div>\n          </div>\n        </div>\n        <div class=\"fw-col-xs-12 fw-col-md-3\">\n          <div class=\"counter\">\n            <i class=\"fa fa-smile-o\" aria-hidden=\"true\"></i>\n            <span class=\"counter-number is-counter is-inview\" data-from=\"0\" data-to=\"8\" data-speed=\"2000\">8</span>\n            <div class=\"counter-text\"> Happy Clients</div>\n          </div>\n        </div>\n      </div>\n    </section>\n    <section class=\"fw-main-row\" id=\"section-3\">\n      <div class=\"fw-container-full\">\n        <div class\"fw-col-xs-12 fw-col-md-6\">\n          <div class=\"spacer\" id=\"spa\"></div>\n          <div class=\"fw-accordion ui-accordion ui-widget ui-helper-reset\" role=\"tablist\">\n            <h3 class=\"fw-accordion-title ui-accordion-header ui-state-default ui-state-active ui-corner-top ui-accordion-icon ui-corner-all\" role=\"tab\" id=\"ui-id-1\" aria-controls=\"ui-id-2\" aria-selected=\"true\" aria-expanded=\"true\" tabindex=\"0\">\n              <i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i>Who Are We?\n            </h3>\n            <div class=\"fw-accordion-content ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom\" id=\"ui-id-2\" aria-labelledby=\"ui-id-1\" role=\"tabpanel\" aria-hidden=\"false\" style=\"display: block;\">\n              <p>And beans affogato galão froth saucer macchiato. Cup, wings crema, cortado a roast extraction a café au lait that. Redeye dripper arabica ut irish cultivar barista aftertaste coffee.\n              </p>\n            </div>\n            <h3 class=\"fw-accordion-title ui-accordion-header ui-state-default ui-accordion-icons ui-corner-top\" role=\"tab\" id=\"ui-id-3\" aria-controls=\"ui-id-4\" aria-selected=\"false\" aria-expanded=\"false\" tabindex=\"0\">\n              <i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i>What We Do Best?\n            </h3>\n            <div class=\"fw-accordion-content ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active\" id=\"ui-id-4\" aria-labelledby=\"ui-id-3\"role=\"tabpanel\" aria-hidden=\"true\" style=\"display:block;\">\n              <p>And beans affogato galão froth saucer macchiato. Cup, wings crema, cortado a roast extraction a café au lait that. Redeye dripper arabica ut irish cultivar barista aftertaste coffee.</p>\n            </div>\n            <h3 class=\"fw-accordion-title ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons\" role=\"tab\" id=\"ui-id-5\" aria-control=\"ui-id-6\" aria-selected=\"false\" aria-expanded=\"false\" tabindex=\"-1\">\n              <i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i>\n              Where Are We Located?\n            </h3>\n            <div class=\"fw-accordion-content ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom\" id=\"ui-id-6\" aria-labelledby=\"ui-id-5\" role=\"tabpanel\" aria-hidden=\"true\" style=\"display:none;\">\n              <p>And beans affogato galão froth saucer macchiato. Cup, wings crema, cortado a roast extraction a café au lait that. Redeye dripper arabica ut irish cultivar barista aftertaste coffee.</p>\n            </div>\n          </div>\n        </div>\n        <div class=\"fw-col-xs-12 fw-col-md-6\" id=\"team\">\n          <img src=\"/images/team.jpg\" style=\"height: 481px;\"></img>\n        </div>\n      </div>\n      <script src=\"//code.jquery.com/jquery-1.10.2.js\"></script>\n  <script src=\"//code.jquery.com/ui/1.11.4/jquery-ui.js\"></script>\n    </section>\n    <!-- end of accordion drop-down -->\n    <section class=\"fw-main-row\" id=\"imagewall\">\n      <div class=\"fw-container-full\">\n        <div class=\"imagewallwrapper\" id=\"imgwrap\">\n          <div class=\"overlay-light\"></div>\n          <div class=\"imagewallcontent overlay-text\">\n            <h4 class=\"image-wall-title title-stripe\"> Why Choose Us?</h4>\n            <div class=\"image-wall-text- text-monospace\">\n              <p>So often we avoid running water, and running water is a lot of fun. We're not trying to teach you a thing to copy. We're just here to teach you a technique, then let you loose into the world. Just let this happen. We just let this flow right out of our minds.</p>\n            </div>\n          </div>\n          <ul class=\"imagewall is-isotope\" data-isotope-gutter=\"0\"data-isotope-cols=\"4\" data-isotope-cols-xs=\"1\" style=\"width: 1316px; display: block; position: relative; height: 656px;\">\n            \n          </ul>\n        </div>\n      </div>\n    </section>\n  </div>\n\n</div>   ";
+
+/***/ },
+/* 257 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	 * jQuery UI Widget 1.12.0
+	 * http://jqueryui.com
+	 *
+	 * Copyright jQuery Foundation and other contributors
+	 * Released under the MIT license.
+	 * http://jquery.org/license
+	 */
+	
+	//>>label: Widget
+	//>>group: Core
+	//>>description: Provides a factory for creating stateful widgets with a common API.
+	//>>docs: http://api.jqueryui.com/jQuery.widget/
+	//>>demos: http://jqueryui.com/widget/
+	
+	( function( factory ) {
+		if ( true ) {
+	
+			// AMD. Register as an anonymous module.
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(1), __webpack_require__(258) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		} else {
+	
+			// Browser globals
+			factory( jQuery );
+		}
+	}( function( $ ) {
+	
+	var widgetUuid = 0;
+	var widgetSlice = Array.prototype.slice;
+	
+	$.cleanData = ( function( orig ) {
+		return function( elems ) {
+			var events, elem, i;
+			for ( i = 0; ( elem = elems[ i ] ) != null; i++ ) {
+				try {
+	
+					// Only trigger remove when necessary to save time
+					events = $._data( elem, "events" );
+					if ( events && events.remove ) {
+						$( elem ).triggerHandler( "remove" );
+					}
+	
+				// Http://bugs.jquery.com/ticket/8235
+				} catch ( e ) {}
+			}
+			orig( elems );
+		};
+	} )( $.cleanData );
+	
+	$.widget = function( name, base, prototype ) {
+		var existingConstructor, constructor, basePrototype;
+	
+		// ProxiedPrototype allows the provided prototype to remain unmodified
+		// so that it can be used as a mixin for multiple widgets (#8876)
+		var proxiedPrototype = {};
+	
+		var namespace = name.split( "." )[ 0 ];
+		name = name.split( "." )[ 1 ];
+		var fullName = namespace + "-" + name;
+	
+		if ( !prototype ) {
+			prototype = base;
+			base = $.Widget;
+		}
+	
+		if ( $.isArray( prototype ) ) {
+			prototype = $.extend.apply( null, [ {} ].concat( prototype ) );
+		}
+	
+		// Create selector for plugin
+		$.expr[ ":" ][ fullName.toLowerCase() ] = function( elem ) {
+			return !!$.data( elem, fullName );
+		};
+	
+		$[ namespace ] = $[ namespace ] || {};
+		existingConstructor = $[ namespace ][ name ];
+		constructor = $[ namespace ][ name ] = function( options, element ) {
+	
+			// Allow instantiation without "new" keyword
+			if ( !this._createWidget ) {
+				return new constructor( options, element );
+			}
+	
+			// Allow instantiation without initializing for simple inheritance
+			// must use "new" keyword (the code above always passes args)
+			if ( arguments.length ) {
+				this._createWidget( options, element );
+			}
+		};
+	
+		// Extend with the existing constructor to carry over any static properties
+		$.extend( constructor, existingConstructor, {
+			version: prototype.version,
+	
+			// Copy the object used to create the prototype in case we need to
+			// redefine the widget later
+			_proto: $.extend( {}, prototype ),
+	
+			// Track widgets that inherit from this widget in case this widget is
+			// redefined after a widget inherits from it
+			_childConstructors: []
+		} );
+	
+		basePrototype = new base();
+	
+		// We need to make the options hash a property directly on the new instance
+		// otherwise we'll modify the options hash on the prototype that we're
+		// inheriting from
+		basePrototype.options = $.widget.extend( {}, basePrototype.options );
+		$.each( prototype, function( prop, value ) {
+			if ( !$.isFunction( value ) ) {
+				proxiedPrototype[ prop ] = value;
+				return;
+			}
+			proxiedPrototype[ prop ] = ( function() {
+				function _super() {
+					return base.prototype[ prop ].apply( this, arguments );
+				}
+	
+				function _superApply( args ) {
+					return base.prototype[ prop ].apply( this, args );
+				}
+	
+				return function() {
+					var __super = this._super;
+					var __superApply = this._superApply;
+					var returnValue;
+	
+					this._super = _super;
+					this._superApply = _superApply;
+	
+					returnValue = value.apply( this, arguments );
+	
+					this._super = __super;
+					this._superApply = __superApply;
+	
+					return returnValue;
+				};
+			} )();
+		} );
+		constructor.prototype = $.widget.extend( basePrototype, {
+	
+			// TODO: remove support for widgetEventPrefix
+			// always use the name + a colon as the prefix, e.g., draggable:start
+			// don't prefix for widgets that aren't DOM-based
+			widgetEventPrefix: existingConstructor ? ( basePrototype.widgetEventPrefix || name ) : name
+		}, proxiedPrototype, {
+			constructor: constructor,
+			namespace: namespace,
+			widgetName: name,
+			widgetFullName: fullName
+		} );
+	
+		// If this widget is being redefined then we need to find all widgets that
+		// are inheriting from it and redefine all of them so that they inherit from
+		// the new version of this widget. We're essentially trying to replace one
+		// level in the prototype chain.
+		if ( existingConstructor ) {
+			$.each( existingConstructor._childConstructors, function( i, child ) {
+				var childPrototype = child.prototype;
+	
+				// Redefine the child widget using the same prototype that was
+				// originally used, but inherit from the new version of the base
+				$.widget( childPrototype.namespace + "." + childPrototype.widgetName, constructor,
+					child._proto );
+			} );
+	
+			// Remove the list of existing child constructors from the old constructor
+			// so the old child constructors can be garbage collected
+			delete existingConstructor._childConstructors;
+		} else {
+			base._childConstructors.push( constructor );
+		}
+	
+		$.widget.bridge( name, constructor );
+	
+		return constructor;
+	};
+	
+	$.widget.extend = function( target ) {
+		var input = widgetSlice.call( arguments, 1 );
+		var inputIndex = 0;
+		var inputLength = input.length;
+		var key;
+		var value;
+	
+		for ( ; inputIndex < inputLength; inputIndex++ ) {
+			for ( key in input[ inputIndex ] ) {
+				value = input[ inputIndex ][ key ];
+				if ( input[ inputIndex ].hasOwnProperty( key ) && value !== undefined ) {
+	
+					// Clone objects
+					if ( $.isPlainObject( value ) ) {
+						target[ key ] = $.isPlainObject( target[ key ] ) ?
+							$.widget.extend( {}, target[ key ], value ) :
+	
+							// Don't extend strings, arrays, etc. with objects
+							$.widget.extend( {}, value );
+	
+					// Copy everything else by reference
+					} else {
+						target[ key ] = value;
+					}
+				}
+			}
+		}
+		return target;
+	};
+	
+	$.widget.bridge = function( name, object ) {
+		var fullName = object.prototype.widgetFullName || name;
+		$.fn[ name ] = function( options ) {
+			var isMethodCall = typeof options === "string";
+			var args = widgetSlice.call( arguments, 1 );
+			var returnValue = this;
+	
+			if ( isMethodCall ) {
+				this.each( function() {
+					var methodValue;
+					var instance = $.data( this, fullName );
+	
+					if ( options === "instance" ) {
+						returnValue = instance;
+						return false;
+					}
+	
+					if ( !instance ) {
+						return $.error( "cannot call methods on " + name +
+							" prior to initialization; " +
+							"attempted to call method '" + options + "'" );
+					}
+	
+					if ( !$.isFunction( instance[ options ] ) || options.charAt( 0 ) === "_" ) {
+						return $.error( "no such method '" + options + "' for " + name +
+							" widget instance" );
+					}
+	
+					methodValue = instance[ options ].apply( instance, args );
+	
+					if ( methodValue !== instance && methodValue !== undefined ) {
+						returnValue = methodValue && methodValue.jquery ?
+							returnValue.pushStack( methodValue.get() ) :
+							methodValue;
+						return false;
+					}
+				} );
+			} else {
+	
+				// Allow multiple hashes to be passed on init
+				if ( args.length ) {
+					options = $.widget.extend.apply( null, [ options ].concat( args ) );
+				}
+	
+				this.each( function() {
+					var instance = $.data( this, fullName );
+					if ( instance ) {
+						instance.option( options || {} );
+						if ( instance._init ) {
+							instance._init();
+						}
+					} else {
+						$.data( this, fullName, new object( options, this ) );
+					}
+				} );
+			}
+	
+			return returnValue;
+		};
+	};
+	
+	$.Widget = function( /* options, element */ ) {};
+	$.Widget._childConstructors = [];
+	
+	$.Widget.prototype = {
+		widgetName: "widget",
+		widgetEventPrefix: "",
+		defaultElement: "<div>",
+	
+		options: {
+			classes: {},
+			disabled: false,
+	
+			// Callbacks
+			create: null
+		},
+	
+		_createWidget: function( options, element ) {
+			element = $( element || this.defaultElement || this )[ 0 ];
+			this.element = $( element );
+			this.uuid = widgetUuid++;
+			this.eventNamespace = "." + this.widgetName + this.uuid;
+	
+			this.bindings = $();
+			this.hoverable = $();
+			this.focusable = $();
+			this.classesElementLookup = {};
+	
+			if ( element !== this ) {
+				$.data( element, this.widgetFullName, this );
+				this._on( true, this.element, {
+					remove: function( event ) {
+						if ( event.target === element ) {
+							this.destroy();
+						}
+					}
+				} );
+				this.document = $( element.style ?
+	
+					// Element within the document
+					element.ownerDocument :
+	
+					// Element is window or document
+					element.document || element );
+				this.window = $( this.document[ 0 ].defaultView || this.document[ 0 ].parentWindow );
+			}
+	
+			this.options = $.widget.extend( {},
+				this.options,
+				this._getCreateOptions(),
+				options );
+	
+			this._create();
+	
+			if ( this.options.disabled ) {
+				this._setOptionDisabled( this.options.disabled );
+			}
+	
+			this._trigger( "create", null, this._getCreateEventData() );
+			this._init();
+		},
+	
+		_getCreateOptions: function() {
+			return {};
+		},
+	
+		_getCreateEventData: $.noop,
+	
+		_create: $.noop,
+	
+		_init: $.noop,
+	
+		destroy: function() {
+			var that = this;
+	
+			this._destroy();
+			$.each( this.classesElementLookup, function( key, value ) {
+				that._removeClass( value, key );
+			} );
+	
+			// We can probably remove the unbind calls in 2.0
+			// all event bindings should go through this._on()
+			this.element
+				.off( this.eventNamespace )
+				.removeData( this.widgetFullName );
+			this.widget()
+				.off( this.eventNamespace )
+				.removeAttr( "aria-disabled" );
+	
+			// Clean up events and states
+			this.bindings.off( this.eventNamespace );
+		},
+	
+		_destroy: $.noop,
+	
+		widget: function() {
+			return this.element;
+		},
+	
+		option: function( key, value ) {
+			var options = key;
+			var parts;
+			var curOption;
+			var i;
+	
+			if ( arguments.length === 0 ) {
+	
+				// Don't return a reference to the internal hash
+				return $.widget.extend( {}, this.options );
+			}
+	
+			if ( typeof key === "string" ) {
+	
+				// Handle nested keys, e.g., "foo.bar" => { foo: { bar: ___ } }
+				options = {};
+				parts = key.split( "." );
+				key = parts.shift();
+				if ( parts.length ) {
+					curOption = options[ key ] = $.widget.extend( {}, this.options[ key ] );
+					for ( i = 0; i < parts.length - 1; i++ ) {
+						curOption[ parts[ i ] ] = curOption[ parts[ i ] ] || {};
+						curOption = curOption[ parts[ i ] ];
+					}
+					key = parts.pop();
+					if ( arguments.length === 1 ) {
+						return curOption[ key ] === undefined ? null : curOption[ key ];
+					}
+					curOption[ key ] = value;
+				} else {
+					if ( arguments.length === 1 ) {
+						return this.options[ key ] === undefined ? null : this.options[ key ];
+					}
+					options[ key ] = value;
+				}
+			}
+	
+			this._setOptions( options );
+	
+			return this;
+		},
+	
+		_setOptions: function( options ) {
+			var key;
+	
+			for ( key in options ) {
+				this._setOption( key, options[ key ] );
+			}
+	
+			return this;
+		},
+	
+		_setOption: function( key, value ) {
+			if ( key === "classes" ) {
+				this._setOptionClasses( value );
+			}
+	
+			this.options[ key ] = value;
+	
+			if ( key === "disabled" ) {
+				this._setOptionDisabled( value );
+			}
+	
+			return this;
+		},
+	
+		_setOptionClasses: function( value ) {
+			var classKey, elements, currentElements;
+	
+			for ( classKey in value ) {
+				currentElements = this.classesElementLookup[ classKey ];
+				if ( value[ classKey ] === this.options.classes[ classKey ] ||
+						!currentElements ||
+						!currentElements.length ) {
+					continue;
+				}
+	
+				// We are doing this to create a new jQuery object because the _removeClass() call
+				// on the next line is going to destroy the reference to the current elements being
+				// tracked. We need to save a copy of this collection so that we can add the new classes
+				// below.
+				elements = $( currentElements.get() );
+				this._removeClass( currentElements, classKey );
+	
+				// We don't use _addClass() here, because that uses this.options.classes
+				// for generating the string of classes. We want to use the value passed in from
+				// _setOption(), this is the new value of the classes option which was passed to
+				// _setOption(). We pass this value directly to _classes().
+				elements.addClass( this._classes( {
+					element: elements,
+					keys: classKey,
+					classes: value,
+					add: true
+				} ) );
+			}
+		},
+	
+		_setOptionDisabled: function( value ) {
+			this._toggleClass( this.widget(), this.widgetFullName + "-disabled", null, !!value );
+	
+			// If the widget is becoming disabled, then nothing is interactive
+			if ( value ) {
+				this._removeClass( this.hoverable, null, "ui-state-hover" );
+				this._removeClass( this.focusable, null, "ui-state-focus" );
+			}
+		},
+	
+		enable: function() {
+			return this._setOptions( { disabled: false } );
+		},
+	
+		disable: function() {
+			return this._setOptions( { disabled: true } );
+		},
+	
+		_classes: function( options ) {
+			var full = [];
+			var that = this;
+	
+			options = $.extend( {
+				element: this.element,
+				classes: this.options.classes || {}
+			}, options );
+	
+			function processClassString( classes, checkOption ) {
+				var current, i;
+				for ( i = 0; i < classes.length; i++ ) {
+					current = that.classesElementLookup[ classes[ i ] ] || $();
+					if ( options.add ) {
+						current = $( $.unique( current.get().concat( options.element.get() ) ) );
+					} else {
+						current = $( current.not( options.element ).get() );
+					}
+					that.classesElementLookup[ classes[ i ] ] = current;
+					full.push( classes[ i ] );
+					if ( checkOption && options.classes[ classes[ i ] ] ) {
+						full.push( options.classes[ classes[ i ] ] );
+					}
+				}
+			}
+	
+			if ( options.keys ) {
+				processClassString( options.keys.match( /\S+/g ) || [], true );
+			}
+			if ( options.extra ) {
+				processClassString( options.extra.match( /\S+/g ) || [] );
+			}
+	
+			return full.join( " " );
+		},
+	
+		_removeClass: function( element, keys, extra ) {
+			return this._toggleClass( element, keys, extra, false );
+		},
+	
+		_addClass: function( element, keys, extra ) {
+			return this._toggleClass( element, keys, extra, true );
+		},
+	
+		_toggleClass: function( element, keys, extra, add ) {
+			add = ( typeof add === "boolean" ) ? add : extra;
+			var shift = ( typeof element === "string" || element === null ),
+				options = {
+					extra: shift ? keys : extra,
+					keys: shift ? element : keys,
+					element: shift ? this.element : element,
+					add: add
+				};
+			options.element.toggleClass( this._classes( options ), add );
+			return this;
+		},
+	
+		_on: function( suppressDisabledCheck, element, handlers ) {
+			var delegateElement;
+			var instance = this;
+	
+			// No suppressDisabledCheck flag, shuffle arguments
+			if ( typeof suppressDisabledCheck !== "boolean" ) {
+				handlers = element;
+				element = suppressDisabledCheck;
+				suppressDisabledCheck = false;
+			}
+	
+			// No element argument, shuffle and use this.element
+			if ( !handlers ) {
+				handlers = element;
+				element = this.element;
+				delegateElement = this.widget();
+			} else {
+				element = delegateElement = $( element );
+				this.bindings = this.bindings.add( element );
+			}
+	
+			$.each( handlers, function( event, handler ) {
+				function handlerProxy() {
+	
+					// Allow widgets to customize the disabled handling
+					// - disabled as an array instead of boolean
+					// - disabled class as method for disabling individual parts
+					if ( !suppressDisabledCheck &&
+							( instance.options.disabled === true ||
+							$( this ).hasClass( "ui-state-disabled" ) ) ) {
+						return;
+					}
+					return ( typeof handler === "string" ? instance[ handler ] : handler )
+						.apply( instance, arguments );
+				}
+	
+				// Copy the guid so direct unbinding works
+				if ( typeof handler !== "string" ) {
+					handlerProxy.guid = handler.guid =
+						handler.guid || handlerProxy.guid || $.guid++;
+				}
+	
+				var match = event.match( /^([\w:-]*)\s*(.*)$/ );
+				var eventName = match[ 1 ] + instance.eventNamespace;
+				var selector = match[ 2 ];
+	
+				if ( selector ) {
+					delegateElement.on( eventName, selector, handlerProxy );
+				} else {
+					element.on( eventName, handlerProxy );
+				}
+			} );
+		},
+	
+		_off: function( element, eventName ) {
+			eventName = ( eventName || "" ).split( " " ).join( this.eventNamespace + " " ) +
+				this.eventNamespace;
+			element.off( eventName ).off( eventName );
+	
+			// Clear the stack to avoid memory leaks (#10056)
+			this.bindings = $( this.bindings.not( element ).get() );
+			this.focusable = $( this.focusable.not( element ).get() );
+			this.hoverable = $( this.hoverable.not( element ).get() );
+		},
+	
+		_delay: function( handler, delay ) {
+			function handlerProxy() {
+				return ( typeof handler === "string" ? instance[ handler ] : handler )
+					.apply( instance, arguments );
+			}
+			var instance = this;
+			return setTimeout( handlerProxy, delay || 0 );
+		},
+	
+		_hoverable: function( element ) {
+			this.hoverable = this.hoverable.add( element );
+			this._on( element, {
+				mouseenter: function( event ) {
+					this._addClass( $( event.currentTarget ), null, "ui-state-hover" );
+				},
+				mouseleave: function( event ) {
+					this._removeClass( $( event.currentTarget ), null, "ui-state-hover" );
+				}
+			} );
+		},
+	
+		_focusable: function( element ) {
+			this.focusable = this.focusable.add( element );
+			this._on( element, {
+				focusin: function( event ) {
+					this._addClass( $( event.currentTarget ), null, "ui-state-focus" );
+				},
+				focusout: function( event ) {
+					this._removeClass( $( event.currentTarget ), null, "ui-state-focus" );
+				}
+			} );
+		},
+	
+		_trigger: function( type, event, data ) {
+			var prop, orig;
+			var callback = this.options[ type ];
+	
+			data = data || {};
+			event = $.Event( event );
+			event.type = ( type === this.widgetEventPrefix ?
+				type :
+				this.widgetEventPrefix + type ).toLowerCase();
+	
+			// The original event may come from any element
+			// so we need to reset the target on the new event
+			event.target = this.element[ 0 ];
+	
+			// Copy original event properties over to the new event
+			orig = event.originalEvent;
+			if ( orig ) {
+				for ( prop in orig ) {
+					if ( !( prop in event ) ) {
+						event[ prop ] = orig[ prop ];
+					}
+				}
+			}
+	
+			this.element.trigger( event, data );
+			return !( $.isFunction( callback ) &&
+				callback.apply( this.element[ 0 ], [ event ].concat( data ) ) === false ||
+				event.isDefaultPrevented() );
+		}
+	};
+	
+	$.each( { show: "fadeIn", hide: "fadeOut" }, function( method, defaultEffect ) {
+		$.Widget.prototype[ "_" + method ] = function( element, options, callback ) {
+			if ( typeof options === "string" ) {
+				options = { effect: options };
+			}
+	
+			var hasOptions;
+			var effectName = !options ?
+				method :
+				options === true || typeof options === "number" ?
+					defaultEffect :
+					options.effect || defaultEffect;
+	
+			options = options || {};
+			if ( typeof options === "number" ) {
+				options = { duration: options };
+			}
+	
+			hasOptions = !$.isEmptyObject( options );
+			options.complete = callback;
+	
+			if ( options.delay ) {
+				element.delay( options.delay );
+			}
+	
+			if ( hasOptions && $.effects && $.effects.effect[ effectName ] ) {
+				element[ method ]( options );
+			} else if ( effectName !== method && element[ effectName ] ) {
+				element[ effectName ]( options.duration, options.easing, callback );
+			} else {
+				element.queue( function( next ) {
+					$( this )[ method ]();
+					if ( callback ) {
+						callback.call( element[ 0 ] );
+					}
+					next();
+				} );
+			}
+		};
+	} );
+	
+	return $.widget;
+	
+	} ) );
+
+
+/***/ },
+/* 258 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
+		if ( true ) {
+	
+			// AMD. Register as an anonymous module.
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(1) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		} else {
+	
+			// Browser globals
+			factory( jQuery );
+		}
+	} ( function( $ ) {
+	
+	$.ui = $.ui || {};
+	
+	return $.ui.version = "1.12.0";
+	
+	} ) );
+
 
 /***/ }
 /******/ ]);
