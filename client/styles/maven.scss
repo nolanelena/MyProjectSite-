@@ -129,6 +129,23 @@ body {
     margin-bottom: 50px;
     text-align: right;
     padding-right: 0px;
+    font-family:'Poiret One', cursive;
+}
+
+.matextblock .ma-text-block-title {
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 300;
+    font-size: 28px;
+    margin-bottom: 50px;
+    text-align: center;
+    padding-right: 0px;
+    font-family:'Poiret One', cursive;
+}
+
+.matextblock {
+    width: 702px;
+    margin-left: 229px;
 }
 
 .image-and-text.image-right .metextblock .me-text-block-stripe:after {
@@ -147,7 +164,7 @@ body {
     height: 1px;
     width: 50px;
     background-color: #a5e5d6;
-    left: 86%;
+    left: 47%;
 }
 
 
@@ -361,7 +378,7 @@ p:last-of-type {
 .progress-bar {
     min-width: 80px;
     text-align: left;
-    transition: width 0.8s;
+    transition: width 0.8s cubic-bezier (0.49, 0.01, 0.18, 1) 0s;
     position: relative;
     float: left;
     height: 100%;
@@ -418,6 +435,91 @@ p:last-of-type {
 .boxicon .box-icon-horizontal .box-header-wrapper + .box-icon-content {
     width: calc(100%-81px);
 }
+
+.ImageWallWrapper {
+    position: relative;
+    height: 327px;
+    left: 85px;
+}
+
+.overlay-bg {
+    background-color: #f7c842
+}
+
+.ImageWallContent.overlay-text {
+    width: 55%;
+    left: 346px;
+    text-align: center;
+    padding-left: 70px;
+    top: 30px;
+}
+
+.overlay-text {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    padding-right: 50px 70px;
+  
+}
+
+.ImageWallContent .image-wall-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.title-stripe {
+    position: relative;
+    z-index: 1;
+}
+
+.is-isotope {
+    padding: 0;
+    margin: 0;
+    max-width: none;
+    overflow: hidden;
+}
+
+.is-aspectratio {
+    min-height: 200px;
+}
+
+.is-isotope > * {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ImageWall .wall-item-inner {
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: calc(100% + 1px);
+    display: block;
+}
+
+.is-isotope .ma-image {
+    width: calc(100% +2px);
+    transition: .25s;
+}
+
+.ma-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+}
+
+
+
+
+
+
 
 
 

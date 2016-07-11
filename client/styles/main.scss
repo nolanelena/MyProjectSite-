@@ -96,11 +96,14 @@ body {
 
       /* PageBlocks */
 
+#post-874 {
+  width: 1311px;
+}
 ul.PageBlocks.is-isotope.list-unstyled {
-  width: 1500px;
+  width: 1311px;
   display: block;
   position: relative;
-  height: 802px;
+  height: 776px;
   top: 5px;
 }
 
@@ -147,7 +150,7 @@ ul.PageBlocks.is-isotope.list-unstyled {
 }
 
 .PageBlocks li.isotope-item-fullheight {
-  height: 803px; 
+  height: 774px; 
 
 } 
 
@@ -156,18 +159,18 @@ ul.PageBlocks.is-isotope.list-unstyled {
 }
 
 .PageBlocks li.isotope-item-width-1 {
-  width: 906px;
+  width: 816px;
   position: absolute;
   height: 397.5px;
   left: 495px;
   top: 0px;
 }
 .PageBlocks li.isotope-item-width-2 {
-  width: 906px;
+  width: 816px;
   position: absolute;
   left: 495px;
   top: 398px;
-  height: 403.5px;
+  height: 375.5px;
 
 }
 
@@ -345,8 +348,8 @@ li {
 .navbarSocial {
   text-align: center;
   margin-bottom: 20px;
-  width: 168px;
-  padding-left: 26px;
+  width: 222px;
+  padding-left: 42px;
 }
 .navbarSocial ul {
   overflow: auto;

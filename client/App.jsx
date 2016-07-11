@@ -34,7 +34,7 @@ $(function(){
       backboneForms.render();
     break;
     case '/pages/navbar.html':
-      navbar.render();
+      header.render();
     break;
     case '/pages/services.html':
         services.init();

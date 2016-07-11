@@ -28,9 +28,7 @@
   display: inline-block;
   position:relative;
   margin:0;
-  height:100vh;
   width: inherit;
-  overflow: auto;
   border-top-width:0;
   border-bottom-width:0;
   border-radius:0;
@@ -58,7 +56,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .navbar a .slicknav_menu {
+  .NavBar a .slicknav_menu {
     display: inline-block;
     position: relative;
     text-decoration: none;
@@ -294,7 +292,7 @@ a.link-border {
   border-color: #fff;
 }
 
-.navbar .navbar-default .navbar-fixed-side {
+.NavBar .navbar-default .navbar-fixed-side {
   text-transform: uppercase;
   width: 308px;
   height: 474px;
@@ -304,18 +302,18 @@ a.link-border {
   margin: 0 0 0.5em;
   text-align: center;
 }
-.navbar > ul {
+.NavBar > ul {
   margin:0;
   padding: 20px 0 0;
 }
-.navbar ul {
+.NavBar ul {
   list-style: none;
 }
-.navbar > ul > li {
+.NavBar > ul > li {
   position: relative;
   background-color: #fff;
 }
-.navbar > ul > li > a {
+.NavBar > ul > li > a {
   list-style-type: none;
   background-color: #fff;
   padding: 10px 5px;
@@ -330,7 +328,7 @@ a.link-border {
   text-decoration: none;
 }
 
-.navbar a:before {
+.NavBar a:before {
   background-color: #a5e5d6;
   content: '';
   position: absolute;
@@ -344,7 +342,7 @@ a.link-border {
           transition: transform 0.1s;
 }
 
-.SideNav a:hover:before {
+.NavBar a:hover:before {
   -webkit-transform: scale3d(1, 1, 1);
           transform: scale3d(1, 1, 1);
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -393,8 +391,8 @@ li {
   font-family: 'Poiret One', cursive;
 }
 
-.navbar .sub-menu {
-  display: block;
+.NavBar .sub-menu {
+  display: none;
   position: relative;
   margin: 0;
   padding: 0;
@@ -402,7 +400,7 @@ li {
   z-index: 100;
 }
 
-.navbar .sub-menu a {
+.NavBar .sub-menu a {
   color: #3b3b3b;
   padding: 10px 15px;
   font-size: 10px;
@@ -425,8 +423,9 @@ li {
 .navbarSocial {
   text-align: center;
   margin-bottom: 20px;
-  width: 168px;
-  padding-left: 26px;
+  width: 222px;
+  height: 54px;
+  padding-left: 42px;
 }
 .navbarSocial ul {
   overflow: auto;
@@ -441,7 +440,7 @@ li {
   display: inline-block;
   color: #000000;
   width: 40px;
-  height: 40px;
+  height: 12px;
   font-size: 25px;
   text-align: center;
   margin: 0 5px;
@@ -457,6 +456,7 @@ li {
 .navbarFooter {
   line-height: 24px;
   text-align: center;
+  font-family:'Poiret One', cursive;
 
 }
 
